@@ -37,9 +37,9 @@
    </head>
    <body class="font-poppins">
       <!-- ~ header -->
-      <header>
+      <header class="fixed top-0 left-0 right-0 z-40">
          <nav
-            class="font-poppins flex justify-between items-center px-12 py-5 cursor-pointer bg-white h-auto w-screen border-b-2 z-40 fixed top-0 left-0 right-0"
+            class="font-poppins flex justify-between items-center px-12 py-5 cursor-pointer bg-white h-auto w-screen border-b-2"
          >
             <div id="logo" class="flex gap-8">
                <a href="#"
@@ -88,18 +88,181 @@
                   <p class="text-[rgb(232,25,81)]">Login/Signup</p>
                </div>
             </div>
-
-            <!-- ~ dropdown navbar -->
-            <div
-               class="absolute top-full left-0 w-full bg-white px-36 flex items-center justify-between text-xs border text-slate-800 font-medium py-3 shadow-md"
-            >
-               <a href="#">Cakes</a> <a href="#">By Flavours</a>
-               <a href="#">Theme Cakes</a> <a href="#">By Relationship</a>
-               <a href="#">Desserts</a> <a href="#">Birthday</a>
-               <a href="#">Anniversary</a> <a href="#">Occasion</a>
-               <a href="#">Customized Cakes</a>
-            </div>
          </nav>
+
+         <!-- ~ dropdown navbar -->
+         <div
+            class="w-full bg-white px-36 flex items-center justify-between text-xs border text-slate-800 font-medium shadow-md"
+         >
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               Cakes
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <h1 class="text-sm font-semibold">Trending Cakes</h1>
+                     <ul class="flex gap-3 flex-col">
+                        <li>
+                           <a href="/src/Prem/pinata-cakes"> Pinata Cakes </a>
+                        </li>
+                        <li>
+                           <a href="#block"> Suprice Cakes </a>
+                        </li>
+                        <li>
+                           <a href="#block"> </a>
+                        </li>
+                        <li>
+                           <a href="#block"> </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               By Flavours
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <ul class="flex gap-3 flex-col">
+                        <li>
+                           <a href="#block"> Chocolate Cakes </a>
+                        </li>
+                        <li>
+                           <a href="#block"> Butterscotch Cakes </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               Theme Cakes
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <h1 class="text-sm font-semibold">Kids Cakes</h1>
+                     <ul class="flex gap-3 flex-col">
+                        <li>
+                           <a href="#block"> 1st Birthday Cakes </a>
+                        </li>
+                        <li>
+                           <a href="#block"> Princess Cakes </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               By Relationship
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <h1 class="text-sm font-semibold">For Him</h1>
+                     <ul class="flex gap-3 flex-col">
+                        <li>
+                           <a href="#block"> Cakes for Father </a>
+                        </li>
+                        <li>
+                           <a href="#block"> Cakes for Husband </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               Desserts
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <ul class="flex gap-3 flex-col">
+                        <li>
+                           <a href="#block"> All Desserts </a>
+                        </li>
+                        <li>
+                           <a href="#block"> Jar Cakes </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               Birthday
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <ul class="flex gap-3 flex-col">
+                        <li>
+                           <a href="#block"> All Birthday Cakes </a>
+                        </li>
+                        <li>
+                           <a href="#block"> 1st Birthday Cakes </a>
+                        </li>
+                        <li>
+                           <a href="#block"> Birthday Photo Cakes</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               Anniversary
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <ul class="flex gap-2 flex-col">
+                        <li>
+                           <a href="#block"> All Anniversary Cakes </a>
+                        </li>
+                        <li>
+                           <a href="#block"> 1st Anniversary Cakes </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               Occasion
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <h1 class="text-sm font-semibold">Festive Celebrations</h1>
+                     <ul class="flex gap-2 flex-col">
+                        <li>
+                           <a href="#block"> Boss Day Cakes </a>
+                        </li>
+                        <li>
+                           <a href="#block"> Karwa Chauth Cakes </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <a href="#" class="relative cakes-tab py-3 group cursor-pointer">
+               Customized Cakes
+            </a>
+         </div>
       </header>
 
       <!-- ~ page title -->
