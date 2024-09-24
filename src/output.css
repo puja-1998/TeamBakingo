@@ -737,10 +737,6 @@ video {
   max-height: fit-content;
 }
 
-.min-h-\[280px\] {
-  min-height: 280px;
-}
-
 .min-h-\[403px\] {
   min-height: 403px;
 }
@@ -783,6 +779,10 @@ video {
 
 .w-\[12px\] {
   width: 12px;
+}
+
+.w-\[17\.7rem\] {
+  width: 17.7rem;
 }
 
 .w-\[30rem\] {
@@ -1057,6 +1057,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-10 {
