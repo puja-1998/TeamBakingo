@@ -10,46 +10,211 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="https://media.bakingo.com/bakingo-ssr/apple-touch-icon-120x120.png">
     <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../flickity.css">
     <title>Birthday Cakes</title>
 </head>
 <body class="font-poppins">
 
     <!-- header section -->
-    <header>
-        <nav class="font-poppins flex justify-between items-center px-20 py-6 cursor-pointer bg-white h-auto w-screen border-b-2 z-40 fixed top-0 left-0 right-0">
-            <div id="logo" class="flex gap-8">
-             <a href="#"><img src="../images/bakingo.svg" alt=""></a>
-             <div id="Location" class="flex items-center gap-1">
-                <span class="material-symbols-outlined text-[16px]">near_me</span>
-                <button class="font-medium text-sm ">Select City</button>
-                <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
-            </div>
-            </div>
-            
-            <div id="search" class="flex items-center gap-4 rounded-lg border pr-3 pl-6  py-3.5 bg-gray-100">
-                <img src="../images/search.svg" alt="">
-                <input class="font-medium text-[13px] outline-none bg-gray-100 w-72" type="text" placeholder="Search for Cakes, occasion, flavor and more">
-            </div>
+    <header class="fixed top-0 left-0 right-0 z-40">
+        <nav class="font-poppins flex justify-between items-center px-12 py-5 cursor-pointer bg-white h-auto w-screen border-b-2">
+           <div id="logo" class="flex gap-8">
+                <a href="#">
+                    <img width="108" src="../../images/bakingo.svg" alt=""/>
+                </a>
+                <div id="Location" class="flex items-center gap-2">
+                    <img
+                        width="12"
+                        src="https://bkmedia.bakingo.com/ssr-static/selectCity.svg"
+                        alt="select-city"
+                    />
+                    <button class="font-medium text-[.78rem]">Select City</button>
+                    <img
+                        width="10"
+                        src="https://bkmedia.bakingo.com/ssr-static/cityDD.svg"
+                        alt="dropdown"
+                    />
+                </div>
+           </div>
 
-            <div id="right_head" class="flex gap-8 font-medium text-[13px] ">
+           <div class="w-[30rem] flex items-center justify-end">
+              <div id="search" class="w-[80%] flex items-center gap-4 rounded-lg border pr-3 pl-6 py-3 bg-[#f4f4f4]">
+                    <img src="../../images/search.svg" alt="" />
+                    <input
+                        class="font-medium placeholder:text-[#898989] text-[11.6px] outline-none bg-[#f4f4f4] w-full"
+                        type="text"
+                        placeholder="Search for Cakes, occasion, flavor and more"
+                    />
+                </div>
+           </div>
+
+            <div id="right_head" class="flex gap-8 font-medium text-[13px]">
                 <div class="flex flex-col items-center gap-1.5">
-                    <img src="../images/trackData.svg" alt="" class="size-6">
+                    <img width="22" src="../../images/trackData.svg" alt="" />
                     <p class="tracking-wider">Track Order</p>
                 </div>
                 <div class="flex flex-col items-center gap-1.5">
-                    <img src="../images/cart3.svg" alt="">
+                    <img width="22" src="../../images/cart3.svg" alt="" />
                     <p class="tracking-wider">Cart</p>
                 </div>
                 <div class="flex flex-col items-center gap-1.5">
-                    <img src="../images/Account.svg" alt="">
+                    <img width="22" src="../../images/Account.svg" alt="" />
                     <p class="text-[rgb(232,25,81)]">Login/Signup</p>
                 </div>
             </div>
         </nav>
+
+        <!-- ~ dropdown navbar -->
+        <div class="w-full bg-white px-36 flex items-center justify-between text-xs border text-slate-800 font-medium shadow-md">
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+            Cakes
+                <div class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl">
+                    <div class="text-xs flex gap-4 flex-col items-start w-[10rem]">
+                        <h1 class="text-sm font-semibold">Trending Cakes</h1>
+                        <ul class="flex gap-3 flex-col">
+                            <li class="hover:font-bold">
+                                <a href="/src/Prem/pinata-cakes"> Pinata Cakes </a>
+                            </li>
+                            <li class="hover:font-bold">
+                                <a href="#block"> Suprice Cakes </a>
+                            </li>
+                            <li class="hover:font-bold">
+                                <a href="#block"> </a>
+                            </li>
+                            <li class="hover:font-bold">
+                                <a href="#block"> </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+            By Flavours
+                <div class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl">
+                    <div class="text-xs flex gap-4 flex-col items-start w-[10rem]">
+                        <ul class="flex gap-3 flex-col">
+                            <li class="hover:font-bold">
+                                <a href="#block"> Chocolate Cakes </a>
+                            </li>
+                            <li class="hover:font-bold">
+                                <a href="#block"> Butterscotch Cakes </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+            Theme Cakes
+                <div class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl">
+                    <div class="text-xs flex gap-4 flex-col items-start w-[10rem]">
+                        <h1 class="text-sm font-semibold">Kids Cakes</h1>
+                        <ul class="flex gap-3 flex-col">
+                            <li class="hover:font-bold">
+                                <a href="#block"> 1st Birthday Cakes </a>
+                            </li>
+                            <li class="hover:font-bold">
+                                <a href="#block"> Princess Cakes </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+            By Relationship
+                <div class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl">
+                    <div class="text-xs flex gap-4 flex-col items-start w-[10rem]">
+                        <h1 class="text-sm font-semibold">For Him</h1>
+                        <ul class="flex gap-3 flex-col">
+                            <li class="hover:font-bold">
+                                <a href="#block"> Cakes for Father </a>
+                            </li>
+                            <li class="hover:font-bold">
+                                <a href="#block"> Cakes for Husband </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+            Desserts
+                <div class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl">
+                    <div class="text-xs flex gap-4 flex-col items-start w-[10rem]">
+                        <ul class="flex gap-3 flex-col">
+                        <li class="hover:font-bold">
+                            <a href="#block"> All Desserts </a>
+                        </li>
+                        <li class="hover:font-bold">
+                            <a href="#block"> Jar Cakes </a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+            Birthday
+                <div class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl">
+                    <div class="text-xs flex gap-4 flex-col items-start w-[10rem]">
+                        <ul class="flex gap-3 flex-col">
+                            <li class="hover:font-bold">
+                                <a href="./allBirthdayCakes.html"> All Birthday Cakes </a>
+                            </li>
+                            <li class="hover:font-bold">
+                                <a href="./1stBirthdayCakes.html"> 1st Birthday Cakes </a>
+                            </li>
+                            <li class="hover:font-bold">
+                                <a href="#block"> Birthday Photo Cakes</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+            Anniversary
+                <div class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl">
+                        <div class="text-xs flex gap-4 flex-col items-start w-[10rem]">
+                            <ul class="flex gap-2 flex-col">
+                                <li class="hover:font-bold">
+                                    <a href="#block"> All Anniversary Cakes </a>
+                                </li>
+                                <li class="hover:font-bold">
+                                    <a href="#block"> 1st Anniversary Cakes </a>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+            Occasion
+                <div class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl">
+                    <div class="text-xs flex gap-4 flex-col items-start w-[10rem]">
+                        <h1 class="text-sm font-semibold">Festive Celebrations</h1>
+                        <ul class="flex gap-2 flex-col">
+                            <li class="hover:font-bold">
+                                <a href="#block"> Boss Day Cakes </a>
+                            </li>
+                            <li class="hover:font-bold">
+                                <a href="#block"> Karwa Chauth Cakes </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="relative cakes-tab py-3 group cursor-pointer">
+                Customized Cakes
+            </a>
+        </div>
     </header>
 
     <!-- Birthday Cakes head section -->
-    <div class="bg-gray-100 max-w-full mt-24">
+    <div class="bg-gray-100 max-w-full mt-32">
         <div class="w-11/12 mx-auto">
             <div class="flex justify-between items-center w-full h-24">
                 <h1 class="text-3xl font-bold">Birthday Cakes</h1>
@@ -119,27 +284,69 @@
             </div>
 
             <!-- single card -->
-            <div class="relative border rounded-lg cursor-pointer">
-                <div class="max-w-80">
-                    <img src="https://bkmedia.bakingo.com/birthday-star-black-forest-cake-cake4036blac-a.jpg?tr=w-320,h-320,dpr-1.5,q-70" width="" alt="cake" class="w-full rounded-tl-lg rounded-tr-lg">
+            <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden">
+                <!-- ~ flickity crousal -->
+                <div class="cursor-pointer" data-flickity='{ "wrapAround": true }'>
+                    <img
+                        src="https://bkmedia.bakingo.com/sq-romantic-pinata-pineapple-cake-850gm-pina2164pine-A_0.jpg?tr=w-320,h-320,dpr-1.5,q-70"
+                        width=""
+                        alt="cake"
+                        class="w-full"
+                    />
+                    <img
+                        src="https://bkmedia.bakingo.com/sq-romantic-pinata-pineapple-cake-850gm-pina2164pine-B_0.jpg?tr=w-320,h-320,dpr-1.5,q-70"
+                        width=""
+                        alt="cake"
+                        class="w-full"
+                    />
+                    <img
+                        src="https://bkmedia.bakingo.com/sq-romantic-pinata-pineapple-cake-850gm-pina2164pine-C_0.jpg?tr=w-320,h-320,dpr-1.5,q-70"
+                        width=""
+                        alt="cake"
+                        class="w-full"
+                    />
+                    <img
+                        src="https://bkmedia.bakingo.com/sq-romantic-pinata-pineapple-cake-850gm-pina2164pine-D_0.jpg?tr=w-320,h-320,dpr-1.5,q-70"
+                        width=""
+                        alt="cake"
+                        class="w-full"
+                    />
+                    <img
+                        src="https://bkmedia.bakingo.com/sq-romantic-pinata-pineapple-cake-850gm-pina2164pine-E_0.jpg?tr=w-320,h-320,dpr-1.5,q-70"
+                        width=""
+                        alt="cake"
+                        class="w-full"
+                    />
                 </div>
-                <img width="30px" height="30px" src="https://media.bakingo.com/bakingo-ssr/static/media/Love-Icon.3c39d64b.svg" alt="filled-heart" class="absolute top-2 right-2 cursor-pointer"/>
-                <div class="p-2 flex flex-col gap-1">
+                <!-- ~ heart button -->
+                <img
+                    width="30px"
+                    height="30px"
+                    src="https://media.bakingo.com/bakingo-ssr/static/media/Love-Icon.3c39d64b.svg"
+                    alt="filled-heart"
+                    class="absolute top-2 right-2 cursor-pointer"
+                />
+                <div class="w-full p-2 pb-3 flex flex-col gap-1">
                     <div class="flex items-center gap-1">
-                        <div class="w-[10px] h-[10px] border border-green-600 flex items-center justify-center">
-                            <i class="fa-solid fa-circle text-[6px] text-green-600"></i>
+                        <div class="w-[12px] h-[12px] flex items-center justify-center">
+                            <img 
+                                width="48" 
+                                height="48" 
+                                src="https://img.icons8.com/color/48/vegetarian-food-symbol.png" 
+                                alt="vegetarian-food-symbol"
+                            />
                         </div>
-                        <p class="text-[9px] text-green-600 font-bold">EGGLESS</p>
+                        <p class="text-[7px] text-green-600 font-bold">EGGLESS</p>
                     </div>
-                    <P class="text-[15px] text-gray-600">Birthday Star Black Forest Cake</P>
-                    <div class="flex items-center gap-1 font-semibold scale-105 px-2">
-                        <i class="fa-solid fa-indian-rupee-sign text-sm"></i>
-                        <span>549</span>
+                    <p class="text-[13px]">Happy Anniversary Pineapple Pinata Cake</p>
+                    <div class="flex items-center gap-1 text-sm text-slate-900 font-semibold scale-105 px-2">
+                        <span class="font-sans font-bold -translate-y-[1px]">&#8377;</span>
+                        <span class="font-poppins"> 1599 </span>
                     </div>
-                    <div class=" text-sm flex items-center justify-start gap-1 scale-95 ml-[-8px]">
-                        <span class="font-medium">4.9</span>
-                        <i class="fa-solid fa-star text-xs text-yellow-500"></i>
-                        <span >(22 reviews)</span>
+                    <div class="text-xs flex items-center justify-start gap-1 scale-95 ml-[-8px]">
+                        <span class="font-[500]">4.9</span>
+                        <i class="fa-solid fa-star text-[11px] text-yellow-500"></i>
+                        <span>(30 reviews)</span>
                     </div>
                 </div>
             </div>
@@ -2333,102 +2540,174 @@
         <div class="flex flex-col justify-center items-center gap-10 pb-16">
             <h1 class="text-3xl">Recently Viewed Products</h1>
             <div class="max-w-7xl flex flex-wrap justify-center items-center gap-8 pb-7">
-                <div class="relative border rounded-lg cursor-pointer hover:shadow-lg">
-                    <div class="max-w-72">
-                        <img src="https://bkmedia.bakingo.com/tantalising-tulip-cake-them2833flav-A.jpg" width="" alt="cake" class="w-full rounded-tl-lg rounded-tr-lg">
+                <!-- single card -->
+                <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden">
+                    <div class="cursor-pointer" >
+                        <img
+                            src="https://bkmedia.bakingo.com/sq-romantic-pinata-pineapple-cake-850gm-pina2164pine-A_0.jpg?tr=w-320,h-320,dpr-1.5,q-70"
+                            width=""
+                            alt="cake"
+                            class="w-full"
+                        />
                     </div>
-                    <img width="30px" height="30px" src="https://media.bakingo.com/bakingo-ssr/static/media/Love-Icon.3c39d64b.svg" alt="filled-heart" class="absolute top-2 right-2 cursor-pointer"/>
-                    <div class="p-2 flex flex-col gap-1">
+                    <!-- ~ heart button -->
+                    <img
+                        width="30px"
+                        height="30px"
+                        src="https://media.bakingo.com/bakingo-ssr/static/media/Love-Icon.3c39d64b.svg"
+                        alt="filled-heart"
+                        class="absolute top-2 right-2 cursor-pointer"
+                    />
+                    <div class="w-full p-2 pb-3 flex flex-col gap-1">
                         <div class="flex items-center gap-1">
-                            <div class="w-[10px] h-[10px] border border-green-600 flex items-center justify-center">
-                                <i class="fa-solid fa-circle text-[6px] text-green-600"></i>
+                            <div class="w-[12px] h-[12px] flex items-center justify-center">
+                                <img 
+                                    width="48" 
+                                    height="48" 
+                                    src="https://img.icons8.com/color/48/vegetarian-food-symbol.png" 
+                                    alt="vegetarian-food-symbol"
+                                />
                             </div>
-                            <p class="text-[9px] text-green-600 font-bold">EGGLESS</p>
+                            <p class="text-[7px] text-green-600 font-bold">EGGLESS</p>
                         </div>
-                        <P class="text-[15px] text-gray-600">Tantalising Tulip Cake</P>
-                        <div class="flex items-center gap-1 font-semibold scale-105 px-2">
-                            <i class="fa-solid fa-indian-rupee-sign text-sm"></i>
-                            <span>2799</span>
+                        <p class="text-[13px]">Happy Anniversary Pineapple Pinata Cake</p>
+                        <div class="flex items-center gap-1 text-sm text-slate-900 font-semibold scale-105 px-2">
+                            <span class="font-sans font-bold -translate-y-[1px]">&#8377;</span>
+                            <span class="font-poppins"> 1599 </span>
                         </div>
-                        <div class=" text-sm flex items-center justify-start gap-1 scale-95 ml-[-8px]">
-                            <span class="font-medium">5</span>
-                            <i class="fa-solid fa-star text-xs text-yellow-500"></i>
-                            <span >(1 reviews)</span>
+                        <div class="text-xs flex items-center justify-start gap-1 scale-95 ml-[-8px]">
+                            <span class="font-[500]">4.9</span>
+                            <i class="fa-solid fa-star text-[11px] text-yellow-500"></i>
+                            <span>(30 reviews)</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="relative border rounded-lg cursor-pointer hover:shadow-lg">
-                    <div class="max-w-72">
-                        <img src="https://bkmedia.bakingo.com/chocolate-dream-cake-cake3750drea-A.jpg" width="" alt="cake" class="w-full rounded-tl-lg rounded-tr-lg">
+                <!-- single card -->
+                <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden">
+                    <div class="cursor-pointer" >
+                        <img
+                            src="https://bkmedia.bakingo.com/sq-romantic-pinata-pineapple-cake-850gm-pina2164pine-A_0.jpg?tr=w-320,h-320,dpr-1.5,q-70"
+                            width=""
+                            alt="cake"
+                            class="w-full"
+                        />
                     </div>
-                    <img width="30px" height="30px" src="https://media.bakingo.com/bakingo-ssr/static/media/Love-Icon.3c39d64b.svg" alt="filled-heart" class="absolute top-2 right-2 cursor-pointer"/>
-                    <div class="p-2 flex flex-col gap-1">
+                    <!-- ~ heart button -->
+                    <img
+                        width="30px"
+                        height="30px"
+                        src="https://media.bakingo.com/bakingo-ssr/static/media/Love-Icon.3c39d64b.svg"
+                        alt="filled-heart"
+                        class="absolute top-2 right-2 cursor-pointer"
+                    />
+                    <div class="w-full p-2 pb-3 flex flex-col gap-1">
                         <div class="flex items-center gap-1">
-                            <div class="w-[10px] h-[10px] border border-green-600 flex items-center justify-center">
-                                <i class="fa-solid fa-circle text-[6px] text-green-600"></i>
+                            <div class="w-[12px] h-[12px] flex items-center justify-center">
+                                <img 
+                                    width="48" 
+                                    height="48" 
+                                    src="https://img.icons8.com/color/48/vegetarian-food-symbol.png" 
+                                    alt="vegetarian-food-symbol"
+                                />
                             </div>
-                            <p class="text-[9px] text-green-600 font-bold">EGGLESS</p>
+                            <p class="text-[7px] text-green-600 font-bold">EGGLESS</p>
                         </div>
-                        <P class="text-[15px] text-gray-600">Chocolate Dream Cake</P>
-                        <div class="flex items-center gap-1 font-semibold scale-105 px-2">
-                            <i class="fa-solid fa-indian-rupee-sign text-sm"></i>
-                            <span>699</span>
+                        <p class="text-[13px]">Happy Anniversary Pineapple Pinata Cake</p>
+                        <div class="flex items-center gap-1 text-sm text-slate-900 font-semibold scale-105 px-2">
+                            <span class="font-sans font-bold -translate-y-[1px]">&#8377;</span>
+                            <span class="font-poppins"> 1599 </span>
                         </div>
-                        <div class=" text-sm flex items-center justify-start gap-1 scale-95 ml-[-8px]">
-                            <span class="font-medium">4.9</span>
-                            <i class="fa-solid fa-star text-xs text-yellow-500"></i>
-                            <span >(188 reviews)</span>
+                        <div class="text-xs flex items-center justify-start gap-1 scale-95 ml-[-8px]">
+                            <span class="font-[500]">4.9</span>
+                            <i class="fa-solid fa-star text-[11px] text-yellow-500"></i>
+                            <span>(30 reviews)</span>
                         </div>
                     </div>
                 </div>
 
-                <div class=" relative border rounded-lg cursor-pointer hover:shadow-lg">
-                    <div class="max-w-72">
-                        <img src="https://bkmedia.bakingo.com/sq-spherical-chocolate-pinata-cake-pina2250choc-A_0.jpg" width="" alt="cake" class="w-full rounded-tl-lg rounded-tr-lg">
+                <!-- single card -->
+                <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden">
+                    <div class="cursor-pointer" >
+                        <img
+                            src="https://bkmedia.bakingo.com/sq-romantic-pinata-pineapple-cake-850gm-pina2164pine-A_0.jpg?tr=w-320,h-320,dpr-1.5,q-70"
+                            width=""
+                            alt="cake"
+                            class="w-full"
+                        />
                     </div>
-                    <img width="30px" height="30px" src="https://media.bakingo.com/bakingo-ssr/static/media/Love-Icon.3c39d64b.svg" alt="filled-heart" class="absolute top-2 right-2 cursor-pointer"/>
-                    <div class="p-2 flex flex-col gap-1">
+                    <!-- ~ heart button -->
+                    <img
+                        width="30px"
+                        height="30px"
+                        src="https://media.bakingo.com/bakingo-ssr/static/media/Love-Icon.3c39d64b.svg"
+                        alt="filled-heart"
+                        class="absolute top-2 right-2 cursor-pointer"
+                    />
+                    <div class="w-full p-2 pb-3 flex flex-col gap-1">
                         <div class="flex items-center gap-1">
-                            <div class="w-[10px] h-[10px] border border-green-600 flex items-center justify-center">
-                                <i class="fa-solid fa-circle text-[6px] text-green-600"></i>
+                            <div class="w-[12px] h-[12px] flex items-center justify-center">
+                                <img 
+                                    width="48" 
+                                    height="48" 
+                                    src="https://img.icons8.com/color/48/vegetarian-food-symbol.png" 
+                                    alt="vegetarian-food-symbol"
+                                />
                             </div>
-                            <p class="text-[9px] text-green-600 font-bold">EGGLESS</p>
+                            <p class="text-[7px] text-green-600 font-bold">EGGLESS</p>
                         </div>
-                        <P class="text-[15px] text-gray-600">Birthday Chocolate Pinata Cake</P>
-                        <div class="flex items-center gap-1 font-semibold scale-105 px-2">
-                            <i class="fa-solid fa-indian-rupee-sign text-sm"></i>
-                            <span>1599</span>
+                        <p class="text-[13px]">Happy Anniversary Pineapple Pinata Cake</p>
+                        <div class="flex items-center gap-1 text-sm text-slate-900 font-semibold scale-105 px-2">
+                            <span class="font-sans font-bold -translate-y-[1px]">&#8377;</span>
+                            <span class="font-poppins"> 1599 </span>
                         </div>
-                        <div class=" text-sm flex items-center justify-start gap-1 scale-95 ml-[-8px]">
-                            <span class="font-medium">4.9</span>
-                            <i class="fa-solid fa-star text-xs text-yellow-500"></i>
-                            <span >(16 reviews)</span>
+                        <div class="text-xs flex items-center justify-start gap-1 scale-95 ml-[-8px]">
+                            <span class="font-[500]">4.9</span>
+                            <i class="fa-solid fa-star text-[11px] text-yellow-500"></i>
+                            <span>(30 reviews)</span>
                         </div>
                     </div>
                 </div>
 
-                <div class=" relative border rounded-lg cursor-pointer hover:shadow-lg">
-                    <div class="max-w-72">
-                        <img src="https://bkmedia.bakingo.com/hbd-cutesy-teddy-cake-them3268flav-A_0.jpg" width="" alt="cake" class="w-full rounded-tl-lg rounded-tr-lg">
+                <!-- single card -->
+                <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden">
+                    <div class="cursor-pointer" >
+                        <img
+                            src="https://bkmedia.bakingo.com/sq-romantic-pinata-pineapple-cake-850gm-pina2164pine-A_0.jpg?tr=w-320,h-320,dpr-1.5,q-70"
+                            width=""
+                            alt="cake"
+                            class="w-full"
+                        />
                     </div>
-                    <img width="30px" height="30px" src="https://media.bakingo.com/bakingo-ssr/static/media/Love-Icon.3c39d64b.svg" alt="filled-heart" class="absolute top-2 right-2 cursor-pointer"/>
-                    <div class="p-2 flex flex-col gap-1">
+                    <!-- ~ heart button -->
+                    <img
+                        width="30px"
+                        height="30px"
+                        src="https://media.bakingo.com/bakingo-ssr/static/media/Love-Icon.3c39d64b.svg"
+                        alt="filled-heart"
+                        class="absolute top-2 right-2 cursor-pointer"
+                    />
+                    <div class="w-full p-2 pb-3 flex flex-col gap-1">
                         <div class="flex items-center gap-1">
-                            <div class="w-[10px] h-[10px] border border-green-600 flex items-center justify-center">
-                                <i class="fa-solid fa-circle text-[6px] text-green-600"></i>
+                            <div class="w-[12px] h-[12px] flex items-center justify-center">
+                                <img 
+                                    width="48" 
+                                    height="48" 
+                                    src="https://img.icons8.com/color/48/vegetarian-food-symbol.png" 
+                                    alt="vegetarian-food-symbol"
+                                />
                             </div>
-                            <p class="text-[9px] text-green-600 font-bold">EGGLESS</p>
+                            <p class="text-[7px] text-green-600 font-bold">EGGLESS</p>
                         </div>
-                        <P class="text-[15px] text-gray-600">HBD Cutesy Teddy Cream Cake</P>
-                        <div class="flex items-center gap-1 font-semibold scale-105 px-2">
-                            <i class="fa-solid fa-indian-rupee-sign text-sm"></i>
-                            <span>1249</span>
+                        <p class="text-[13px]">Happy Anniversary Pineapple Pinata Cake</p>
+                        <div class="flex items-center gap-1 text-sm text-slate-900 font-semibold scale-105 px-2">
+                            <span class="font-sans font-bold -translate-y-[1px]">&#8377;</span>
+                            <span class="font-poppins"> 1599 </span>
                         </div>
-                        <div class=" text-sm flex items-center justify-start gap-1 scale-95 ml-[-8px]">
-                            <span class="font-medium">4.8</span>
-                            <i class="fa-solid fa-star text-xs text-yellow-500"></i>
-                            <span >(17 reviews)</span>
+                        <div class="text-xs flex items-center justify-start gap-1 scale-95 ml-[-8px]">
+                            <span class="font-[500]">4.9</span>
+                            <i class="fa-solid fa-star text-[11px] text-yellow-500"></i>
+                            <span>(30 reviews)</span>
                         </div>
                     </div>
                 </div>
@@ -3844,6 +4123,7 @@
             <img class="w-[600px]" src="../images/payment.e08b4d57.png" alt="Payments">
         </div>
     </footer>
-
+    
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 </html>
