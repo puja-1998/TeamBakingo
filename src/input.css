@@ -17,3 +17,7 @@
 .cakes-tab:hover::after {
    transform: scale(1);
 }
+
+.no-scrollbar::-webkit-scrollbar {
+   display: none;
+}
