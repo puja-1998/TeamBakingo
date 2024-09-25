@@ -39,13 +39,422 @@
       <!-- ~ header -->
       <header class="fixed top-0 left-0 right-0 z-40">
          <nav
-            class="font-poppins flex justify-between items-center px-12 py-5 cursor-pointer bg-white h-auto w-screen border-b-2"
+            class="font-poppins flex justify-between items-center px-2 sm:px-12 py-5 cursor-pointer bg-white h-auto w-screen border-b-2"
          >
             <div id="logo" class="flex gap-8">
-               <a href="#"
-                  ><img width="108" src="../../images/bakingo.svg" alt=""
+               <div class="relative sm:hidden p-2 w-[2rem] mr-2">
+                  <!-- Sidebar -->
+                  <div
+                     id="sidebar"
+                     class="fixed left-0 top-0 w-80 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50"
+                  >
+                     <div
+                        class="flex justify-between items-center bg-[#f6f6f6] p-5 rounded-b-lg mr-3"
+                     >
+                        <h2 class="text-lg font-bold text-slate-900">
+                           All Category
+                        </h2>
+                        <button
+                           id="closeBtn"
+                           class="text-2xl focus:outline-none"
+                        >
+                           &times;
+                        </button>
+                     </div>
+                     <ul class="mr-3">
+                        <!-- ~ cakes -->
+                        <li>
+                           <button
+                              class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                              onclick="toggleAccordion('cakes', this)"
+                           >
+                              Cakes
+                              <span class="icon-plus">+</span>
+                              <span class="icon-minus hidden">−</span>
+                           </button>
+                           <ul id="cakes" class="w-full hidden">
+                              <li>
+                                 <button
+                                    class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
+                                    onclick="toggleSubmenu(this)"
+                                 >
+                                    <span
+                                       class="text-[16px] text-slate-900 font-medium"
+                                       >Trending Cakes</span
+                                    >
+                                    <span class="icon-down"
+                                       ><img
+                                          alt="arrow"
+                                          src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
+                                          width="16"
+                                          height="16"
+                                    /></span>
+                                 </button>
+                                 <ul class="hidden">
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                          >Pinata Cakes</a
+                                       >
+                                    </li>
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                          >Suprice Cakes</a
+                                       >
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <!-- ~ by flavours -->
+                        <li>
+                           <button
+                              class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                              onclick="toggleAccordion('by-flavours', this)"
+                           >
+                              By Flavours
+                              <span class="icon-plus">+</span>
+                              <span class="icon-minus hidden">−</span>
+                           </button>
+                           <ul id="by-flavours" class="w-full hidden">
+                              <li>
+                                 <ul>
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                          >Chocolate Cakes</a
+                                       >
+                                    </li>
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                          >Butterscotch Cakes</a
+                                       >
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <!-- ~ theme cakes -->
+                        <li>
+                           <button
+                              class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                              onclick="toggleAccordion('theme-cakes', this)"
+                           >
+                              Theme Cakes
+                              <span class="icon-plus">+</span>
+                              <span class="icon-minus hidden">−</span>
+                           </button>
+                           <ul id="theme-cakes" class="w-full hidden">
+                              <li>
+                                 <button
+                                    class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
+                                    onclick="toggleSubmenu(this)"
+                                 >
+                                    <span
+                                       class="text-[16px] text-slate-900 font-medium"
+                                       >Kids Cakes</span
+                                    >
+                                    <span class="icon-down"
+                                       ><img
+                                          alt="arrow"
+                                          src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
+                                          width="16"
+                                          height="16"
+                                    /></span>
+                                 </button>
+                                 <ul class="hidden">
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                          >1st Birthday Cakes</a
+                                       >
+                                    </li>
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >
+                                          Princess Cakes</a
+                                       >
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <!-- ~ by relationship -->
+                        <li>
+                           <button
+                              class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                              onclick="toggleAccordion('by-relationship', this)"
+                           >
+                              By Relationship
+                              <span class="icon-plus">+</span>
+                              <span class="icon-minus hidden">−</span>
+                           </button>
+                           <ul id="by-relationship" class="w-full hidden">
+                              <li>
+                                 <button
+                                    class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
+                                    onclick="toggleSubmenu(this)"
+                                 >
+                                    <span
+                                       class="text-[16px] text-slate-900 font-medium"
+                                       >For Him</span
+                                    >
+                                    <span class="icon-down"
+                                       ><img
+                                          alt="arrow"
+                                          src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
+                                          width="16"
+                                          height="16"
+                                    /></span>
+                                 </button>
+                                 <ul class="hidden">
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >
+                                          Cakes for Father</a
+                                       >
+                                    </li>
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >
+                                          Cakes for Husband</a
+                                       >
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <!-- ~ desserts -->
+                        <li>
+                           <button
+                              class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                              onclick="toggleAccordion('desserts', this)"
+                           >
+                              Desserts
+                              <span class="icon-plus">+</span>
+                              <span class="icon-minus hidden">−</span>
+                           </button>
+                           <ul id="desserts" class="w-full hidden">
+                              <li>
+                                 <ul>
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                          >All Desserts</a
+                                       >
+                                    </li>
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >
+                                          Jar Cakes</a
+                                       >
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <!-- ~ birthday -->
+                        <li>
+                           <button
+                              class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                              onclick="toggleAccordion('birthday', this)"
+                           >
+                              Birthday
+                              <span class="icon-plus">+</span>
+                              <span class="icon-minus hidden">−</span>
+                           </button>
+                           <ul id="birthday" class="w-full hidden">
+                              <li>
+                                 <ul>
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                          >All Birthday Cakes</a
+                                       >
+                                    </li>
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >
+                                          1st Birthday Cakes</a
+                                       >
+                                    </li>
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >
+                                          Birthday Photo Cakes</a
+                                       >
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <!-- ~ anniversary -->
+                        <li>
+                           <button
+                              class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                              onclick="toggleAccordion('anniversary', this)"
+                           >
+                              Anniversary
+                              <span class="icon-plus">+</span>
+                              <span class="icon-minus hidden">−</span>
+                           </button>
+                           <ul id="anniversary" class="w-full hidden">
+                              <li>
+                                 <ul>
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                          >All Anniversary Cakes</a
+                                       >
+                                    </li>
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >
+                                          1st Anniversary Cakes</a
+                                       >
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <!-- ~ occasion -->
+                        <li>
+                           <button
+                              class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                              onclick="toggleAccordion('occasion', this)"
+                           >
+                              Occasion
+                              <span class="icon-plus">+</span>
+                              <span class="icon-minus hidden">−</span>
+                           </button>
+                           <ul id="occasion" class="w-full hidden">
+                              <li>
+                                 <button
+                                    class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
+                                    onclick="toggleSubmenu(this)"
+                                 >
+                                    <span
+                                       class="text-[16px] text-slate-900 font-medium"
+                                       >Festive Celebrations</span
+                                    >
+                                    <span class="icon-down"
+                                       ><img
+                                          alt="arrow"
+                                          src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
+                                          width="16"
+                                          height="16"
+                                    /></span>
+                                 </button>
+                                 <ul class="hidden">
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >
+                                          Boss Day Cakes</a
+                                       >
+                                    </li>
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >
+                                          Karwa Chauth Cakes</a
+                                       >
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <!-- ~ customized cakes -->
+                        <li>
+                           <a
+                              href="#"
+                              class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                           >
+                              Customized Cakes
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <!-- Overlay -->
+                  <div
+                     id="overlay"
+                     class="fixed inset-0 bg-black opacity-50 hidden z-40"
+                  ></div>
+
+                  <!-- Button to Open Sidebar -->
+                  <button id="openSidebarBtn">
+                     <!-- class="bg-red-500 text-white px-4 py-2 m-4" -->
+                     <svg
+                        width="30px"
+                        height="30px"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                     >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                           id="SVGRepo_tracerCarrier"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                           <path
+                              d="M4 18H10"
+                              stroke="#000000"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                           ></path>
+                           <path
+                              d="M4 12L16 12"
+                              stroke="#000000"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                           ></path>
+                           <path
+                              d="M4 6L20 6"
+                              stroke="#000000"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                           ></path>
+                        </g>
+                     </svg>
+                  </button>
+               </div>
+
+               <a href="#" class="w-[7rem] object-cover"
+                  ><img src="../../images/bakingo.svg" alt="logo"
                /></a>
-               <div id="Location" class="flex items-center gap-2">
+               <div
+                  id="Location"
+                  class="invisible sm:visible flex items-center gap-2"
+               >
                   <img
                      width="12"
                      src="https://bkmedia.bakingo.com/ssr-static/selectCity.svg"
@@ -60,7 +469,93 @@
                </div>
             </div>
 
-            <div class="w-[30rem] flex items-center justify-end">
+            <div
+               class="sm:hidden p-2 w-[6rem] flex gap-1 items-center justify-between"
+            >
+               <svg
+                  fill="#000000"
+                  height="24px"
+                  width="24px"
+                  version="1.1"
+                  id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 488.4 488.4"
+                  xml:space="preserve"
+               >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                     id="SVGRepo_tracerCarrier"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                     <g>
+                        <g>
+                           <path
+                              d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6 s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2 S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7 S381.9,104.65,381.9,203.25z"
+                           ></path>
+                        </g>
+                     </g>
+                  </g>
+               </svg>
+               <svg
+                  width="30px"
+                  height="30px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+               >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                     id="SVGRepo_tracerCarrier"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                     <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                        stroke="#000000"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                     ></path>
+                  </g>
+               </svg>
+               <svg
+                  width="36px"
+                  height="36px"
+                  viewBox="0 -0.5 25 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+               >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                     id="SVGRepo_tracerCarrier"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                     <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M5.51132 9.177L6.27532 18.177C6.34062 19.1879 7.16948 19.9803 8.18232 20H16.8253C17.8378 19.9798 18.6661 19.1875 18.7313 18.177L19.4953 9.177C19.5542 8.63047 19.3817 8.08424 19.0196 7.67066C18.6575 7.25708 18.1388 7.01389 17.5893 7H7.41732C6.8678 7.01389 6.34917 7.25708 5.98707 7.67066C5.62497 8.08424 5.45246 8.63047 5.51132 9.177Z"
+                        stroke="#000000"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                     ></path>
+                     <path
+                        d="M16.703 6.66154C16.5161 7.03118 16.6642 7.48236 17.0338 7.66929C17.4035 7.85621 17.8547 7.7081 18.0416 7.33846L16.703 6.66154ZM17.3515 5.71218L18.0095 5.35226V5.35226L17.3515 5.71218ZM16.2783 5L16.3543 4.25386C16.3291 4.25129 16.3037 4.25 16.2783 4.25V5ZM8.72831 5V4.25C8.70292 4.25 8.67755 4.25129 8.6523 4.25386L8.72831 5ZM7.65513 5.71218L6.99714 5.35226L6.99714 5.35226L7.65513 5.71218ZM6.96502 7.33846C7.15195 7.7081 7.60313 7.85621 7.97277 7.66929C8.34241 7.48236 8.49052 7.03118 8.3036 6.66154L6.96502 7.33846ZM10.7533 11C10.7533 10.5858 10.4175 10.25 10.0033 10.25C9.5891 10.25 9.25331 10.5858 9.25331 11H10.7533ZM10.0033 11.5H9.25331H10.0033ZM15.7533 11C15.7533 10.5858 15.4175 10.25 15.0033 10.25C14.5891 10.25 14.2533 10.5858 14.2533 11H15.7533ZM18.0416 7.33846C18.3586 6.71151 18.3466 5.96863 18.0095 5.35226L16.6935 6.0721C16.7935 6.25502 16.7971 6.47548 16.703 6.66154L18.0416 7.33846ZM18.0095 5.35226C17.6723 4.73588 17.0533 4.32507 16.3543 4.25386L16.2023 5.74614C16.4097 5.76727 16.5934 5.88919 16.6935 6.0721L18.0095 5.35226ZM16.2783 4.25H8.72831V5.75H16.2783V4.25ZM8.6523 4.25386C7.95335 4.32507 7.3343 4.73588 6.99714 5.35226L8.31313 6.0721C8.41318 5.88919 8.5969 5.76727 8.80432 5.74614L8.6523 4.25386ZM6.99714 5.35226C6.65998 5.96863 6.64797 6.71151 6.96502 7.33846L8.3036 6.66154C8.20951 6.47548 8.21307 6.25502 8.31313 6.0721L6.99714 5.35226ZM9.25331 11V11.5H10.7533V11H9.25331ZM9.25331 11.5C9.25331 13.2949 10.7084 14.75 12.5033 14.75V13.25C11.5368 13.25 10.7533 12.4665 10.7533 11.5H9.25331ZM12.5033 14.75C14.2982 14.75 15.7533 13.2949 15.7533 11.5H14.2533C14.2533 12.4665 13.4698 13.25 12.5033 13.25V14.75ZM15.7533 11.5V11H14.2533V11.5H15.7533Z"
+                        fill="#000000"
+                     ></path>
+                  </g>
+               </svg>
+            </div>
+
+            <div class="hidden sm:flex w-[30rem] mr-4 items-center justify-end">
                <div
                   id="search"
                   class="w-[80%] flex items-center gap-4 rounded-lg border pr-3 pl-6 py-3 bg-[#f4f4f4]"
@@ -74,17 +569,34 @@
                </div>
             </div>
 
-            <div id="right_head" class="flex gap-8 font-medium text-[13px]">
+            <div
+               id="right_head"
+               class="hidden sm:flex gap-8 font-medium text-[13px]"
+            >
                <div class="flex flex-col items-center gap-1.5">
-                  <img width="22" src="../../images/trackData.svg" alt="" />
+                  <img
+                     src="../../images/trackData.svg"
+                     alt=""
+                     class="w-[1.4rem] h-[1.4rem]"
+                  />
                   <p class="tracking-wider">Track Order</p>
                </div>
                <div class="flex flex-col items-center gap-1.5">
-                  <img width="22" src="../../images/cart3.svg" alt="" />
+                  <img
+                     width="22"
+                     src="../../images/cart3.svg"
+                     alt=""
+                     class="w-[1.4rem] h-[1.4rem]"
+                  />
                   <p class="tracking-wider">Cart</p>
                </div>
                <div class="flex flex-col items-center gap-1.5">
-                  <img width="22" src="../../images/Account.svg" alt="" />
+                  <img
+                     width="22"
+                     src="../../images/Account.svg"
+                     alt=""
+                     class="w-[1.4rem] h-[1.4rem]"
+                  />
                   <p class="text-[rgb(232,25,81)]">Login/Signup</p>
                </div>
             </div>
@@ -92,7 +604,7 @@
 
          <!-- ~ dropdown navbar -->
          <div
-            class="w-full bg-white px-36 flex items-center justify-between text-xs border text-slate-800 font-medium shadow-md"
+            class="invisible sm:visible w-full bg-white px-4 md:px-12 lg:px-36 flex gap-2 items-center justify-between text-xs text-nowrap border text-slate-800 font-medium shadow-md"
          >
             <div class="cakes-tab relative py-3 group cursor-pointer">
                Cakes
@@ -267,11 +779,11 @@
 
       <!-- ~ page title -->
       <div
-         class="mt-32 bg-[#f8f8f8] w-full h-[4rem] flex items-center justify-between p-10 px-[5.2rem]"
+         class="mt-24 sm:mt-36 lg:mt-32 bg-[#f8f8f8] w-full h-[4rem] flex items-center justify-between p-10 px-4 sm:px-[5.2rem]"
       >
          <h1 class="text-3xl font-bold text-[#251d34]">Pinata Cakes</h1>
          <div
-            class="flex gap-1 flex-col items-center border border-slate-200 px-4 py-2 rounded-lg bg-white text-xs font-medium"
+            class="hidden sm:flex gap-1 flex-col items-center border border-slate-200 px-4 py-2 rounded-lg bg-white text-xs font-medium"
          >
             <div class="flex items-center justify-center gap-1">
                <div
@@ -1851,16 +2363,20 @@
       </div>
 
       <!-- ~ recently viewed section -->
-      <div class="flex flex-col justify-center items-center gap-10 mt-16">
-         <h1 class="text-3xl font-base text-slate-800">
+      <div
+         class="flex flex-col justify-center items-center gap-10 mt-16 w-full px-6 sm:px-12"
+      >
+         <h1
+            class="text-2xl sm:text-3xl text-center text-nowrap font-base text-slate-800"
+         >
             Recently Viewed Products
          </h1>
          <div
-            class="max-w-full flex flex-wrap justify-between items-center gap-8 pb-7"
+            class="max-w-full no-scrollbar flex overflow-x-scroll justify-between items-center gap-8 pb-7"
          >
             <!-- single card -->
             <div
-               class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden"
+               class="relative min-w-[15.7rem] min-h-[203px] border rounded-md overflow-hidden"
             >
                <img
                   src="https://bkmedia.bakingo.com/sq-romantic-pinata-pineapple-cake-850gm-pina2164pine-A_0.jpg?tr=w-320,h-320,dpr-1.5,q-70"
@@ -1915,7 +2431,7 @@
 
             <!-- single card -->
             <div
-               class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden"
+               class="relative min-w-[15.7rem] min-h-[203px] border rounded-md overflow-hidden"
             >
                <img
                   src="https://bkmedia.bakingo.com/adorable-unicorn-butterscotch-pinata-cakepina3602butt_A.jpg?tr=w-320,h-320,dpr-1.5,q-70"
@@ -1970,7 +2486,7 @@
 
             <!-- single card -->
             <div
-               class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden"
+               class="relative min-w-[15.7rem] min-h-[203px] border rounded-md overflow-hidden"
             >
                <img
                   src="https://bkmedia.bakingo.com/sq-birthday-chocolate-overload-pinata-cake-750gm-pina2163choc-A_0.jpg?tr=w-320,h-320,dpr-1.5,q-70"
@@ -2025,7 +2541,7 @@
 
             <!-- single card -->
             <div
-               class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden"
+               class="relative min-w-[15.7rem] min-h-[203px] border rounded-md overflow-hidden"
             >
                <img
                   src="https://bkmedia.bakingo.com/sq-heart-shaped-pinata-cake-400gm-pina1811choc-A_1.jpg?tr=w-320,h-320,dpr-1.5,q-70"
@@ -3509,179 +4025,176 @@
                >Load More Review</a
             >
          </div>
+      </div>
 
-         <!--  Information & FAQ Section-->
-         <div class="pt-4 text-sm text-gray-500 font-normal">
-            <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
-               Looking For Hammer Cake? Bakingo Got You Covered
-            </h1>
-            <p class="pb-3">
-               The world is gushing over Pinata cake, and so we have added this
-               fun cake to our collection. If you want to order a Pinata cake
-               with a hammer online, Bakingo is your go-to bakery. With every
-               pinata cake, a wooden hammer is provided to break the chocolate
-               shell to get the cake inside; this is why it is also called
-               hammer cake.
-            </p>
-            <p>
-               Pinata Cakes from Bakingo are the ideal choice for various
-               occasions like birthdays and anniversaries. Crafted with the
-               finest ingredients and baked to perfection, these cakes are a
-               testament to our commitment to quality. The joy of smashing a
-               cake with a hammer adds a fun twist to your parties, ensuring
-               your guests will remember your celebration for years to come.
-               Experience a cake with a hammer and let your celebration begin.
-            </p>
-            <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
-               Variety Of Pinata Cake With Hammer Available At Bakingo
-            </h1>
-            <p>
-               Bakingo has been awarded as the best eggless cake shop because
-               here you will find tasty, and trending cakes baked with quality
-               ingredients. You can order the trending pinata cake with a hammer
-               online. Choose any of the pinata cakes and you will get a sturdy
-               wooden hammer along with it to break the shell of the pinata
-               cake. Later, you can use the hammer for any other purpose. A
-               variety of pinata cakes online are available at Bakingo. You can
-               buy a 3D heart-shaped pinata cake with gems and chocolates for an
-               anniversary or any romantic occasion. We are the
-               <span
-                  ><a href="#" class="text-blue-400 hover:text-red-300"
-                     >best bakery shop</a
-                  ></span
-               >
-               from where you can order ball-shaped pinata cakes,
-               basket-ball-themed pinata cakes, and tier pinata cakes. Thus,
-               Bakingo is your go-to shop for ordering
-               <span
-                  ><a href="#" class="text-blue-400 hover:text-red-300">
-                     pinata cakes online in Mumbai</a
-                  ></span
-               >
-               anytime, anywhere.
-            </p>
-            <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
-               Buy Pinata Cakes Online Via Bakingo For Any Occasion
-            </h1>
-            <p class="pb-3">
-               Since the lockdown, so many trends have taken over social media
-               and gone viral. And now a new trend of pinata cakes is winning
-               hearts. Pinata cake or 'Smash' is a heart-shaped cake with a
-               hammer. This cake is the new food trend that has been going viral
-               on social media since Valentine's. The word 'pinata' originally
-               comes from Spanish, which roughly translates to 'pot'. The
-               tradition of 'pinata' can be traced back to North America at
-               birthdays and other festivities. The concept of this pinata is
-               introduced to give the simple birthday cake an interesting twist.
-               Available in a wide range of flavors including chocolate pinata
-               cake, vanilla pinata cake, etc. this cake will never fail to
-               amaze you.
-            </p>
-            <p class="pb-3">
-               These 3D-looking pinata cakes online have taken the internet by
-               storm for a good reason. They are incredibly fun to make and can
-               be filled with anything you want for a great surprise.
-            </p>
-            <p>
-               Amaze your loved ones when you slice out the cake and let the
-               colorful candies spill out. Wondering how? Bakingo, the
-               FSSAI-certified bakery is now following the trend with a wide
-               range of pinata cakes online that are baked with the best
-               ingredients from our expert bakers. Visit the website and simply
-               place your order and get instant online pinata cake delivery.
-            </p>
-            <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
-               Order Pinata Cake With Hammer Online At Best Price
-            </h1>
-            <p class="pb-3">
-               Pinata cakes are a trending cake option. Pinata cakes make
-               celebrations exciting due to their uniqueness and sweet surprise
-               inside. Bakingo offers pinata cake with hammer. With each pinata
-               cake, we provide a wooden hammer for you to smash the cake and
-               devour it. On our website, you can find a wide variety of pinata
-               cakes, such as round-shaped pinata cakes, heart-shaped pinata
-               cakes, and designer pinata cakes. Our pinata cakes are filled
-               with creamy and flavorful cakes inside. The pinata cake with
-               hammer price starts at Rs. 999/-. Also, we have gem-filled pinata
-               cakes in pineapple and chocolate flavours.
-            </p>
-            <p>
-               You can order pinata cake with a hammer for birthdays,
-               anniversaries, Father’s Day, Valentine’s Day, baby showers, or
-               any other occasion. You can easily place an order for a pinata
-               cake on our website or app and get it delivered to your doorstep.
-               With our standard cake delivery, you can enjoy free shipping
-               benefits. Pay only the pinata cake price you have ordered and
-               relish the goodness.
-            </p>
-            <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
-               Send Pinata Cake Online On Same Day Or Midnight Across India
-            </h1>
-            <p>
-               Celebrations become more exciting and memorable with the help of
-               cakes, and nothing’s better than a yummy cake at midnight.
-               Sending the cake at midnight to surprise your loved ones is a
-               great feeling, and we are here to offer you an online same-day or
-               midnight cake delivery across India. For instance, if a birthday
-               of loved ones is around, send a birthday pinata cake and notch up
-               the celebrations with Bakingo. Life is all about these moments of
-               happiness where you live a little more. So, buy a pinata cake as
-               a birthday or anniversary gift for your loved ones. We are known
-               for our timely offers, and you will be pleased with our
-               hassle-free services.
-            </p>
+      <!--  ~ information & FAQ section-->
+      <div
+         class="pt-4 text-sm text-gray-500 font-normal px-4 sm:px-32 max-w-full"
+      >
+         <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
+            Looking For Hammer Cake? Bakingo Got You Covered
+         </h1>
+         <p class="pb-3">
+            The world is gushing over Pinata cake, and so we have added this fun
+            cake to our collection. If you want to order a Pinata cake with a
+            hammer online, Bakingo is your go-to bakery. With every pinata cake,
+            a wooden hammer is provided to break the chocolate shell to get the
+            cake inside; this is why it is also called hammer cake.
+         </p>
+         <p>
+            Pinata Cakes from Bakingo are the ideal choice for various occasions
+            like birthdays and anniversaries. Crafted with the finest
+            ingredients and baked to perfection, these cakes are a testament to
+            our commitment to quality. The joy of smashing a cake with a hammer
+            adds a fun twist to your parties, ensuring your guests will remember
+            your celebration for years to come. Experience a cake with a hammer
+            and let your celebration begin.
+         </p>
+         <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
+            Variety Of Pinata Cake With Hammer Available At Bakingo
+         </h1>
+         <p>
+            Bakingo has been awarded as the best eggless cake shop because here
+            you will find tasty, and trending cakes baked with quality
+            ingredients. You can order the trending pinata cake with a hammer
+            online. Choose any of the pinata cakes and you will get a sturdy
+            wooden hammer along with it to break the shell of the pinata cake.
+            Later, you can use the hammer for any other purpose. A variety of
+            pinata cakes online are available at Bakingo. You can buy a 3D
+            heart-shaped pinata cake with gems and chocolates for an anniversary
+            or any romantic occasion. We are the
+            <span
+               ><a href="#" class="text-blue-400 hover:text-red-300"
+                  >best bakery shop</a
+               ></span
+            >
+            from where you can order ball-shaped pinata cakes,
+            basket-ball-themed pinata cakes, and tier pinata cakes. Thus,
+            Bakingo is your go-to shop for ordering
+            <span
+               ><a href="#" class="text-blue-400 hover:text-red-300">
+                  pinata cakes online in Mumbai</a
+               ></span
+            >
+            anytime, anywhere.
+         </p>
+         <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
+            Buy Pinata Cakes Online Via Bakingo For Any Occasion
+         </h1>
+         <p class="pb-3">
+            Since the lockdown, so many trends have taken over social media and
+            gone viral. And now a new trend of pinata cakes is winning hearts.
+            Pinata cake or 'Smash' is a heart-shaped cake with a hammer. This
+            cake is the new food trend that has been going viral on social media
+            since Valentine's. The word 'pinata' originally comes from Spanish,
+            which roughly translates to 'pot'. The tradition of 'pinata' can be
+            traced back to North America at birthdays and other festivities. The
+            concept of this pinata is introduced to give the simple birthday
+            cake an interesting twist. Available in a wide range of flavors
+            including chocolate pinata cake, vanilla pinata cake, etc. this cake
+            will never fail to amaze you.
+         </p>
+         <p class="pb-3">
+            These 3D-looking pinata cakes online have taken the internet by
+            storm for a good reason. They are incredibly fun to make and can be
+            filled with anything you want for a great surprise.
+         </p>
+         <p>
+            Amaze your loved ones when you slice out the cake and let the
+            colorful candies spill out. Wondering how? Bakingo, the
+            FSSAI-certified bakery is now following the trend with a wide range
+            of pinata cakes online that are baked with the best ingredients from
+            our expert bakers. Visit the website and simply place your order and
+            get instant online pinata cake delivery.
+         </p>
+         <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
+            Order Pinata Cake With Hammer Online At Best Price
+         </h1>
+         <p class="pb-3">
+            Pinata cakes are a trending cake option. Pinata cakes make
+            celebrations exciting due to their uniqueness and sweet surprise
+            inside. Bakingo offers pinata cake with hammer. With each pinata
+            cake, we provide a wooden hammer for you to smash the cake and
+            devour it. On our website, you can find a wide variety of pinata
+            cakes, such as round-shaped pinata cakes, heart-shaped pinata cakes,
+            and designer pinata cakes. Our pinata cakes are filled with creamy
+            and flavorful cakes inside. The pinata cake with hammer price starts
+            at Rs. 999/-. Also, we have gem-filled pinata cakes in pineapple and
+            chocolate flavours.
+         </p>
+         <p>
+            You can order pinata cake with a hammer for birthdays,
+            anniversaries, Father’s Day, Valentine’s Day, baby showers, or any
+            other occasion. You can easily place an order for a pinata cake on
+            our website or app and get it delivered to your doorstep. With our
+            standard cake delivery, you can enjoy free shipping benefits. Pay
+            only the pinata cake price you have ordered and relish the goodness.
+         </p>
+         <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
+            Send Pinata Cake Online On Same Day Or Midnight Across India
+         </h1>
+         <p>
+            Celebrations become more exciting and memorable with the help of
+            cakes, and nothing’s better than a yummy cake at midnight. Sending
+            the cake at midnight to surprise your loved ones is a great feeling,
+            and we are here to offer you an online same-day or midnight cake
+            delivery across India. For instance, if a birthday of loved ones is
+            around, send a birthday pinata cake and notch up the celebrations
+            with Bakingo. Life is all about these moments of happiness where you
+            live a little more. So, buy a pinata cake as a birthday or
+            anniversary gift for your loved ones. We are known for our timely
+            offers, and you will be pleased with our hassle-free services.
+         </p>
 
-            <h1 class="text-slate-600 mt-1 pt-3 text-lg font-semibold">
-               FAQs Related To Pinata Cake Delivery
-            </h1>
+         <h1 class="text-slate-600 mt-1 pt-3 text-lg font-semibold">
+            FAQs Related To Pinata Cake Delivery
+         </h1>
 
-            <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
-               Q1. What Is The Minimum Weight Required Of A Pinata Cake For 5
-               People Serving?
-            </h1>
-            <p>
-               The minimum weight required of pinata cake for serving 5 people
-               is around 1kg.
-            </p>
-            <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
-               Q2. What Flavors Are Available In Pinata Cakes?
-            </h1>
-            <p>Truffle and vanilla flavors are available in pinata cakes.</p>
-            <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
-               Q3. Do You Provide A Hammer With A Pinata Cake?
-            </h1>
-            <p>Yes, we do provide a hammer with pinata cake.</p>
-            <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
-               Q4. Can I Order A Pinata Cake For The Same Day Delivery?
-            </h1>
-            <p>Yes, Bakingo provides same-day delivery for pinata cakes.</p>
-            <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
-               Q5. Can You Deliver The Pinata Cake At Midnight? If Yes Then Is
-               There Any Specific Fee?
-            </h1>
-            <p>
-               Yes, Bakingo delivers pinata cake at midnight. You have to pay a
-               minimal charge of INR 250 INR.
-            </p>
-            <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
-               Q6. Are The Pinata Cakes Delivered By Bakingo Fresh?
-            </h1>
-            <p>
-               Yes, Bakingo completely ensures the quality of the cakes that it
-               delivers to its customers. All the cakes are prepared (and then
-               delivered)only after the orders are completely confirmed on the
-               website.
-            </p>
-            <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
-               Q7. Does Bakingo Offer Pinata Cakes Sufficient For Large
-               Gatherings?
-            </h1>
-            <p>
-               Yes, Bakingo cakes are perfect for every gathering, whether small
-               or large. You can choose whatever size you wish, from half kg
-               cakes to 4 kg cakes, that will be perfect for your celebration.
-            </p>
-         </div>
+         <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
+            Q1. What Is The Minimum Weight Required Of A Pinata Cake For 5
+            People Serving?
+         </h1>
+         <p>
+            The minimum weight required of pinata cake for serving 5 people is
+            around 1kg.
+         </p>
+         <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
+            Q2. What Flavors Are Available In Pinata Cakes?
+         </h1>
+         <p>Truffle and vanilla flavors are available in pinata cakes.</p>
+         <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
+            Q3. Do You Provide A Hammer With A Pinata Cake?
+         </h1>
+         <p>Yes, we do provide a hammer with pinata cake.</p>
+         <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
+            Q4. Can I Order A Pinata Cake For The Same Day Delivery?
+         </h1>
+         <p>Yes, Bakingo provides same-day delivery for pinata cakes.</p>
+         <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
+            Q5. Can You Deliver The Pinata Cake At Midnight? If Yes Then Is
+            There Any Specific Fee?
+         </h1>
+         <p>
+            Yes, Bakingo delivers pinata cake at midnight. You have to pay a
+            minimal charge of INR 250 INR.
+         </p>
+         <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
+            Q6. Are The Pinata Cakes Delivered By Bakingo Fresh?
+         </h1>
+         <p>
+            Yes, Bakingo completely ensures the quality of the cakes that it
+            delivers to its customers. All the cakes are prepared (and then
+            delivered)only after the orders are completely confirmed on the
+            website.
+         </p>
+         <h1 class="text-slate-600 mt-1 py-3 text-lg font-semibold">
+            Q7. Does Bakingo Offer Pinata Cakes Sufficient For Large Gatherings?
+         </h1>
+         <p>
+            Yes, Bakingo cakes are perfect for every gathering, whether small or
+            large. You can choose whatever size you wish, from half kg cakes to
+            4 kg cakes, that will be perfect for your celebration.
+         </p>
       </div>
 
       <!-- ~ quick links section -->
@@ -4150,6 +4663,7 @@
          </div>
       </footer>
 
+      <script src="./script.js"></script>
       <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
    </body>
 </html>
