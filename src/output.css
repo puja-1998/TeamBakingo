@@ -706,10 +706,6 @@ video {
   margin-top: 6rem;
 }
 
-.mt-32 {
-  margin-top: 8rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -720,10 +716,6 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
 }
 
 .block {
@@ -907,6 +899,14 @@ video {
   width: 100vw;
 }
 
+.w-\[2px\] {
+  width: 2px;
+}
+
+.w-\[20px\] {
+  width: 20px;
+}
+
 .min-w-\[15\.7rem\] {
   min-width: 15.7rem;
 }
@@ -981,6 +981,10 @@ video {
 
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1148,11 +1152,6 @@ video {
   border-top-width: 2px;
 }
 
-.border-blue-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(59 130 246 / var(--tw-border-opacity));
-}
-
 .border-green-600 {
   --tw-border-opacity: 1;
   border-color: rgb(22 163 74 / var(--tw-border-opacity));
@@ -1291,11 +1290,6 @@ video {
 .px-32 {
   padding-left: 8rem;
   padding-right: 8rem;
-}
-
-.px-36 {
-  padding-left: 9rem;
-  padding-right: 9rem;
 }
 
 .px-4 {
@@ -1536,6 +1530,14 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[2px\] {
+  font-size: 2px;
+}
+
+.text-\[20px\] {
+  font-size: 20px;
 }
 
 .font-\[500\] {
@@ -1835,14 +1837,6 @@ video {
     visibility: visible;
   }
 
-  .sm\:mt-32 {
-    margin-top: 8rem;
-  }
-
-  .sm\:mt-40 {
-    margin-top: 10rem;
-  }
-
   .sm\:mt-36 {
     margin-top: 9rem;
   }
@@ -1853,6 +1847,18 @@ video {
 
   .sm\:hidden {
     display: none;
+  }
+
+  .sm\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sm\:gap-4 {
+    gap: 1rem;
   }
 
   .sm\:px-12 {
@@ -1870,36 +1876,49 @@ video {
     padding-right: 5.2rem;
   }
 
+  .sm\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 
 @media (min-width: 768px) {
-  .md\:mt-32 {
-    margin-top: 8rem;
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .md\:px-36 {
-    padding-left: 9rem;
-    padding-right: 9rem;
-  }
-
-  .md\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+
+  .md\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .lg\:mt-32 {
     margin-top: 8rem;
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:px-36 {
