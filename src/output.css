@@ -1059,8 +1059,16 @@ video {
   row-gap: 0.375rem;
 }
 
+.gap-y-6 {
+  row-gap: 1.5rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
 }
 
 .text-wrap {
@@ -1406,6 +1414,10 @@ video {
   padding-top: 1.5rem;
 }
 
+.pl-20 {
+  padding-left: 5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1659,6 +1671,10 @@ video {
   color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
+.line-through {
+  text-decoration-line: line-through;
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -1759,6 +1775,11 @@ video {
 .hover\:text-red-300:hover {
   --tw-text-opacity: 1;
   color: rgb(252 165 165 / var(--tw-text-opacity));
+}
+
+.hover\:text-yellow-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
 .hover\:shadow-lg:hover {
