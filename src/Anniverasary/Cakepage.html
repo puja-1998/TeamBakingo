@@ -5,7 +5,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Anniversary Cakes | Order cake on Anniversary & Get ₹350 OFF</title>
       <link rel="stylesheet" href="../../output.css" />
-      <link rel="icon" href="../images/title icon.avif">
       <!-- ~ font -->
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,10 +23,10 @@
          crossorigin="anonymous"
          referrerpolicy="no-referrer"
       />
-      <!-- <link
+      <link
          rel="stylesheet"
          href="https://unpkg.com/flickity@2/dist/flickity.css"
-      /> -->
+      />
       <link rel="stylesheet" href="../flickity.css" />
       <link rel="stylesheet" href="../output.css">
       <style>
@@ -37,11 +36,10 @@
       </style>
    </head>
    <body class="font-poppins">
-      <header class="fixed top-0 left-0 right-0 z-40">
-         <nav  class="font-poppins flex justify-between items-center px-12 py-5 cursor-pointer bg-white h-auto w-screen border-b-2"
-         >
+      <header>
+         <nav class=" font-poppins flex justify-between items-center px-20 py-6 cursor-pointer  bg-white h-auto w-screen border-b-2 z-40 fixed top-0 left-0 right-0">
              <div id="logo" class="flex gap-8">
-              <a href="../index.html"><img src="../images/bakingo.svg" alt=""></a>
+              <a href="#"><img src="../images/bakingo.svg" alt=""></a>
               <div id="Location" class="flex items-center gap-1">
                  <span class="material-symbols-outlined text-[16px]">near_me</span>
                  <button class="font-medium text-sm ">Select City</button>
@@ -69,187 +67,12 @@
                  </div>
              </div>
          </nav>
-
-         
-         <!-- ~ dropdown navbar -->
-         <div
-            class="w-full bg-white px-36 flex items-center justify-between text-xs border text-slate-800 font-medium shadow-md"
-         >
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               Cakes
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <h1 class="text-sm font-semibold">Trending Cakes</h1>
-                     <ul class="flex gap-3 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="/src/Prem/pinata-cakes"> Pinata Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> Suprice Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               By Flavours
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <ul class="flex gap-3 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="#block"> Chocolate Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> Butterscotch Cakes </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               Theme Cakes
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <h1 class="text-sm font-semibold">Kids Cakes</h1>
-                     <ul class="flex gap-3 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="#block"> 1st Birthday Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> Princess Cakes </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               By Relationship
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <h1 class="text-sm font-semibold">For Him</h1>
-                     <ul class="flex gap-3 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="#block"> Cakes for Father </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> Cakes for Husband </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               Desserts
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <ul class="flex gap-3 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="#block"> All Desserts </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> Jar Cakes </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               Birthday
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <ul class="flex gap-3 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="#block"> All Birthday Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> 1st Birthday Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> Birthday Photo Cakes</a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               Anniversary
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <ul class="flex gap-2 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="#block"> All Anniversary Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> 1st Anniversary Cakes </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               Occasion
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <h1 class="text-sm font-semibold">Festive Celebrations</h1>
-                     <ul class="flex gap-2 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="#block"> Boss Day Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> Karwa Chauth Cakes </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <a href="#" class="relative cakes-tab py-3 group cursor-pointer">
-               Customized Cakes
-            </a>
-         </div>
      </header>
 
 
       <!-- ~ page title -->
       <div
-      class=" mt-36 bg-[#f8f8f8] w-full h-[4rem] flex items-center justify-between p-10 px-[5.2rem]"
+      class=" mt-24 bg-[#f8f8f8] w-full h-[4rem] flex items-center justify-between p-10 px-[5.2rem]"
       >
          <h1 class="text-3xl font-bold text-[#251d34]">Anniversary Cakes</h1>
          <div
@@ -438,7 +261,6 @@
                   alt="filled-heart"
                   class="absolute top-2 right-2 cursor-pointer"
                />
-               <p class="absolute flex justify-center items-center bg-red-400  rounded-br-full h-6 font-semibold text-[12px] w-24 top-0 left-0 cursor-pointer text-white">Best Seller</p>
                <div class="w-full p-2 pb-3 flex flex-col gap-1">
                   <div class="flex items-center gap-1">
                      <div
@@ -596,7 +418,6 @@
                   alt="filled-heart"
                   class="absolute top-2 right-2 cursor-pointer"
                />
-               <p class="absolute flex justify-center items-center bg-red-400  rounded-br-full h-6 font-semibold text-[12px] w-24 top-0 left-0 cursor-pointer text-white">Best Seller</p>
                <div class="w-full p-2 pb-3 flex flex-col gap-1">
                   <div class="flex items-center gap-1">
                      <div
@@ -837,7 +658,6 @@
               alt="filled-heart"
               class="absolute top-2 right-2 cursor-pointer"
            />
-           <p class="absolute flex justify-center items-center bg-red-400  rounded-br-full h-6 font-semibold text-[12px] w-24 top-0 left-0 cursor-pointer text-white">Best Seller</p>
            <div class="w-full p-2 pb-3 flex flex-col gap-1">
               <div class="flex items-center gap-1">
                  <div
@@ -919,7 +739,6 @@
             alt="filled-heart"
             class="absolute top-2 right-2 cursor-pointer"
          />
-         <p class="absolute flex justify-center items-center bg-red-400  rounded-br-full h-6 font-semibold text-[12px] w-24 top-0 left-0 cursor-pointer text-white">Best Seller</p>
          <div class="w-full p-2 pb-3 flex flex-col gap-1">
             <div class="flex items-center gap-1">
                <div
@@ -1084,7 +903,6 @@
        alt="filled-heart"
        class="absolute top-2 right-2 cursor-pointer"
     />
-    <p class="absolute flex justify-center items-center bg-red-400  rounded-br-full h-6 font-semibold text-[12px] w-24 top-0 left-0 cursor-pointer text-white">Best Seller</p>
     <div class="w-full p-2 pb-3 flex flex-col gap-1">
        <div class="flex items-center gap-1">
           <div
@@ -1318,7 +1136,6 @@
        alt="filled-heart"
        class="absolute top-2 right-2 cursor-pointer"
     />
-    <p class="absolute flex justify-center items-center bg-red-400  rounded-br-full h-6 font-semibold text-[12px] w-24 top-0 left-0 cursor-pointer text-white">Best Seller</p>
     <div class="w-full p-2 pb-3 flex flex-col gap-1">
        <div class="flex items-center gap-1">
           <div
@@ -1483,7 +1300,6 @@ class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden"
    alt="filled-heart"
    class="absolute top-2 right-2 cursor-pointer"
 />
-<p class="absolute flex justify-center items-center bg-red-400  rounded-br-full h-6 font-semibold text-[12px] w-24 top-0 left-0 cursor-pointer text-white">Best Seller</p>
 <div class="w-full p-2 pb-3 flex flex-col gap-1">
    <div class="flex items-center gap-1">
       <div
@@ -1648,7 +1464,6 @@ src="https://media.bakingo.com/bakingo-ssr/static/media/Love-Icon.3c39d64b.svg"
 alt="filled-heart"
 class="absolute top-2 right-2 cursor-pointer"
 />
-<p class="absolute flex justify-center items-center bg-red-400  rounded-br-full h-6 font-semibold text-[12px] w-24 top-0 left-0 cursor-pointer text-white">Best Seller</p>
 <div class="w-full p-2 pb-3 flex flex-col gap-1">
 <div class="flex items-center gap-1">
   <div
@@ -1880,7 +1695,6 @@ class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden"
    alt="filled-heart"
    class="absolute top-2 right-2 cursor-pointer"
 />
-<p class="absolute flex justify-center items-center bg-red-400  rounded-br-full h-6 font-semibold text-[12px] w-24 top-0 left-0 cursor-pointer text-white">Best Seller</p>
 <div class="w-full p-2 pb-3 flex flex-col gap-1">
    <div class="flex items-center gap-1">
       <div
@@ -2039,7 +1853,6 @@ class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden"
  alt="filled-heart"
  class="absolute top-2 right-2 cursor-pointer"
 />
-<p class="absolute flex justify-center items-center bg-red-400  rounded-br-full h-6 font-semibold text-[12px] w-24 top-0 left-0 cursor-pointer text-white">Best Seller</p>
 <div class="w-full p-2 pb-3 flex flex-col gap-1">
  <div class="flex items-center gap-1">
     <div
@@ -2177,11 +1990,9 @@ class="absolute top-2 right-2 cursor-pointer"
          <h1 class="text-4xl font-normal text-gray-700">Recently Viewed Products</h1>
          <div class="max-w-7xl flex flex-wrap justify-center items-center gap-8 pb-7">
              <div class="border rounded-lg cursor-pointer hover:shadow-lg">
-                 <div class="max-w-72 relative">
+                 <div class="max-w-72">
                      <img src="https://bkmedia.bakingo.com/tantalising-tulip-cake-them2833flav-A.jpg" width="" alt="cake" class="w-full rounded-tl-lg rounded-tr-lg">
-                     <p class="absolute flex justify-center items-center bg-red-400  rounded-br-full h-6 font-semibold text-[12px] w-24 top-0 left-0 cursor-pointer text-white">Best Seller</p>
-                  </div>
-                 
+                 </div>
                  <div class="p-2 flex flex-col gap-1">
                      <div class="flex items-center gap-1">
                          <div class="w-[10px] h-[10px] border border-green-600 flex items-center justify-center">
@@ -2227,10 +2038,9 @@ class="absolute top-2 right-2 cursor-pointer"
              </div>
 
              <div class="border rounded-lg cursor-pointer hover:shadow-lg">
-                 <div class="max-w-72 relative">
+                 <div class="max-w-72">
                      <img src="https://bkmedia.bakingo.com/sq-spherical-chocolate-pinata-cake-pina2250choc-A_0.jpg" width="" alt="cake" class="w-full rounded-tl-lg rounded-tr-lg">
-                     <p class="absolute flex justify-center items-center bg-red-400  rounded-br-full h-6 font-semibold text-[12px] w-24 top-0 left-0 cursor-pointer text-white">Best Seller</p>
-                  </div>
+                 </div>
                  <div class="p-2 flex flex-col gap-1">
                      <div class="flex items-center gap-1">
                          <div class="w-[10px] h-[10px] border border-green-600 flex items-center justify-center">
@@ -2252,10 +2062,9 @@ class="absolute top-2 right-2 cursor-pointer"
              </div>
 
              <div class="border rounded-lg cursor-pointer hover:shadow-lg">
-                 <div class="max-w-72 relative">
+                 <div class="max-w-72">
                      <img src="https://bkmedia.bakingo.com/hbd-cutesy-teddy-cake-them3268flav-A_0.jpg" width="" alt="cake" class="w-full rounded-tl-lg rounded-tr-lg">
-                     <p class="absolute flex justify-center items-center bg-red-400  rounded-br-full h-6 font-semibold text-[12px] w-24 top-0 left-0 cursor-pointer text-white">Best Seller</p>
-                  </div>
+                 </div>
                  <div class="p-2 flex flex-col gap-1">
                      <div class="flex items-center gap-1">
                          <div class="w-[10px] h-[10px] border border-green-600 flex items-center justify-center">
@@ -2303,10 +2112,9 @@ class="absolute top-2 right-2 cursor-pointer"
 
            
            <div class="border rounded-lg cursor-pointer hover:shadow-lg">
-            <div class="max-w-72 relative">
+            <div class="max-w-72">
                 <img src="https://bkmedia.bakingo.com/textured-two-tier-floral-cake-them3232flav-A_2.jpg?tr=w-320,h-320,q-70" width="" alt="cake" class="w-full rounded-tl-lg rounded-tr-lg">
-                <p class="absolute flex justify-center items-center bg-red-400  rounded-br-full h-6 font-semibold text-[12px] w-24 top-0 left-0 cursor-pointer text-white">Best Seller</p>
-               </div>
+            </div>
             <div class="p-2 flex flex-col gap-1">
                 <div class="flex items-center gap-1">
                     <div class="w-[10px] h-[10px] border border-green-600 flex items-center justify-center">
@@ -2331,18 +2139,18 @@ class="absolute top-2 right-2 cursor-pointer"
 
 
      <!-- Reviews & Ratings -->
-    <div class="font-poppins mt-10 px-32 ">
+    <div class="font-poppins mt-10 px-32">
       <h1 class="flex justify-center items-center font-normal text-[38px]">
         All Reviews & Ratings
       </h1>
-      <div class="flex justify-center items-center py-6 gap-10">
+      <div class="flex justify-center items-center py-6 gap-4">
         <div class="flex gap-2 items-center">
           <img src="../images/review-stars.svg" alt="review" />
-          <span class="font-semibold text-[14px]">4.9 out of 5</span>
+          <span class="font-semibold text-[15px]">4.9 out of 5</span>
         </div>
         <div class="flex gap-2 items-center">
           <img src="../images/recomended.svg" alt="recomended" />
-          <span class="font-semibold text-[14px]">98 % Recommended</span>
+          <span class="font-semibold text-[15px]">98 % Recommended</span>
         </div>
       </div>
 
@@ -2382,7 +2190,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -2439,7 +2247,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -2498,7 +2306,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -2555,7 +2363,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -2614,7 +2422,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -2678,7 +2486,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -2739,7 +2547,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -2799,7 +2607,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -2856,7 +2664,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -2916,7 +2724,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -2983,7 +2791,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -3048,7 +2856,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -3107,7 +2915,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -3167,7 +2975,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -3226,7 +3034,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -3283,7 +3091,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -3346,7 +3154,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -3410,7 +3218,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -3467,7 +3275,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -3532,7 +3340,7 @@ class="absolute top-2 right-2 cursor-pointer"
                       >star</span
                     >
                   </div>
-                  <div class="text-green-500 text-xs font-normal">
+                  <div class="text-green-500 text-sm font-normal">
                     <p>Recommended</p>
                   </div>
                 </div>
@@ -3578,28 +3386,19 @@ class="absolute top-2 right-2 cursor-pointer"
         <h1 class="py-3 text-lg font-semibold">Variety Of Anniversary Cakes At Bakingo</h1>
         <p>At Bakingo, we have a wide variety of anniversary cakes so that you can make your best pick. From much-loved flavours like butterscotch, chocolate, strawberry, blueberry, black forest, red velvet, choco truffle, plum cake, etc., to some of the classic flavours like vanilla, pineapple, fruit etc., we provide online delivery of all the freshly baked happy anniversary cakes, at your doorstep. Browse our trendy and blissful anniversary cake online and make the celebration more joyous. Order a fresh strawberry anniversary cake at just Rs 649/ and woo your beloved partner. Also, when it comes to discussing marriage day, how can we forget to mention our heart-shaped anniversary cakes. A heart-shaped cake is one of a kind picks when looking for a wedding anniversary cake! Express how much you love your spouse since he/she entered your life with our happy marriage anniversary cakes.</p>
         <h1 class="py-3 text-lg font-semibold">Special Marriage Anniversary Cakes</h1>
-        <p>A special wedding anniversary cake is a must to honour the day of love when you both exchanged your vows to have a happily ever after. A special anniversary cake by Bakingo will indeed add glitter to your party and celebration. Your companionship deserves some perfectly baked sweetness frosted with delicious cream that you can slice through together to have bites of love. And special anniversary cakes in our collection do the same for you. No matter how many years of togetherness, Bakingo is sure to bless you with the best cake in town! We have beautifully crafted marriage day cakes for you as you hit one of the most precious years of togetherness in love.</p>
-        <p class="py-3">●<a href="./AnniversaryCakes.html" class="text-blue-400 hover:text-red-300"> 1st Anniversary Cakes</a> - Firsts are undoubtedly super special, so make sure to give your partner some butterflies in the stomach as you mark the occasion with our <span class="text-blue-400 hover:text-red-400">personalised anniversary cake</span>  (which is a special cake with photo), love-infused delight, paradise red-gained, love blossomed, cheers to togetherness, alive by love and much more. In addition to the first anniversary cakes, we also offer 3rd anniversary cake and so much more to explore, pick and enjoy.</p>
-        <p>● <a href="./AnniversaryCakes.html" class="text-blue-400 hover:text-red-300">5th Anniversary Cakes</a> - 5 down, forever to go! With this lovely aim in mind, cherish all your personal memories by taking a walk down memory lane. From making your spouse feel super special with some of our anniversary cake with photo options to other appealing fondant creations. Double up the whole happiness by ordering a wedding anniversary photo cake for your 5th anniversary.</p>
-         <p class="py-3">● <a href="./AnniversaryCakes.html" class="text-blue-400 hover:text-red-300">25th Anniversary Cakes</a> - Celebrate the joy of stepping into your 25th year of togetherness with our heavenly good Silver Anniversary cakes that comes along with midnight delivery as well as same-day delivery to rejoice in the fullest capacity when it calls for the anniversary celebrations.</p>
-        <p>● <a href="./AnniversaryCakes.html" class="text-blue-400 hover:text-red-300">50th Anniversary Cakes</a> - "Ever thine, ever mine, ever ours." Wow! That is something really big and special at the same time. So, make sure to celebrate this special milestone of your life, your mom and dad's anniversary, or your relative's anniversary over Bakingo's love-crafted <span class="text-blue-400 hover:text-red-400">3 Tier Cakes</span>.</p>
-        <p class="py-3">These 3D-looking anniversary cakes online have taken the internet by storm for a good reason. They are incredibly fun to make and can be filled with anything you want for a great surprise.</p>
+        <p class="pb-3">A special wedding anniversary cake is a must to honour the day of love when you both exchanged your vows to have a happily ever after. A special anniversary cake by Bakingo will indeed add glitter to your party and celebration. Your companionship deserves some perfectly baked sweetness frosted with delicious cream that you can slice through together to have bites of love. And special anniversary cakes in our collection do the same for you. No matter how many years of togetherness, Bakingo is sure to bless you with the best cake in town! We have beautifully crafted marriage day cakes for you as you hit one of the most precious years of togetherness in love.</p>
+        <p class="pb-3">These 3D-looking pinata cakes online have taken the internet by storm for a good reason. They are incredibly fun to make and can be filled with anything you want for a great surprise.</p>
         <p>Amaze your loved ones when you slice out the cake and let the colorful candies spill out. Wondering how? Bakingo, the FSSAI-certified bakery is now following the trend with a wide range of pinata cakes online that are baked with the best ingredients from our expert bakers. Visit the website and simply place your order and get instant online pinata cake delivery.</p>
         <h1 class="py-3 text-lg font-semibold">Avail Free Doorstep Delivery Over Bakingo’s Marriage Anniversary Cake Range</h1>
         <p class="pb-3">Without having a freshly baked show-stopping cake for the anniversary, your celebrations won’t be joyous enough. So, pick your favorite wedding anniversary cake to pamper your loved ones or your spouse from a reputed FSSAI-certified bakery called Bakingo. It is high time to make your special one with toothsome wedding anniversary cakes online only by Bakingo. What sets Bakingo’s cakes apart from others is its unique anniversary cake design, affordable pricing, and free doorstep delivery services. Bakingo offers same-day, midnight, early morning, express and fixed on-time delivery over its happy wedding anniversary cake collection to make it even happier. Toh phir intezar kis baat ka? Abhi एनिवर्सरी केक order karein Bakingo se!</p>
         <p>You can order pinata cake with a hammer for birthdays, anniversaries, Father’s Day, Valentine’s Day, baby showers, or any other occasion. You can easily place an order for a pinata cake on our website or app and get it delivered to your doorstep. With our standard cake delivery, you can enjoy free shipping benefits. Pay only the pinata cake price you have ordered and relish the goodness.</p>
         <h1 class="py-3 text-lg font-semibold">Personalize Your Anniversary Cake With Exclusive Message Cards</h1>
-        <p>Another opportunity that you relish with Bakingo is the addition of an anniversary card that you get to send along with your 1st, 2nd, 3rd anniversary or any year anniversary cake or the <span class="text-blue-400 hover:text-red-400">anniversary cake for parents</span>. Wondrously infusing emotions, it gives the couple or your partner a moment full of butterflies in the stomach and goosebumps on the skin. Make their heart smile the widest by ordering the most happy-lovely and beautifully designed anniversary theme cake and a lovely message card. Here are a few of the anniversary quote options that you can use to make their heart happy!</p>
-        <p> 1. You're the one my heart talks about</p>
-        <p>2. Here's to love and laughter and happily ever after!</p>
-        <p>3. Today we celebrate the best decision of our lives!</p>
-        <p>4. Layers of love, respect, and togetherness.</p>
-        <p>5. You are the cake of my heart!</p>
-   
+        <p>Another opportunity that you relish with Bakingo is the addition of an anniversary card that you get to send along with your 1st, 2nd, 3rd anniversary or any year anniversary cake or the anniversary cake for parents. Wondrously infusing emotions, it gives the couple or your partner a moment full of butterflies in the stomach and goosebumps on the skin. Make their heart smile the widest by ordering the most happy-lovely and beautifully designed anniversary theme cake and a lovely message card. Here are a few of the anniversary quote options that you can use to make their heart happy!</p>
+
         <h1 class="pt-3 text-lg font-semibold">FAQs Related To Anniversary Cakes</h1>
        
         <h1 class="py-3 text-lg font-semibold">Q1. Can I Get A Cake For The First Anniversary?</h1>
-        <p>Surely, you can! From choosing the personalised anniversary cake love-infused delight to paradise red gained to cheers to togetherness to much more, your first anniversary shall be made more memorable over these cakes.</p>
+        <p>Surely, you can! From choosing the personalised anniversary cake to love-infused delight to paradise red gained to cheers to togetherness to much more, your first anniversary shall be made more memorable over these cakes.</p>
         <h1 class="py-3 text-lg font-semibold">Q2. How Can I Trust The Quality Of Cake Delivered By Bakingo?</h1>
         <p>All our cakes are baked with love and fresh ingredients that give a heavenly taste. Don't just take our word for it; rather, try it on your own to know that we don't compromise on the quality when it comes to all of our cakes and other desserts.</p>
         <h1 class="py-3 text-lg font-semibold">Q3. Do You Make An Egg Or Eggless Anniversary Cake?</h1>
@@ -3849,10 +3648,56 @@ class="absolute top-2 right-2 cursor-pointer"
         </div>    
     </div>
 
+    <!-- Read Some section -->
+    <div class="flex flex-col justify-center items-center gap-10">
+        <h1 class="text-4xl font-semibold text-gray-700">Read Some Of Our Recent Blog Post</h1>
+        <div class="max-w-7xl flex flex-wrap justify-center items-center gap-8 pb-7">
+
+            <div class="max-w-72 rounded-lg p-3 shadow-lg">
+                <div class="flex flex-col gap-3 max-w-60 max-h-fit rounded-lg cursor-pointer hover:scale-105 transition duration-500 delay-75 ease-in-out">
+                    <div class="max-w-60">
+                        <img src="https://bakingo.com/blog/wp-content/uploads/2024/08/cotton-candy-layer-cake-photo.jpg?tr=w-266,dpr-1.5,q-70" width="" alt="cake" class="w-full rounded-lg">
+                    </div>
+                    <p class="text-base font-bold pb-3">Cotton Candy Cake Recipe: A Whimsical Delight for Every Occasion</p>
+                    <p class="text-sm font-semibold text-gray-700 pb-4">If you’re searching for a cake that’s as magical as a dream, look no further than the Cotton Candy Cake. This delightful confection combines the light and airy ...</p>
+                </div>
+            </div>
+
+            <div class="max-w-72 rounded-lg p-3 shadow-lg">
+                <div class="flex flex-col gap-3 max-w-60 max-h-fit rounded-lg cursor-pointer hover:scale-105 transition duration-500 delay-75 ease-in-out">
+                    <div class="max-w-60">
+                        <img src="https://bakingo.com/blog/wp-content/uploads/2024/08/games-for-teachers.jpg?tr=w-266,dpr-1.5,q-70" width="" alt="cake" class="w-full rounded-lg">
+                    </div>
+                    <p class="text-base font-bold pb-3">10 Fun Games for Teachers to Celebrate Teachers’ Day with a Twist</p>
+                    <p class="text-sm font-semibold text-gray-700 pb-1">Teachers’ Day is a special occasion to honor and celebrate the educators who shape our lives. While heartfelt messages and gifts are a wonderful way to show app...</p>
+                </div>
+            </div>
+
+            <div class="max-w-72 rounded-lg p-3 shadow-lg">
+                <div class="flex flex-col gap-3 max-w-60 max-h-fit rounded-lg cursor-pointer hover:scale-105 transition duration-500 delay-75 ease-in-out">
+                    <div class="max-w-60">
+                        <img src="https://bakingo.com/blog/wp-content/uploads/2024/08/lemon-drizzle-cake-recepie.jpg?tr=w-266,dpr-1.5,q-70" width="" alt="cake" class="w-full rounded-lg">
+                    </div>
+                    <p class="text-base font-bold pb-3">Easy and Refreshing Lemon Drizzle Cake Recipe for Any Occasion</p>
+                    <p class="text-sm font-semibold text-gray-700 pb-11">There’s something universally appealing about a lemon drizzle cake. Its tangy flavour and light, moist texture makes it the perfect treat whether you’re hosting...</p>
+                </div>
+            </div>
+
+            <div class="max-w-72 rounded-lg p-3 shadow-lg">
+                <div class="flex flex-col gap-3 max-w-60 max-h-fit rounded-lg cursor-pointer hover:scale-105 transition duration-500 delay-75 ease-in-out">
+                    <div class="max-w-60 flex flex-col gap-3">
+                        <img src="https://bakingo.com/blog/wp-content/uploads/2024/08/Cover-.jpg?tr=w-266,dpr-1.5,q-70" width="" alt="cake" class="w-full rounded-lg">
+                    </div>
+                    <p class="text-base font-bold pb-3">Easy Step-by-Step Raspberry Bakewell Cake Recipe</p>
+                    <p class="text-sm font-semibold text-gray-700 pb-16">There’s nothing quite like a Bakewell Cake, the rich almond flavours with plump raspberry jam; it is something from the outer world. Welcome to the delightful w...</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
-      <div class=" mt-1 cursor-default font-poppins flex h-32 px-20 items-center justify-between bg-[rgb(255,248,239)] border-b-2 border-t-2 border-red-100">
+      <div class=" mt-10 cursor-default font-poppins flex h-32 px-20 items-center justify-between bg-[rgb(255,248,239)] border-b-2 border-t-2 border-red-100">
           <div class="flex justify-between items-center gap-6">
               <div class="flex items-center font-semibold text-[13px]">
                   <img src="https://media.bakingo.com/bakingo-ssr/static/media/truckIcon.822f5067.svg" alt="" class="pr-3">

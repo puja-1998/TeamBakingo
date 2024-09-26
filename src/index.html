@@ -6,22 +6,79 @@
     <title>Online Cake Delivery | Send Cakes by Best Bakery | Order For Same Day: Bakingo</title>
     <link rel="icon" href="./images/title icon.avif">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- lato font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
-<link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
     <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./flickity.css" />
+    <style>
+        #sortbox:checked ~ #sortboxmenu {
+           opacity: 1;
+        }
+
+        .flickity-slider {
+    display: flex; /* Ensure items are in a row */
+}
+
+.carousel-image {
+    width: calc(33.33% - 20px); /* Adjust width for 3 images and the gap */
+    margin: 0 10px; /* Add gap between images */
+    box-sizing: border-box; /* Ensure padding and border are included in total width */
+    border-radius: 20px;
+}
+   .flickity-page-dots {
+   position: absolute;
+   width: 100%;
+   bottom: -25px;
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   text-align: center;
+   
+   line-height: 1;
+}
+
+.flickity-rtl .flickity-page-dots {
+   direction: rtl;
+}
+
+.flickity-page-dots .dot {
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   margin: 0 8px;
+   background: #333;
+   border-radius: 50%;
+   opacity: 0.25;
+   cursor: pointer;
+}
+.flickity-page-dots .dot .active{
+   background-color: rgb(254,129,126);
+}
+
+.flickity-page-dots .dot.is-selected {
+   opacity: 1;
+}
+.flickity-button {
+   display: none;
+}
+     </style>
 </head>
-<body>
+<body class="font-poppins">
    
     <!-- Header -->
 
-    <header>
-        <nav class=" font-poppins flex justify-between items-center px-20 py-6 cursor-pointer  bg-white h-auto w-screen border-b-2 z-40 fixed top-0 left-0 right-0">
+    <header class="fixed top-0 left-0 right-0 z-40">
+        <nav  class="font-poppins flex justify-between items-center px-12 py-5 cursor-pointer bg-white h-auto w-screen border-b-2"
+        >
             <div id="logo" class="flex gap-8">
-             <a href="#"><img src="./images/bakingo.svg" alt=""></a>
+             <a href="#"><img src="./images/bakingo.svg" alt="" id="logo"></a>
              <div id="Location" class="flex items-center gap-1">
                 <span class="material-symbols-outlined text-[16px]">near_me</span>
                 <button class="font-medium text-sm ">Select City</button>
@@ -49,14 +106,1121 @@
                 </div>
             </div>
         </nav>
+
+        
+         <!-- ~ dropdown navbar -->
+         <div
+            class="w-full bg-white px-36 flex items-center justify-between text-xs border text-slate-800 font-medium shadow-md"
+         >
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               Cakes
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <h1 class="text-sm font-semibold">Trending Cakes</h1>
+                     <ul class="flex gap-3 flex-col">
+                        <li class="hover:font-bold">
+                           <a href="/src/Prem/pinata-cakes"> Pinata Cakes </a>
+                        </li>
+                        <li class="hover:font-bold">
+                           <a href="#block"> Suprice Cakes </a>
+                        </li>
+                        <li class="hover:font-bold">
+                           <a href="#block"> </a>
+                        </li>
+                        <li class="hover:font-bold">
+                           <a href="#block"> </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               By Flavours
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <ul class="flex gap-3 flex-col">
+                        <li class="hover:font-bold">
+                           <a href="#block"> Chocolate Cakes </a>
+                        </li>
+                        <li class="hover:font-bold">
+                           <a href="#block"> Butterscotch Cakes </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               Theme Cakes
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <h1 class="text-sm font-semibold">Kids Cakes</h1>
+                     <ul class="flex gap-3 flex-col">
+                        <li class="hover:font-bold">
+                           <a href="#block"> 1st Birthday Cakes </a>
+                        </li>
+                        <li class="hover:font-bold">
+                           <a href="#block"> Princess Cakes </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               By Relationship
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <h1 class="text-sm font-semibold">For Him</h1>
+                     <ul class="flex gap-3 flex-col">
+                        <li class="hover:font-bold">
+                           <a href="#block"> Cakes for Father </a>
+                        </li>
+                        <li class="hover:font-bold">
+                           <a href="#block"> Cakes for Husband </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               Desserts
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <ul class="flex gap-3 flex-col">
+                        <li class="hover:font-bold">
+                           <a href="#block"> All Desserts </a>
+                        </li>
+                        <li class="hover:font-bold">
+                           <a href="#block"> Jar Cakes </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               Birthday
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <ul class="flex gap-3 flex-col">
+                        <li class="hover:font-bold">
+                           <a href="#block"> All Birthday Cakes </a>
+                        </li>
+                        <li class="hover:font-bold">
+                           <a href="#block"> 1st Birthday Cakes </a>
+                        </li>
+                        <li class="hover:font-bold">
+                           <a href="#block"> Birthday Photo Cakes</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               Anniversary
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <ul class="flex gap-2 flex-col">
+                        <li class="hover:font-bold">
+                           <a href="./Anniverasary/AnniversaryCakes.html"> All Anniversary Cakes </a>
+                        </li>
+                        <li class="hover:font-bold">
+                           <a href="#block"> 1st Anniversary Cakes </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               Occasion
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <h1 class="text-sm font-semibold">Festive Celebrations</h1>
+                     <ul class="flex gap-2 flex-col">
+                        <li class="hover:font-bold">
+                           <a href="#block"> Boss Day Cakes </a>
+                        </li>
+                        <li class="hover:font-bold">
+                           <a href="#block"> Karwa Chauth Cakes </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <a href="#" class="relative cakes-tab py-3 group cursor-pointer">
+               Customized Cakes
+            </a>
+         </div>
     </header>
+
+    <!-- Main Container -->
+    <main>
+      <div class="px-14 mt-44">
+         <!-- ~ flickity crousal -->
+        <div
+        class="cursor-pointer"
+        data-flickity='{ "wrapAround": true, "cellAlign":"center"}'
+     >
+        <img
+           src="https://bkmedia.bakingo.com/regular-cake-desktop_2.jpg"
+           width=""
+           alt="cake"
+           class="carousel-image"
+        /><img
+           src="https://bkmedia.bakingo.com/gourmet_cake_desktop%20(1)_1.jpg"
+           width=""
+           alt="cake"
+           class="carousel-image"
+        /><img
+           src="https://bkmedia.bakingo.com/birthday_cake_desktop.jpg"
+           width=""
+           alt="cake"
+           class="carousel-image"
+        />
+        <img
+           src="https://bkmedia.bakingo.com/jungle_cake_desktop_0.jpg"
+           width=""
+           alt="cake"
+           class="carousel-image"
+        />
+     </div>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      </div>
+
+      <div class=" px-14 mt-16"><hr></div>
+
+      <!-- Surprise Your Loved One -->
+
+      <div class=" px-20 mt-10">
+         <h1 class=" text-[34px] font-semibold">Surprise Your Loved One</h1>
+         <div class="mt-4">
+            <div class="flex gap-6 ">
+               
+               <div class="border pb-3 rounded-lg">
+                  <div class="overflow-hidden">
+                     <a href=""><img src="https://bkmedia.bakingo.com/regular_cake_1.jpg?tr=w-484,q-70" alt="Regular Cake " class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out"></a>
+                  </div>
+                   <div>
+                     <a href=""><span class=" pt-3 flex  items-center justify-center font-semibold text-[17px]">Regular Cakes</span></a>
+                   </div> 
+               </div>
+               <div class="border pb-3 rounded-lg">
+               <div class="overflow-hidden">
+               <a href=""><img src="https://bkmedia.bakingo.com/gourmet_cake_0.jpg?tr=w-484,q-70" alt="Gourmet Cake" class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out"></a>
+               </div>
+               <div>
+                  <a href=""><span class=" pt-3 flex  items-center justify-center font-semibold text-[17px]">Gourmet Cakes</span></a>
+               </div>
+               </div>
+               <div class="border pb-3 rounded-lg">
+               <div class="overflow-hidden">
+               <a href=""><img src="https://bkmedia.bakingo.com/photo_cake_desktop.jpg?tr=w-484,q-70" alt="Photo Cakes" class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out"></a>
+               </div>
+               <div>
+                  <a href=""><span class=" pt-3 flex  items-center justify-center font-semibold text-[17px]">Photo Cakes</span></a>
+               </div>
+               </div>
+               <div class="border pb-3 rounded-lg">
+               <div class="overflow-hidden">
+               <a href=""><img src="https://bkmedia.bakingo.com/theme_cake_9.jpg?tr=w-484,q-70" alt="Theme Cakes" class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out"></a>
+               </div>
+               <div>
+                  <a href=""><span class=" pt-3 flex  items-center justify-center font-semibold text-[17px]">Theme Cakes</span></a>
+               </div>
+            </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Our Best Sellers -->
+       <div class="  mt-14 pb-14 h-auto" style="background-image: url('https://media.bakingo.com/bakingo-ssr/static/media/bestSellerDesk.ce04c4ff.svg');">
+         
+         <div class="px-20 pt-14 flex justify-between">
+            <h2 class="text-[34px] font-semibold font-lato">Our Best Sellers</h2>
+            <p class="text-[14px] font-semibold border text-red-400 border-red-400 hover:bg-red-400 hover:text-white rounded-full w-32 h-10 bg-white flex items-center justify-center">View All</p>
+         </div>
+      
+         <!-- card container section -->
+         <div class="max-w-full grid grid-cols-4 justify-start items-center px-[4.6rem] mt-4 gap-y-6 ">
+            <!-- single card 1 -->
+            <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden bg-white">
+            <div class="p-2">
+               <div class="overflow-hidden  border rounded-md border-none">
+                  <img
+                        src="https://bkmedia.bakingo.com/choco-truffle-cake0005choc-a.jpg?tr=h-265,w-265?tr=w-266,q-70"
+                        width=""
+                        alt="cake"
+                        class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out"
+                     />
+               </div>
+            </div>
+            <div>
+               <!-- ~ veg symbol button -->
+               <!-- <div class="absolute border rounded-[20px] border-green-400 h-[8px] top-[3px] right-[3px] w-[8px] bg-[#1c8b6a]"></div> -->
+               <img
+               width="10"
+               height="10"
+               src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
+               alt="vegetarian-food-symbol"
+               class="absolute  top-2 right-6 cursor-pointer bg-white"
+               />
+               <div class="w-full p-2 pb-3 flex flex-col gap-1">
+                  <p class="text-[15px] font-normal">
+                     Our Classic Chocolate Truffle Cake
+                  </p>
+                  <div
+                     class="flex items-center gap-1 text-base text-slate-900 font-semibold scale-105 px-2"
+                  >
+                     <span class="font-sans font-bold -translate-y-[1px]"
+                        >&#8377;
+                     </span>
+                     <span class="font-poppins"> 549 <span class="text-[13px] font-normal line-through text-gray-400"> 599</span>
+                     <span class="text-[13px] font-normal text-green-600 ">  9% OFF</span></span> </span>
+                  </div>
+                  <div
+                     class="text-xs flex items-center justify-start gap-1 scale-95 ml-[-8px]"
+                  >
+                     <span class="font-[500]">4.8</span>
+                     <i
+                        class="fa-solid fa-star text-[11px] text-yellow-500"
+                     ></i>
+                     <span>(3380 reviews)</span>
+                  </div>
+               </div>
+            </div>
+            </div>
+
+             <!-- single card 2 -->
+             <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden bg-white">
+               <div class="p-2">
+                  <div class="overflow-hidden  border rounded-md border-none">
+               <img
+                        src="https://bkmedia.bakingo.com/choco-vanilla-cake0006chva-AAA.jpg?tr=h-265,w-265?tr=w-266,q-70"
+                        width=""
+                        alt="cake"
+                        class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out"
+                     />
+                  </div>
+               </div>
+               <div>
+                  <!-- ~ veg symbol button -->
+                  <img
+                  width="10"
+                  height="10"
+                  src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
+                  alt="vegetarian-food-symbol"
+                  class="absolute top-2 right-6 cursor-pointer bg-white"
+                  />
+                  <div class="w-full p-2 pb-3 flex flex-col gap-1">
+                     <p class="text-[15px] font-normal">
+                        Chocolate Vanilla Half & Half Cake
+                     </p>
+                     <div
+                        class="flex items-center gap-1 text-base text-slate-900 font-semibold scale-105 px-2"
+                     >
+                        <span class="font-sans font-bold -translate-y-[1px]"
+                           >&#8377;
+                        </span>
+                        <span class="font-poppins"> 549 </span>
+                     </div>
+                     <div
+                        class="text-xs flex items-center justify-start gap-1 scale-95 ml-[-8px]"
+                     >
+                        <span class="font-[500]">4.9</span>
+                        <i
+                           class="fa-solid fa-star text-[11px] text-yellow-500"
+                        ></i>
+                        <span>(1927 reviews)</span>
+                     </div>
+                  </div>
+               </div>
+             </div>
+   
+                <!-- single card 3 -->
+            <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden bg-white">
+               <div class="p-2">
+                  <div class="overflow-hidden  border rounded-md border-none">
+               <img
+                        src="https://bkmedia.bakingo.com/fresh-fruit-cake0014frui-AAA.jpg?tr=h-265,w-265?tr=w-266,q-70"
+                        width=""
+                        alt="cake"
+                        class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out"
+                     />
+                  </div>
+               </div>
+               <div>
+                  <!-- ~ veg symbol button -->
+                  <img
+                  width="10"
+                  height="10"
+                  src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
+                  alt="vegetarian-food-symbol"
+                  class="absolute top-2 right-6 cursor-pointer bg-white"
+                  />
+                  <div class="w-full p-2 pb-3 flex flex-col gap-1">
+                     <p class="text-[15px] font-normal">
+                        Fresh Fruits & Roasted Almonds Cake
+                     </p>
+                     <div
+                        class="flex items-center gap-1 text-base text-slate-900 font-semibold scale-105 px-2"
+                     >
+                        <span class="font-sans font-bold -translate-y-[1px]"
+                           >&#8377;
+                        </span>
+                        <span class="font-poppins"> 699 </span>
+                     </div>
+                     <div
+                        class="text-xs flex items-center justify-start gap-1 scale-95 ml-[-8px]"
+                     >
+                        <span class="font-[500]">4.9</span>
+                        <i
+                           class="fa-solid fa-star text-[11px] text-yellow-500"
+                        ></i>
+                        <span>(1129 reviews)</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+                <!-- single card 4 -->
+            <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden bg-white">
+               <div class="p-2">
+                  <div class="overflow-hidden  border rounded-md border-none">
+               <img
+                        src="https://bkmedia.bakingo.com/pista-topped-rasmalai-cake-cake3550rash-A.jpg?tr=h-265,w-265?tr=w-266,q-70"
+                        width=""
+                        alt="cake"
+                        class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out"
+                     />
+                  </div>
+               </div>
+               <div>
+                  <!-- ~ veg symbol button -->
+                  <img
+                  width="10"
+                  height="10"
+                  src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
+                  alt="vegetarian-food-symbol"
+                  class="absolute top-2 right-6 cursor-pointer bg-white"
+                  />
+                  <div class="w-full p-2 pb-3 flex flex-col gap-1">
+                     <p class="text-[15px] font-normal">
+                        Rose Petals N Pistachio Rasmalai Cake
+                     </p>
+                     <div
+                        class="flex items-center gap-1 text-base text-slate-900 font-semibold scale-105 px-2"
+                     >
+                        <span class="font-sans font-bold -translate-y-[1px]"
+                           >&#8377;
+                        </span>
+                        <span class="font-poppins"> 699 </span>
+                     </div>
+                     <div
+                        class="text-xs flex items-center justify-start gap-1 scale-95 ml-[-8px]"
+                     >
+                        <span class="font-[500]">4.8</span>
+                        <i
+                           class="fa-solid fa-star text-[11px] text-yellow-500"
+                        ></i>
+                        <span>(160 reviews)</span>
+                     </div>
+                  </div>
+               </div>
+               </div>
+
+                <!-- single card 5 -->
+            <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden bg-white">
+               <div class="p-2">
+                  <div class="overflow-hidden  border rounded-md border-none">
+               <img
+                        src="https://bkmedia.bakingo.com/sq-pineapple-cake0022pifr-AA_0.jpg?tr=h-265,w-265?tr=w-266,q-70"
+                        width=""
+                        alt="cake"
+                        class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out"
+                     />
+                  </div>
+               </div>
+               <div>
+                  <!-- ~ veg symbol button -->
+                  <img
+                  width="10"
+                  height="10"
+                  src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
+                  alt="vegetarian-food-symbol"
+                  class="absolute top-2 right-6 cursor-pointer bg-white"
+                  />
+                  <div class="w-full p-2 pb-3 flex flex-col gap-1">
+                     <p class="text-[15px] font-normal">
+                        Whipped Cream Pineapple Cake
+                     </p>
+                     <div
+                        class="flex items-center gap-1 text-base text-slate-900 font-semibold scale-105 px-2"
+                     >
+                        <span class="font-sans font-bold -translate-y-[1px]"
+                           >&#8377;
+                        </span>
+                        <span class="font-poppins"> 499 <span class="text-[13px] font-normal line-through text-gray-400"> 549</span>
+                        <span class="text-[13px] font-normal text-green-500">10% OFF</span></span></span>
+                     </div>
+                     <div
+                        class="text-xs flex items-center justify-start gap-1 scale-95 ml-[-8px]"
+                     >
+                        <span class="font-[500]">4.9</span>
+                        <i
+                           class="fa-solid fa-star text-[11px] text-yellow-500"
+                        ></i>
+                        <span>(740 reviews)</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+                <!-- single card 6 -->
+            <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden bg-white">
+               <div class="p-2">
+                  <div class="overflow-hidden  border rounded-md border-none">
+               <img
+                        src="https://bkmedia.bakingo.com/black-forest-cake0001chbl-AAA.jpg?tr=h-265,w-265?tr=w-266,q-70"
+                        width=""
+                        alt="cake"
+                        class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out"
+                     />
+                  </div>
+               </div>
+               <div>
+                  <!-- ~ veg symbol button -->
+                  <img
+                  width="10"
+                  height="10"
+                  src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
+                  alt="vegetarian-food-symbol"
+                  class="absolute top-2 right-6 cursor-pointer bg-white"
+                  />
+                  <div class="w-full p-2 pb-3 flex flex-col gap-1">
+                     <p class="text-[15px] font-normal">
+                        Original Black Forest Cake
+                     </p>
+                     <div
+                        class="flex items-center gap-1 text-base text-slate-900 font-semibold scale-105 px-2"
+                     >
+                        <span class="font-sans font-bold -translate-y-[1px]"
+                           >&#8377;
+                        </span>
+                        <span class="font-poppins"> 549 <span class="text-[13px] font-normal line-through text-gray-400"> 599</span>
+                        <span class="text-[13px] font-normal text-green-500">9% OFF</span></span></span>
+                     </div>
+                     <div
+                        class="text-xs flex items-center justify-start gap-1 scale-95 ml-[-8px]"
+                     >
+                        <span class="font-[500]">4.9</span>
+                        <i
+                           class="fa-solid fa-star text-[11px] text-yellow-500"
+                        ></i>
+                        <span>(559 reviews)</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+                <!-- single card 7 -->
+            <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden bg-white">
+               <div class="p-2">
+                  <div class="overflow-hidden  border rounded-md border-none">
+               <img
+                        src="https://bkmedia.bakingo.com/kitkat-chocolate-cake-cake1119choco-AAA.jpg?tr=h-265,w-265?tr=w-266,q-70"
+                        width=""
+                        alt="cake"
+                        class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out"
+                     />
+                  </div>
+               </div>
+               <div>
+                  <!-- ~ veg symbol button -->
+                  <img
+                  width="10"
+                  height="10"
+                  src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
+                  alt="vegetarian-food-symbol"
+                  class="absolute top-2 right-6 cursor-pointer bg-white"
+                  />
+                  <div class="w-full p-2 pb-3 flex flex-col gap-1">
+                     <p class="text-[15px] font-normal">
+                        KitKat Chocolate Truffle Cake
+                     </p>
+                     <div
+                        class="flex items-center gap-1 text-base text-slate-900 font-semibold scale-105 px-2"
+                     >
+                        <span class="font-sans font-bold -translate-y-[1px]"
+                           >&#8377;
+                        </span>
+                        <span class="font-poppins"> 699 </span>
+                     </div>
+                     <div
+                        class="text-xs flex items-center justify-start gap-1 scale-95 ml-[-8px]"
+                     >
+                        <span class="font-[500]">4.9</span>
+                        <i
+                           class="fa-solid fa-star text-[11px] text-yellow-500"
+                        ></i>
+                        <span>(514 reviews)</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+                <!-- single card 8 -->
+            <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden bg-white">
+               <div class="p-2">
+                  <div class="overflow-hidden  border rounded-md border-none">
+               <img
+                        src="https://bkmedia.bakingo.com/chocolate-chip-cake0008choc-AAA.jpg?tr=h-265,w-265?tr=w-266,q-70"
+                        width=""
+                        alt="cake"
+                        class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out"
+                     />
+                  </div>
+               </div>
+            <div>
+                  <!-- ~ veg symbol button -->
+                  <img
+                  width="10"
+                  height="10"
+                  src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
+                  alt="vegetarian-food-symbol"
+                  class="absolute top-2 right-6 cursor-pointer bg-white"
+                  />
+                  <div class="w-full p-2 pb-3 flex flex-col gap-1">
+                     <p class="text-[15px] font-normal">
+                        Choco Chip Truffle Cake
+                     </p>
+                     <div
+                        class="flex items-center gap-1 text-base text-slate-900 font-semibold scale-105 px-2"
+                     >
+                        <span class="font-sans font-bold -translate-y-[1px]"
+                           >&#8377;
+                        </span>
+                        <span class="font-poppins"> 599 </span>
+                     </div>
+                     <div
+                        class="text-xs flex items-center justify-start gap-1 scale-95 ml-[-8px]"
+                     >
+                        <span class="font-[500]">4.9</span>
+                        <i
+                           class="fa-solid fa-star text-[11px] text-yellow-500"
+                        ></i>
+                        <span>(344 reviews)</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+      </div> 
+       </div> 
+
+      <!-- Experience Flavours -->
+       <div class=" cursor-pointer mt-14 mx-20">
+            <h2 class="font-lato font-semibold text-[34px]">Experience Flavours</h2>
+         <div class=" mt-10 flex gap-3  font-semibold text-base">
+            <a href="" class=" flex justify-center w-[140px] border border-gray-400 rounded-lg hover:border-red-400 hover:text-red-400 px-6 py-3">Chocolate</a>
+            <a href="" class=" flex justify-center w-[140px] border border-gray-400 rounded-lg hover:border-red-400 hover:text-red-400 px-6 py-3">Fruits</a>
+            <a href="" class=" flex justify-center w-[140px] border border-gray-400 rounded-lg hover:border-red-400 hover:text-red-400 px-6 py-3">Red Velvet</a>
+            <a href="" class=" flex justify-center w-[140px] border border-gray-400 rounded-lg hover:border-red-400 hover:text-red-400 px-6 py-3">Strawberry</a>
+            <a href="" class=" flex justify-center w-[140px] border border-gray-400 rounded-lg hover:border-red-400 hover:text-red-400 px-6 py-3">Blackforest</a>
+            <a href="" class=" flex justify-center w-[140px] border border-gray-400 rounded-lg hover:border-red-400 hover:text-red-400 px-6 py-3">Pineapple</a>
+            <a href="" class=" flex justify-center w-[140px] border border-gray-400 rounded-lg hover:border-red-400 hover:text-red-400 px-6 py-3">Butterscotch</a>
+            <a href="" class=" flex justify-center w-[140px] border border-gray-400 rounded-lg hover:border-red-400 hover:text-red-400 px-6 py-3">Kit Kat</a>
+         </div>
+       </div>
+
+       <!-- Trending Cakes -->
+       <div class="  mt-14 pb-14 h-auto bg-[rgb(255,247,238)] cursor-pointer">
+         
+         <div class="px-20 pt-12 flex justify-between">
+            <h2 class="text-[34px] font-semibold font-lato">Trending Cakes</h2>
+            <p class="text-[14px] font-semibold border text-red-400 border-red-400 hover:bg-red-400 hover:text-white rounded-full w-32 h-10 bg-white flex items-center justify-center">View All</p>
+         </div>
+         <!-- trending cake images -->
+           <!-- First Row - 3 Columns -->
+         <div class=" grid grid-cols-3  px-[4.6rem] mt-4 gap-6 ">
+            <div class="flex flex-col justify-center items-center">
+               <div class="rounded-md overflow-hidden">
+                  <img src="https://bkmedia.bakingo.com/photo_pulling_cake_desktop.jpg?tr=w-484,q-70" alt="pulling_cake" class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out">
+               </div>
+               <a href="" class=" font-lato font-semibold text-[17px] pt-4">Photo Pulling Cakes</a>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+               <div class="rounded-md overflow-hidden">
+                  <img src="https://bkmedia.bakingo.com/pinata_cake_desktop.jpg?tr=w-484,q-70" alt="/pinata_cake" class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out">
+               </div>
+               <a href="" class=" font-lato font-semibold text-[17px] pt-4">Pinata Cake</a>
+            </div>
+            <div class="max-w-full flex flex-col justify-center items-center">
+              <div class="rounded-md overflow-hidden">
+               <img src="https://bkmedia.bakingo.com/pull_me_up_cake_desktop.jpg?tr=w-484,q-70" alt="pull_me_up_cake" class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out">
+              </div>
+               <a href="" class=" font-lato font-semibold text-[17px] pt-4">Pull Me Up Cake</a>
+            </div >
+
+             <!-- Second Row - 2 Equal Columns -->
+            <div class="col-span-3 grid grid-cols-2 justify-between items-center">
+            <div class="flex flex-col justify-center items-center">
+               <div class="rounded-md overflow-hidden ">
+                  <img src="https://bkmedia.bakingo.com/bomb_cake_desktop.jpg?tr=w-484,q-70" alt="bomb_cake" class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out">
+               </div>
+               <a href="" class=" font-lato font-semibold text-[17px] pt-4">Bomb Cake</a>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+               <div class="rounded-md overflow-hidden">
+                  <img src="https://bkmedia.bakingo.com/surprise_cake_box_desktop.jpg?tr=w-484,q-70" alt="surprise_cake_box" class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out">
+               </div>
+               <a href="" class=" font-lato font-semibold text-[17px] pt-4">Cake Surprise Box</a>
+            </div>
+         </div>
+         </div>
+        </div>
+
+        <!-- Designer Cakes -->
+        <div class="  mt-8 pb-14 h-auto bg-white cursor-pointer">
+         
+         <div class="px-20 pt-12 flex justify-between">
+            <h2 class="text-[34px] font-semibold font-lato"> Designer Cakes</h2>
+            <p class="text-[14px] font-semibold border text-red-400 border-red-400 hover:bg-red-400 hover:text-white rounded-full w-32 h-10 bg-white flex items-center justify-center">View All</p>
+         </div>
+
+         <div class="mt-4 px-20">
+            <div class="grid grid-cols-3 gap-10">
+               <div class="border pb-3 rounded-lg">
+                  <div class="overflow-hidden rounded-t-lg">
+                     <a href=""><img src="https://bkmedia.bakingo.com/barbie_1.jpg?tr=w-484,q-70" alt="barbie_1" class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out"></a>
+                  </div>
+                  <a href="" class=" pt-3 flex  items-center justify-center font-semibold text-[17px]">Barbie Cakes</a>
+               </div>
+               <div class="border pb-3 rounded-lg">
+                  <div class="overflow-hidden rounded-t-lg">
+                     <a href=""><img src="https://bkmedia.bakingo.com/cartoon-cake_0.jpg?tr=w-484,q-70" alt="cartoon-cake" class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out"></a>
+                  </div>
+                  <a href="" class=" pt-3 flex  items-center justify-center font-semibold text-[17px]">Cartoon Cakes</a>
+               </div>
+               <div class="border pb-4 rounded-lg">
+                  <div class="overflow-hidden rounded-t-lg">
+                     <a href=""><img src="https://bkmedia.bakingo.com/number-cake.jpg?tr=w-484,q-70" alt="number-cake" class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out"></a>
+                  </div>
+                  <a href="" class=" pt-4 flex  items-center justify-center font-semibold text-[17px]">Number Cakes</a>
+               </div>
+
+               <div class="border pb-3 rounded-lg">
+                  <div class="overflow-hidden rounded-t-lg">
+                     <a href=""><img src="https://bkmedia.bakingo.com/rainbow_cakes_desktop.jpg?tr=w-484,q-70" alt="rainbow_cakes" class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out"></a>
+                  </div>
+                  <a href="" class=" pt-3 flex  items-center justify-center font-semibold text-[17px]">Rainbow Cakes</a>
+               </div>
+               <div class="border pb-3 rounded-lg">
+                  <div class="overflow-hidden rounded-t-lg">
+                     <a href=""><img src="https://bkmedia.bakingo.com/jungle-theme-cake.jpg?tr=w-484,q-70" alt="jungle-theme-cake" class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out"></a>
+                  </div>
+                  <a href="" class=" pt-3 flex  items-center justify-center font-semibold text-[17px]">Jungle Theme Cakes</a>
+               </div>
+               <div class="border pb-4 rounded-lg">
+                  <div class="overflow-hidden rounded-t-lg">
+                     <a href=""><img src="https://bkmedia.bakingo.com/baby-shower_0.jpg?tr=w-484,q-70" alt="baby-shower Cake" class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out"></a>
+                  </div>
+                  <a href="" class=" pt-4 flex  items-center justify-center font-semibold text-[17px]">Baby Shower Cakes</a>
+               </div>
+            </div>
+         </div>
+         
+        </div>
+        
+        <!-- Looking for something else -->
+       <div class=" px-20">
+         <div class=" px-14 pr-2    mt-4 pb-10 h-auto" style="background-image: url('https://media.bakingo.com/bakingo-ssr/static/media/youMay.afb47926.jpg');">
+         
+            <div class=" pt-8  h-auto flex justify-between">
+               <h2 class="text-[34px] font-semibold font-lato">Looking For Something Else</h2>
+            </div>
+            <div class="pt-4 grid grid-cols-3 gap-6">
+               <div>
+                  <img src="https://bkmedia.bakingo.com/pastries_3.png?tr=w-350,q-70" alt="pastries">
+               </div>
+               <div>
+                  <img src="https://bkmedia.bakingo.com/jar_cakes_2.png?tr=w-350,q-70" alt="Jar Cakes">
+               </div>
+               <div>
+                  <img src="https://bkmedia.bakingo.com/cup_cakes_5.png?tr=w-350,q-70" alt="Cup Cake">
+               </div>
+               <div>
+                  <img src="https://bkmedia.bakingo.com/brownies_2.png?tr=w-350,q-70" alt="brownies">
+               </div>
+               <div>
+                  <img src="https://bkmedia.bakingo.com/hampers.png?tr=w-350,q-70" alt="hampers">
+               </div>
+               <div>
+                  <img src="https://bkmedia.bakingo.com/cookies-desktop.png?tr=w-350,q-70" alt="cookies">
+               </div>
+            </div>
+           </div>
+           
+       </div>
+         <!-- Recently Viewed Products -->
+         <div class="  mt-14 pb-14 h-auto bg-white cursor-pointer">
+         
+            <div class="px-20 pt-12 flex justify-between">
+               <h2 class="text-[36px] font-semibold ">Recently Viewed Products</h2>
+               <p class="text-[14px] font-semibold border text-red-400 border-red-400 hover:bg-red-400 hover:text-white rounded-full w-32 h-10 bg-white flex items-center justify-center">View All</p>
+            </div>
+
+            
+            <!-- card cake section -->
+         <div class="px-20 mt-8 max-w-full grid grid-cols-4 gap-4 pb-7">
+            <!-- single card -->
+            <div class="border rounded-lg cursor-pointer hover:shadow-md">
+                <div class=" relative max-w-80">
+                  <img src="https://bkmedia.bakingo.com/pista-topped-rasmalai-cake-cake3550rash-A.jpg" width="" alt="cake" class=" w-full rounded-tl-lg rounded-tr-lg">
+                  <p class="absolute flex justify-center items-center bg-red-400  rounded-br-full h-6 font-semibold text-[12px] w-24 top-0 left-0 cursor-pointer text-white">Best Seller</p>
+               </div>
+                
+                <div class="p-2 flex flex-col gap-1">
+                    <P class="font-normal text-[15px] text-gray-500">Rose Petals N Pistachio Rasmalai Cake</P>
+                    <div class="flex items-center gap-1 scale-105 px-2">
+                        <i class="fa-solid fa-indian-rupee-sign text-gray-700 text-[12px]"></i>
+                        <span class="font-bold text-base text-gray-700">699</span>
+                    </div>
+                    <div class=" flex items-center justify-start gap-1 scale-95 ml-[-8px]">
+                        <span class="font-semibold text-[12px]">4.8</span>
+                        <i class="fa-solid fa-star text-xs text-yellow-500"></i>
+                        <span class="font-normal text-[11px] text-gray-500">(160 reviews)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- single card -->
+            <div class="border rounded-lg cursor-pointer hover:shadow-md">
+               <div class="relative max-w-80">
+                   <img src="https://bkmedia.bakingo.com/fresh-fruit-cake0014frui-AAA.jpg" width="" alt="cake" class="w-full rounded-tl-lg rounded-tr-lg">
+                   <p class="absolute flex justify-center items-center bg-red-400  rounded-br-full h-6 font-semibold text-[12px] w-24 top-0 left-0 cursor-pointer text-white">Best Seller</p>
+                  </div>
+               <div class="p-2 flex flex-col gap-1">
+                   <P class="font-normal text-[15px] text-gray-500">Fresh Fruits & Roasted Almonds Cake</P>
+                   <div class="flex items-center gap-1  scale-105 px-2">
+                       <i class="fa-solid fa-indian-rupee-sign text-gray-700 text-[12px]"></i>
+                       <span class="font-bold text-base text-gray-700">699</span>
+                   </div>
+                   <div class=" flex items-center justify-start gap-1 scale-95 ml-[-8px]">
+                       <span class="font-semibold text-[12px]">4.9</span>
+                       <i class="fa-solid fa-star text-xs text-yellow-500"></i>
+                       <span class="font-normal text-[11px] text-gray-500">(1129 reviews)</span>
+                   </div>
+               </div>
+           </div>
+
+           <!-- single card -->
+           <div class="border rounded-lg cursor-pointer hover:shadow-md">
+            <div class="relative max-w-80">
+                <img src="https://bkmedia.bakingo.com/choco-truffle-cake0005choc-a.jpg" width="" alt="cake" class="w-full rounded-tl-lg rounded-tr-lg">
+                <p class="absolute flex justify-center items-center bg-red-400  rounded-br-full h-6 font-semibold text-[12px] w-24 top-0 left-0 cursor-pointer text-white">Best Seller</p>
+               </div>
+            <div class="p-2 flex flex-col gap-1">
+                <P class="font-normal text-[15px] text-gray-500">Our Classic Chocolate Truffle Cake</P>
+                <div class="flex items-center gap-1  scale-105 px-2">
+                    <i class="fa-solid fa-indian-rupee-sign text-gray-700 text-[12px]"></i>
+                    <span class="font-bold text-base text-gray-700">549 <span class="text-[13px] font-normal line-through text-gray-400"> 599</span>
+                    <span class="text-[13px] font-normal text-green-500">9% OFF</span></span></span>
+                </div>
+                <div class=" flex items-center justify-start gap-1 scale-95 ml-[-8px]">
+                    <span class="font-semibold text-[12px]">4.9</span>
+                    <i class="fa-solid fa-star text-xs text-yellow-500"></i>
+                    <span class="font-normal text-[11px] text-gray-500">(3380 reviews)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- single card -->
+        <div class="border rounded-lg cursor-pointer hover:shadow-md">
+         <div class="max-w-80">
+             <img src="https://bkmedia.bakingo.com/butterscotch-cake0003butt-AAAA.jpg" width="" alt="cake" class="w-full rounded-tl-lg rounded-tr-lg">
+         </div>
+         <div class="p-2 flex flex-col gap-1">
+             <P class="font-normal text-[15px] text-gray-500">Butterscotch Cherry Topped Cake</P>
+             <div class="flex items-center gap-1 scale-105 px-2">
+                 <i class="fa-solid fa-indian-rupee-sign text-gray-700 text-[12px]"></i>
+                 <span class="font-bold text-base text-gray-700">499 <span class="text-[13px] font-normal line-through text-gray-400"> 549</span>
+                 <span class="text-[13px] font-normal text-green-500">10% OFF</span></span></span>
+             </div>
+             <div class="  flex items-center justify-start gap-1 scale-95 ml-[-8px]">
+                 <span class="font-semibold text-[12px]">4.9</span>
+                 <i class="fa-solid fa-star text-xs text-yellow-500"></i>
+                 <span class="font-normal text-[11px] text-gray-500">(1469 reviews)</span>
+             </div>
+         </div>
+     </div>
+         </div>
+      </div>
+
+           
+    <!-- Read Some section -->
+    <div class="  mt-3 pb-12 h-auto bg-[rgb(255,239,239)] cursor-pointer">
+         
+      <div class="px-20 pb-8 pt-10 flex justify-between">
+         <h2 class="text-[34px] font-semibold font-lato">Read Some Of Our Recent Blog Posts</h2>
+         <p class="text-[14px] font-semibold border text-red-400 border-red-400 hover:bg-red-400 hover:text-white rounded-full w-32 h-10 bg-white flex items-center justify-center">View All</p>
+      </div>
+
+      <div class="max-w-7xl flex flex-wrap justify-center items-center pr-0 gap-8 ">
+         <div class="bg-white max-w-72 rounded-lg p-3 shadow-lg">
+            <div class="flex flex-col gap-3 max-w-60 max-h-fit rounded-lg cursor-pointer hover:scale-105 transition duration-500 delay-75 ease-in-out">
+                <div class="max-w-60">
+                    <img src="https://bakingo.com/blog/wp-content/uploads/2024/08/cotton-candy-layer-cake-photo.jpg?tr=w-266,dpr-1.5,q-70" width="" alt="cake" class="w-full rounded-lg">
+                </div>
+                <p class="text-base font-bold pb-3">Cotton Candy Cake Recipe: A Whimsical Delight for Every Occasion</p>
+                <p class="text-sm font-semibold text-gray-700 pb-4">If you’re searching for a cake that’s as magical as a dream, look no further than the Cotton Candy Cake. This delightful confection combines the light and airy ...</p>
+            </div>
+        </div>
+
+        <div class=" bg-white  max-w-72 rounded-lg p-3 shadow-lg">
+            <div class="flex flex-col gap-3 max-w-60 max-h-fit rounded-lg cursor-pointer hover:scale-105 transition duration-500 delay-75 ease-in-out">
+                <div class="max-w-60">
+                    <img src="https://bakingo.com/blog/wp-content/uploads/2024/08/games-for-teachers.jpg?tr=w-266,dpr-1.5,q-70" width="" alt="cake" class="w-full rounded-lg">
+                </div>
+                <p class="text-base font-bold pb-3">10 Fun Games for Teachers to Celebrate Teachers’ Day with a Twist</p>
+                <p class="text-sm font-semibold text-gray-700 pb-1">Teachers’ Day is a special occasion to honor and celebrate the educators who shape our lives. While heartfelt messages and gifts are a wonderful way to show app...</p>
+            </div>
+        </div>
+
+        <div class="bg-white max-w-72 rounded-lg p-3 shadow-lg">
+            <div class="flex flex-col gap-3 max-w-60 max-h-fit rounded-lg cursor-pointer hover:scale-105 transition duration-500 delay-75 ease-in-out">
+                <div class="max-w-60">
+                    <img src="https://bakingo.com/blog/wp-content/uploads/2024/08/lemon-drizzle-cake-recepie.jpg?tr=w-266,dpr-1.5,q-70" width="" alt="cake" class="w-full rounded-lg">
+                </div>
+                <p class="text-base font-bold pb-3">Easy and Refreshing Lemon Drizzle Cake Recipe for Any Occasion</p>
+                <p class="text-sm font-semibold text-gray-700 pb-11">There’s something universally appealing about a lemon drizzle cake. Its tangy flavour and light, moist texture makes it the perfect treat whether you’re hosting...</p>
+            </div>
+        </div>
+
+        <div class="bg-white max-w-72 rounded-lg p-3 shadow-lg">
+            <div class="flex flex-col gap-3 max-w-60 max-h-fit rounded-lg cursor-pointer hover:scale-105 transition duration-500 delay-75 ease-in-out">
+                <div class="max-w-60 flex flex-col gap-3">
+                    <img src="https://bakingo.com/blog/wp-content/uploads/2024/08/Cover-.jpg?tr=w-266,dpr-1.5,q-70" width="" alt="cake" class="w-full rounded-lg">
+                </div>
+                <p class="text-base font-bold pb-3">Easy Step-by-Step Raspberry Bakewell Cake Recipe</p>
+                <p class="text-sm font-semibold text-gray-700 pb-16">There’s nothing quite like a Bakewell Cake, the rich almond flavours with plump raspberry jam; it is something from the outer world. Welcome to the delightful w...</p>
+            </div>
+        </div>
+
+      </div>
+      </div>
+
+     <!-- What our customer says -->
+      <div class="mt-20 pb-2 px-20 h-auto cursor-pointer">
+         <div class="flex  items-center justify-between">
+            <div class="mt-5  h-[590px] w-[506px] bg-cover"  style="background-image: url('https://bkmedia.bakingo.com/ssr-static/blobs.png');">
+               <div class="px-14 ">
+                 <div class=" pt-52">
+                   <!-- ~ flickity crousal -->
+                 <div
+                 class="cursor-pointer  "
+                 data-flickity='{ "wrapAround": true}'
+              >
+
+              <div class="flex text-white absolute  items-center justify-center ">
+               <P class=" font-normal text-[20px]">Thank you for my lovely wishes to send her and your cake was amazing, ???
+                  <span class="font-normal text-base">Isha</span>
+               </P>
+             </div>
+
+             <div class="flex text-white absolute items-center justify-center ">
+               <P class=" font-normal text-[20px]">The jar cakes were awesome & Delicious!
+                  <br><span class="font-normal text-base">Rohith</span></P>
+             </div>
+
+             <div class="flex text-white absolute items-center justify-center ">
+               <P class=" font-normal text-[20px]">Very Very Good taste and timely delivery.
+                  <br><span class="font-normal text-base">Paras Dwivedi</span></P>
+             </div> 
+
+             
+
+              <div class="flex text-white absolute items-center justify-center">
+               <P class=" font-normal text-[20px] flex flex-col">Yummy and nice packaging I really Love it!
+                  <span class="font-normal text-base">Chiku and Cherry</span></P>
+             </div>
+            
+              </div>
+                 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+                 
+                 </div>
+                 <div class=" pt-8">
+                  <a href="" class="text-white pt-12">All Reviews</a>
+                 </div>
+               </div>
+            </div>
+            <div class=" flex flex-col flex-wrap gap-6 items-start w-[50vw] pl-52 pr-16 ">
+               <div>
+                  <h1 class="font-normal text-[35px]">What our customers say about us!</h1>
+               </div>
+               <div class="flex  gap-2  items-center">
+                  <div class="text-green-700 border rounded bg-[rgb(232,244,237)] h-7 w-16 font-normal flex items-center justify-center gap-1 ">
+                     <i class="fa-solid fa-star text-base"></i>
+                     <span class=" text-[15px]">4.9</span>
+                  </div>
+                  <div class="font-normal text-[15px]">
+                     <p>Based On 37428+ Reviews And Rating</p>
+                  </div>
+               </div>
+
+               <div class="flex gap-2 items-center">
+                  <div class="text-green-700 border rounded bg-[rgb(232,244,237)] h-7 w-16 font-normal flex items-center justify-center gap-1 ">
+                     <i class="fa-solid fa-star text-base"></i>
+                     <span class=" text-[15px]">4.4</span>
+                  </div>
+                  <div class="font-normal text-base w-[130px]">
+                     <img src="https://media.bakingo.com/bakingo-ssr/static/media/google-rating.e8b4a584.png" alt="Google Image" class="size-fit">
+                  </div>
+               </div>
+
+               <div class="flex gap-2 items-center">
+                  <div class="text-green-700 border rounded bg-[rgb(232,244,237)] h-7 w-16 font-normal flex items-center justify-center gap-1 ">
+                     <i class="fa-solid fa-star text-base"></i>
+                     <span class=" text-[15px]">4.1</span>
+                  </div>
+                  <div class="font-normal text-base w-[130px]">
+                     <img src="https://media.bakingo.com/bakingo-ssr/static/media/facebook-rating.5ddcee07.png" alt="Facebook Image" class="size-fit">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Seeking for Something -->
+       <div class=" mt-2 flex gap-20">
+         <div class="h-full w-full">
+            <img src="https://bkmedia.bakingo.com/ssr-static/contact_form.png" alt="Cake Image">
+         </div>
+         <div class="pr-16 h-full w-full">
+            <div class="font-normal text-[33px]">
+               ..Seeking for something special and customized ?
+            </div>
+            <div class="pt-4">
+               <form>
+                  <div class="flex gap-3">
+                     <div class="mb-7">
+                        <label for="name" class="block text-sm font-medium text-gray-400">Your Name <span class="text-red-400">*</span></label>
+                        <input type="text" id="name" name="name" required class="mt-3  w-[290px] h-[36px] border-black border focus:outline-none  p-2" >
+                      </div>
+                      
+                      <div class="mb-7">
+                         <label for="name" class="block text-sm font-medium text-gray-400">Phone Number <span class="text-red-400">*</span></label>
+                        <input type="text" id="name" name="name" required class="mt-3  w-[290px] h-[36px]  border-black border focus:outline-none  p-2" >
+                      </div>
+                  </div>
+                  
+                  <div class="mb-7">
+                    <label for="email" class="block text-sm font-medium text-gray-400">Email<span class="text-red-400">*</span></label>
+                    <input type="email" id="email" name="email" required class="mt-3 block w-full h-[36px] border border-black focus:outline-none   p-2">
+                  </div>
+                  
+                  <div class="mb-6">
+                    <label for="message" class="block text-sm font-medium text-gray-400">Message<span class="text-red-400">*</span></label>
+                    <textarea id="message" name="message" rows="3" required class="mt-3 block w-full border focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-md  p-2"></textarea>
+                  </div>
+                  
+                  <button type="submit" class="w-full bg-[rgb(255,95,93)] text-white text-base font-normal py-2 rounded-md h-16">
+                    Submit Form
+                  </button>
+                </form>
+            </div>
+         </div>
+       </div>
+
+       <!-- About Us -->
+       <div class="px-28 mt-14 pb-14 h-auto bg-cover bg-center" style="background-image: url('https://bkmedia.bakingo.com/ssr-static/aboutus_bg.png');">
+         <div class="w-2/4">
+            <h1 class="font-normal text-[38px]">About us</h1>
+            <p class="font-normal text-base text-gray-400 pt-6 mb-6">Bakingo is an FSSAI-certified bakery where every dessert tells a story! Our bakery came to light intending to make your remarkable occasions even sweeter and more memorable. We bake perfection with quality ingredients into impeccable cakes, pastries, brownies, cupcakes, and much more. We specialise in delivering exuberant smiles to our customers in around 30 cities across India, including Delhi, Mumbai, Bengaluru, Hyderabad, Ahmedabad, Chennai, Kolkata, Pune, and so forth. Bakingo is a haven for dessert lovers who want to indulge in scrumptious treats and fill their celebrations with cherished memories.</p>
+            <span class="px-6 py-2 border-2 text-[15px] font-semibold hover:cursor-pointer bg-red-50 text-red-400 rounded-md border-red-300">View All</span>
+         </div>
+        </div>
+        <div class="mt-4 px-28">
+         <h1 class="font-semibold text-[20px] text-gray-600 py-3">Bakingo - Your Trusted FSSAI Certified Online Bakery For Every Celebration</h1>
+         <p class="font-normal text-sm text-gray-400">We are exactly what you are looking for. Yes, we are an FSSAI certified online cake and Bakery Company that specializes in delivering absolutely lip-smacking delicacies. Currently, we are delivering cakes in Gurgaon, Delhi, Noida,Ghaziabad, Bangalore, Hyderabad, Mumbai, Kolkata, Chennai, and many other cities. We are here to create some unforgettable memories and some undying emotions by helping you to send cake online to your beloved ones.</p>
+         <p class="font-normal text-sm text-gray-400 py-3">Our mission is to “deliver these heavenly cakes at your doorstep on time to make your celebrations even grander”. Because for us, it is not just a Cake but more and so we craft it with a blend of inspiration, passion, and love. We guarantee an extraordinary taste in your choicest flavors with ravishing designs. Sounds perfect, isn’t it?</p>
+         <p class="font-normal text-sm text-gray-400">So, be prepared to experience something devilishly delicious, something that will take even the hardest to please Cake Lovers on a delectable ride into the World of Sweet Indulgence where we celebrate Happiness! Watch Out Us! We are Bakingo, a brand you will call the best cake shop near me after having our cakes. We Are Here to Redefine Sweetness & our matchless services of delivering cakes online.</p>
+         
+         <h2 class="font-semibold text-[20px] text-gray-600 py-4">Why To Choose Bakingo For Online Cake Delivery In India?</h2>
+         <p class="font-normal text-sm text-gray-400">Now, having a <a href=""><span class="text-blue-400 hover:text-red-400">birthday cake</span></a>,<a href="./Anniverasary/AnniversaryCakes.html"><span class="text-blue-400 hover:text-red-400">anniversary cake</span></a>  or wedding cake is completely a hassle-free task with Bakingo. Earlier, you would have to go from one shop to another in search for a delectable cake to heighten the happiness of your special occasions. But now, with Bakingo’s online cake delivery, you can browse through a variety of best quality cakes and pick your favorite cake just sitting at your home. After you have selected your favorite cake from our varieties, order the cake online in a few clicks and relax because Bakingo ensure same day cake delivery. Yes, now gorge on your favorite delicacies and take your special occasions to new heights with Bakingo’s online cake delivery service. With our melt-in-mouth delicacies now you can also deliver your heartfelt wishes and affection to your loved ones on their special days. In fact, even if you live in another country and wants to send a delicious cake to India for your parents, relatives, or friends on their birthday, anniversary or any other occasion, then you can completely count on Bakingo for timely delivery because we understand your love and emotions towards your close ones. So, go ahead and place your online cake order from us from your comfort, and we will serve you the perfectly baked delicacies. Our online cake delivery service promise to deliver on the same day.</p>
+         
+         <h1 class="font-semibold text-[20px] text-gray-600 py-4">Variety And Flavors Of Cakes To Make You Surrender Your Senses</h1>
+         <p class="font-normal text-sm text-gray-400">Bakingo’s online cake delivery offers you a huge range of cakes baked with utmost perfection and the finest quality of ingredients. Cakes available in our bakery are always fresh, soft, moist, mushy and fluffy in texture. We have flavorsome cakes to illuminate your every occasion. Be it a birthday, wedding, anniversary, Valentine's day, Mother's day or any other event, our cakes will never disappoint you. These hard-to-resist delicacies are available in a plethora of flavors like <a href=""><span class="text-blue-400 hover:text-red-400">Red Velvet</span></a>,<a href=""><span class="text-blue-400 hover:text-red-400">Butterscotch</span></a> ,<a href=""><span class="text-blue-400 hover:text-red-400">Strawberry</span></a> , <a href=""><span class="text-blue-400 hover:text-red-400">Chocolate</span></a>,<a href=""><span class="text-blue-400 hover:text-red-400">Vanilla</span></a> ,<a href=""><span class="text-blue-400 hover:text-red-400">Blueberry</span></a> ,<a href=""><span class="text-blue-400 hover:text-red-400">Pineapple</span></a> , <a href=""><span class="text-blue-400 hover:text-red-400">Kiwi</span></a>, <a href=""><span class="text-blue-400 hover:text-red-400">Coffee</span></a>, <a href=""><span class="text-blue-400 hover:text-red-400">Mango</span></a>, <a href=""><span class="text-blue-400 hover:text-red-400">Ferrero Rocher</span></a>, <a href=""><span class="text-blue-400 hover:text-red-400">Oreo</span></a>Kit-kat,<a href=""><span class="text-blue-400 hover:text-red-400"></span></a>  and many more. Since no one can say ‘No’ to chocolates, we have come up with a variety of chocolate cakes among which 'Double-Trouble', 'Alive by Chocolate' and Rocher Rejoice with just leave your mouth water. If you are a fruit lover, then you must try our extremely delicious Red Velvet fruit cake enriched with fruits and adorned with whipped cream. With Bakingo, you can proudly say that "I have the best cakes near me' which will be at your doorstep within a few clicks.So, if there is a huge celebration waiting up next in your calendar, order a cake online from us and brighten up your celebration with our irresistible yummylicious treats. Our online cake delivery service promise to deliver on the same day.</p>
+         
+         <h2 class="font-semibold text-[20px] text-gray-600 py-4">Buy Variety Of Bakery Items Online From Bakingo</h2>
+         <p class="font-normal text-sm text-gray-400">Cakes: - We have lots and lots of different types of cakes available. You can buy cakes according to your preferences such as occasion, type, flavours, and your city. Our designer cakes have always been the talk of the town, and our photo cakes have never failed to impress people. If you are out of the country, you can easily send cake to India with same day delivery.</p>
+         <p class="font-normal text-sm text-gray-400 py-3">Jar Cakes: - This sweet version of the cakes is a new-age trend. <a href=""><span class="text-blue-400 hover:text-red-400">Jar cakes</span></a> are best suited to cater to little sweet hunger pangs. At Bakingo, you can buy jar cakes in two different sizes and can also buy them with or without the combo. Every single bite of our scrumptious jar cakes will make you drool madly.</p>
+         <p class="font-normal text-sm text-gray-400">Cupcakes: - These are the most popular and most cutest dish containing the richness and deliciousness of the cake. You can buy and send <a href=""><span class="text-blue-400 hover:text-red-400">cupcakes</span></a> from Bakingo with so much ease to all your near and dear ones as we promise to deliver oven-fresh cute delicacy. You can buy cupcakes in a combo of two, three, and six. You can also buy a single cupcake.</p>
+         <p class="font-normal text-sm text-gray-400 py-3">Pastries: - Pastries are good to enjoy little parties with your friends and family and sometimes also make a great snack time food. <a href=""><span class="text-blue-400 hover:text-red-400">Pastries</span></a> at Bakingo are baked with all the premium ingredients using world-class baking process and techniques. And our artist like designers put all their creativity to give an eye-catchy look to the pastries.</p>
+         <p class="font-normal text-sm text-gray-400">Brownies: - Brownies are baked delicacies that look like a piece of cake, just like pastries at first look but are denser and a bit hard than the cake. They provide a taste that rests between a cake and a bar of chocolate. You can order different kinds of <a href=""><span class="text-blue-400 hover:text-red-400">brownies and brownie sets</span></a> from Bakingo.</p>
+         <p class="font-normal text-sm text-gray-400 py-3">Pinata Cake: - Someone thought of hiding a cake inside the hard, sugary, edible covering, and it is now known as Pinata Cakes. The best thing about pinata cakes is that they provide an element of surprise even after the cake is taken out of the box. We deliver amazing <a href=""><span class="text-blue-400 hover:text-red-400">Pinata cakes</span></a>  through our online cake delivery service and provide a wooden hammer for free to break the hard covering.</p>
+         <p class="font-normal text-sm text-gray-400">Pull Me Up Cake: - We have amazing and magical<a href=""><span class="text-blue-400 hover:text-red-400">Pull Me Up Cakes</span></a>  which provide a performance of dripping chocolate as soon as you pull up the plastic covering. You will see a cake coming to its final decision before your eyes and at your comfort.</p>
+      
+         <h2 class="font-semibold text-[20px] text-gray-600 py-4">Order Cake Online With Bakingo’s Special Delivery Services</h2>
+         <p class="font-normal text-sm text-gray-400">Bifurcating things furthermore means providing ease of selection, and that’s what Bakingo do through various types of cake delivery services. When you order cake online from Bakingo, you get the luxury to choose from delivery types as per your comfort and convenience. There can be situations where you want the cake at a fixed time to enhance the surprise, and so you can opt for a fixed time cake delivery service for which you have to pay Rs. 150/- only. Some people would love to celebrate over cakes early in the morning, and thus we serve them our delicacies through early morning delivery at a delivery charge of Rs. 150/- only. The excitement of surprise and the fun doubles when it is given at midnight. So, if you plan to flabbergast someone with a cake at 12 AM, you can opt-out midnight cake delivery, for which we charge Rs. 250/- only. You can also place cake orders online for same-day delivery and 2-hour delivery, and we provide the delivery service for free.</p>
+         
+         <h2 class="font-semibold text-[18px] text-gray-600 py-4">FAQs Related To Bakingo's Online Cake Delivery In India</h2>
+         <h2 class="font-semibold text-[18px] text-gray-600 py-">Can I Send A Message Or Wish Along With A Cake?</h2>
+
+         <p class="font-normal text-base py-3">Of course you can. Bakingo provides facility of sending personalized messages along with Cake. While placing an order for cake, you get an option of typing your message in a message box.</p>
+      
+         <h2 class="font-semibold text-[18px] text-gray-600 py-4">Do You Take The Same Day Orders As Well?</h2>
+         <p class="font-normal text-base">Yes, being the best cake shop we do take same-day orders as well, but you need to make them before 8 P.M.</p>
+      
+         <h2 class="font-semibold text-[18px] text-gray-600 py-4">Am I Assured Of Timely Delivery Of The Cake?</h2>
+         <p class="font-normal text-base">We always try our best to deliver cakes on-time and we also make promise for that. But, in some predicaments there might be a slight delay. Although, we will inform our customers in such cases.</p>
+
+         <h2 class="font-semibold text-[18px] text-gray-600 py-4">Do You Have Any Add-Ons With The Birthday Cakes?</h2>
+         <p class="font-normal text-base">Yes, we have a variety of add on options; some of them are bouquet, teddy bear, a box of Ferraro Rocher.</p>
+         
+         <h2 class="font-semibold text-[18px] text-gray-600 py-4">What Is The Process Of Refund If I Want To Cancel My Order?</h2>
+         <p>Visit -<a href=""><span class="text-blue-400 hover:text-red-400">https://www.bakingo.com/cancellation-and-refund-policy</span></a>  to read our cancellation and refund policy.</p>
+      
+         <h2 class="font-semibold text-[18px] text-gray-600 py-4">Avail Bakingo Cake Delivery Service In Below Mentioned Cities</h2>
+
+         <span class="text-blue-400 hover:text-red-400">Delhi</span>  | <span class="text-blue-400 hover:text-red-400">Bangalore</span> | <span class="text-blue-400 hover:text-red-400">Gurgaon</span> | <span class="text-blue-400 hover:text-red-400">Noida</span> | <span class="text-blue-400 hover:text-red-400">Mumbai</span> | <span class="text-blue-400 hover:text-red-400">Pune</span> | <span class="text-blue-400 hover:text-red-400">Ghaziabad</span> | <span class="text-blue-400 hover:text-red-400">Chennai</span> | <span class="text-blue-400 hover:text-red-400">Hyderabad</span> |<span class="text-blue-400 hover:text-red-400">Secunderabad</span>  | <span class="text-blue-400 hover:text-red-400">Kolkata</span> | <span class="text-blue-400 hover:text-red-400">Coimbatore</span> | <span class="text-blue-400 hover:text-red-400">Kanpur</span> | <span class="text-blue-400 hover:text-red-400">Jaipur</span> |<span class="text-blue-400 hover:text-red-400">Jalandhar</span>  |<span class="text-blue-400 hover:text-red-400">Faridabad</span>  |<span class="text-blue-400 hover:text-red-400">Patna</span>  |<span class="text-blue-400 hover:text-red-400">Ranchi</span>  | <span class="text-blue-400 hover:text-red-400">Ludhiana</span> |<span class="text-blue-400 hover:text-red-400">Ahmedabad</span>  | <span class="text-blue-400 hover:text-red-400">Amritsar</span> |<span class="text-blue-400 hover:text-red-400">Lucknow</span>  | <span class="text-blue-400 hover:text-red-400">Dehradun</span>  | <span class="text-blue-400 hover:text-red-400">Haridwar</span>  | <span class="text-blue-400 hover:text-red-400">Surat</span>  | <span class="text-blue-400 hover:text-red-400">Chandigarh</span> |<span class="text-blue-400 hover:text-red-400">Mohali</span>  | <span class="text-blue-400 hover:text-red-400">Panchkula</span>
+      </div>
+    </main>
 
 
 
 
     <!-- Footer -->
      <footer>
-        <div class=" mt-40 cursor-default font-poppins flex h-32 px-20 items-center justify-between bg-[rgb(255,248,239)] border-b-2 border-t-2 border-red-100">
+        <div class=" mt-4 cursor-default font-poppins flex h-32 px-20 items-center justify-between bg-[rgb(255,248,239)] border-b-2 border-t-2 border-red-100">
             <div class="flex justify-between items-center gap-6">
                 <div class="flex items-center font-semibold text-[13px]">
                     <img src="./images/truckIcon.822f5067.svg" alt="" class="pr-3">
