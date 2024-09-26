@@ -1869,12 +1869,20 @@ video {
     display: none;
   }
 
+  .sm\:w-\[17\.7rem\] {
+    width: 17.7rem;
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
 
   .sm\:flex-nowrap {
     flex-wrap: nowrap;
+  }
+
+  .sm\:justify-end {
+    justify-content: flex-end;
   }
 
   .sm\:gap-20 {
@@ -1928,6 +1936,11 @@ video {
     padding-right: 5.2rem;
   }
 
+  .sm\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -1949,6 +1962,10 @@ video {
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
+  }
+
+  .md\:w-\[19\.4rem\] {
+    width: 19.4rem;
   }
 
   .md\:grid-cols-3 {
@@ -2004,6 +2021,10 @@ video {
     display: flex;
   }
 
+  .lg\:min-w-\[19\.4rem\] {
+    min-width: 19.4rem;
+  }
+
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -2024,5 +2045,10 @@ video {
   .lg\:px-36 {
     padding-left: 9rem;
     padding-right: 9rem;
+  }
+
+  .lg\:px-\[4\.6rem\] {
+    padding-left: 4.6rem;
+    padding-right: 4.6rem;
   }
 }
