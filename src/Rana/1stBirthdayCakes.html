@@ -18,7 +18,7 @@
      </style>
     <title>1st Birthday Cake</title>
 </head>
-<body class="font-poppins w-screen">
+<body class="font-poppins w-screen overflow-x-hidden">
 
     <!-- ~ header -->
     <header class="w-screen fixed top-0 left-0 right-0 z-40">
@@ -762,7 +762,7 @@
     </header>
 
     <!-- Title of 1st Birthday Cakes section -->
-    <div class="mt-24 sm:mt-32 px-3 sm:px-[4rem] sm:bg-gray-100 border flex justify-between items-center w-full h-24">
+    <div class="mt-24 sm:mt-32 px-3 sm:px-[4rem] sm:bg-gray-100 border flex justify-between items-center w-full h-24 overflow-x-hidden">
         <h1 class="text-lg sm:text-3xl text-nowrap font-bold">1st Birthday Cake</h1>
         <div class="bg-white border rounded-lg flex-col justify-center items-center gap-2 text-xs px-3 py-2 hidden sm:block">
             <div class="flex gap-1 justify-center items-center border-b pb-2">
@@ -778,10 +778,10 @@
     
 
     <!-- main section -->
-    <div class="w-full px-3 md:px-[6rem]">
+    <div class="w-full px-3 md:px-[6rem] overflow-x-hidden">
         
 
-        <!-- Birthday Cakes Chocolates head section -->
+        <!-- 1st Birthday Cakes head section -->
         <div class="max-w-full flex justify-end items-center py-4 text-sm font-medium">
             <div class="flex items-center justify-center gap-2">
                 <p>Sort By :</p>
@@ -3178,59 +3178,63 @@
                </div>
             </div>
          </div>
-      </div>
+        </div>
 
-        <!-- Reviews & Ratings -->
-        <div class="font-poppins px-32">
-            <h1 class="flex justify-center items-center font-normal text-[38px]">All Reviews & Ratings</h1>
+        <!-- ~ reviews & ratings -->
+        <div class="font-poppins px-4 sm:px-10 md:px-32 mt-12">
+            <h1 class="flex justify-center items-center font-normal text-2xl sm:text-[38px]">All Reviews & Ratings</h1>
             <div class="flex justify-center items-center py-6 gap-4">
-                <div class="flex gap-2 items-center">
+                <div class="flex flex-col sm:flex-row gap-2 items-center">
                     <img src="../images/review-stars.svg" alt="review" />
-                    <span class="font-semibold text-[15px] mr-8">4.9 out of 5</span>
-                
+                    <span class="font-semibold text-sm sm:text-[15px]">4.9 out of 5</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 items-center">
                     <img src="../images/recomended.svg" alt="recomended" />
-                    <span class="font-semibold text-[15px]">98 % Recommended</span>
-                </div>  
+                    <span class="font-semibold text-sm sm:text-[15px]">98 % Recommended</span>
+                </div>
             </div>
-  
+
             <!-- Grid -->
-            <div class="grid grid-cols-1 gap-4 pt-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pt-6">
                 <!-- col1 -->
                 <div class="flex flex-col gap-3">
                     <!-- review cell 1 -->
                     <div class="border-2 rounded-xl h-fit">
                         <img
-                            src="https://media.bakingo.com/bk/review_image/1725633809.5701.jpeg?tr=w-320"
+                            src="https://media.bakingo.com/bk/review_image/1725442948.0183.jpeg?tr=w-320"
                             alt=""
                             class="w-[100%] rounded-xl"
                         />
                         <div class="px-3 py-3 leading-6">
                             <div class="pb-3">
-                                <p class="font-normal text-sm">Good one</p>
-                                <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                    </div>
-                                    <div class="text-green-500 text-sm font-normal">
-                                        <p>Recommended</p>
-                                    </div>
+                            <p class="font-normal text-sm">Good one</p>
+                            <p class="font-normal text-[13px] text-gray-500">
+                                Rating and Review
+                            </p>
+                            <div class="flex flex-wrap items-center justify-between">
+                                <div class="text-yellow-400 text-[14px] flex items-center">
+                                    <span> ★ </span>
+                                    <span> ★ </span>
+                                    <span> ★ </span>
+                                    <span> ★ </span>
+                                    <span> ★ </span>
                                 </div>
+                                <div class="text-green-500 text-xs font-normal">
+                                    <p>Recommended</p>
+                                </div>
+                            </div>
                             </div>
                             <hr />
                             <div class="py-3 font-normal text-sm">
                                 <p>
-                                    <span class="text-gray-500 text-[13px]">Product :</span> Happy Birthday Choco Ball Pinata Cake
+                                    <span class="text-gray-500 text-[13px]">Product :</span>
+                                    Happy Birthday Choco Ball Pinata Cake
                                 </p>
                                 <p>
                                     <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday
                                 </p>
                                 <p>
-                                    <span class="text-gray-500 text-[13px]"> Date :</span> 21st Sep, 2024
+                                    <span class="text-gray-500 text-[13px]">Date :</span>21st Sep, 2024
                                 </p>
                             </div>
                             <div>
@@ -3241,40 +3245,37 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- review cell 2 -->
                     <div class="border-2 rounded-xl h-fit">
                         <div class="px-3 py-3 leading-6">
                             <div class="pb-3">
-                                <p class="font-normal text-sm">Yummiest cake ever.</p>
-                                <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                            <div class="flex justify-between">
-                                <div class="text-yellow-400">
-                                    <span class="material-symbols-outlined text-[16px]">star</span>
-                                    <span class="material-symbols-outlined text-[16px]">star</span>
-                                    <span class="material-symbols-outlined text-[16px]">star</span>
-                                    <span class="material-symbols-outlined text-[16px]">star</span>
-                                    <span class="material-symbols-outlined text-[16px]">star</span>
+                            <p class="font-normal text-sm">Yummiest cake ever.</p>
+                            <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
+                            <div class="flex flex-wrap items-center justify-between">
+                                <div class="text-yellow-400 text-[14px] flex items-center">
+                                    <span> ★ </span>
+                                    <span> ★ </span>
+                                    <span> ★ </span>
+                                    <span> ★ </span>
+                                    <span> ★ </span>
                                 </div>
-                                <div class="text-green-500 text-sm font-normal">
+                                <div class="text-green-500 text-xs font-normal">
                                     <p>Recommended</p>
                                 </div>
                             </div>
                             </div>
                             <hr />
                             <div class="py-3 font-normal text-sm">
-                            <p>
-                                <span class="text-gray-500 text-[13px]">Product :</span
-                                >Chocolate Pinata Heart Shape Cake
-                            </p>
-                            <p>
-                                <span class="text-gray-500 text-[13px]">Occassion :</span
-                                >Birthday
-                            </p>
-                            <p>
-                                <span class="text-gray-500 text-[13px]"> Date :</span>8th Sep,
-                                2024
-                            </p>
+                                <p>
+                                    <span class="text-gray-500 text-[13px]">Product :</span>Chocolate Pinata Heart Shape Cake
+                                </p>
+                                <p>
+                                    <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday
+                                </p>
+                                <p>
+                                    <span class="text-gray-500 text-[13px]"> Date :</span>8th Sep, 2024
+                                </p>
                             </div>
                             <div>
                                 <p class="font-semibold text-[15px]">Nidhi Babbar</p>
@@ -3284,22 +3285,22 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- review cell 3 -->
                     <div class="border-2 rounded-xl h-fit">
                         <div class="px-3 py-3 leading-6">
                             <div class="pb-3">
                                 <p class="font-normal text-sm">Cake was.good and as well as packaging</p>
                                 <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
                                     </div>
-                                    <div class="text-green-500 text-sm font-normal">
+                                    <div class="text-green-500 text-xs font-normal">
                                         <p>Recommended</p>
                                     </div>
                                 </div>
@@ -3313,8 +3314,7 @@
                                     <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday
                                 </p>
                                 <p>
-                                    <span class="text-gray-500 text-[13px]"> Date :</span> 12th Aug, 2024
-                                </p>
+                                    <span class="text-gray-500 text-[13px]">Date :</span>12th Aug, 2024</p>
                             </div>
                             <div>
                                 <p class="font-semibold text-[15px]">Bindu</p>
@@ -3324,22 +3324,24 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- review cell 4 -->
                     <div class="border-2 rounded-xl h-fit">
                         <div class="px-3 py-3 leading-6">
                             <div class="pb-3">
                                 <p class="font-normal text-sm">Tasty and economical</p>
-                                <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
+                                <p class="font-normal text-[13px] text-gray-500">
+                                    Rating and Review
+                                </p>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
                                     </div>
-                                    <div class="text-green-500 text-sm font-normal">
+                                    <div class="text-green-500 text-xs font-normal">
                                         <p>Recommended</p>
                                     </div>
                                 </div>
@@ -3364,22 +3366,22 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- review cell 5 -->
                     <div class="border-2 rounded-xl h-fit">
                         <div class="px-3 py-3 leading-6">
                             <div class="pb-3">
                                 <p class="font-normal text-sm">Kid happy for on time delivery and penata cake</p>
                                 <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
                                     </div>
-                                    <div class="text-green-500 text-sm font-normal">
+                                    <div class="text-green-500 text-xs font-normal">
                                         <p>Recommended</p>
                                     </div>
                                 </div>
@@ -3387,13 +3389,13 @@
                             <hr />
                             <div class="py-3 font-normal text-sm">
                                 <p>
-                                    <span class="text-gray-500 text-[13px]">Product :</span> Happy Birthday Choco Ball Pinata Cake
+                                    <span class="text-gray-500 text-[13px]">Product :</span>Happy Birthday Choco Ball Pinata Cake
                                 </p>
                                 <p>
                                     <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday
                                 </p>
                                 <p>
-                                    <span class="text-gray-500 text-[13px]"> Date :</span> 10th Sep, 2024
+                                    <span class="text-gray-500 text-[13px]">Date :</span>10th Sep, 2024
                                 </p>
                             </div>
                             <div>
@@ -3404,27 +3406,27 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- review cell 6 -->
                     <div class="border-2 rounded-xl h-fit">
                         <div class="px-3 py-3 leading-6">
                             <img
-                            src="../images/cake4.avif"
-                            alt=""
-                            class="w-[100%] rounded-xl"
+                                src="https://media.bakingo.com/bk/review_image/1725633809.5701.jpeg?tr=w-320"
+                                alt=""
+                                class="w-[100%] rounded-xl"
                             />
                             <div class="pb-3">
                                 <p class="font-normal text-sm">Thank you for the delicious cake.</p>
                                 <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
                                     </div>
-                                    <div class="text-green-500 text-sm font-normal">
+                                    <div class="text-green-500 text-xs font-normal">
                                         <p>Recommended</p>
                                     </div>
                                 </div>
@@ -3438,7 +3440,7 @@
                                     <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday
                                 </p>
                                 <p>
-                                    <span class="text-gray-500 text-[13px]"> Date :</span>11th Sep, 2024
+                                    <span class="text-gray-500 text-[13px]">Date :</span>11th Sep, 2024
                                 </p>
                             </div>
                             <div>
@@ -3450,7 +3452,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- col2 -->
                 <div class="flex flex-col gap-3">
                     <!-- review cell 1 -->
@@ -3459,15 +3461,15 @@
                             <div class="pb-3">
                                 <p class="font-normal text-sm">Amazing taste ?</p>
                                 <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
                                     </div>
-                                    <div class="text-green-500 text-sm font-normal">
+                                    <div class="text-green-500 text-xs font-normal">
                                         <p>Recommended</p>
                                     </div>
                                 </div>
@@ -3475,7 +3477,7 @@
                             <hr />
                             <div class="py-3 font-normal text-sm">
                                 <p>
-                                    <span class="text-gray-500 text-[13px]">Product :</span> Red Heart Shape Pinata Cake
+                                    <span class="text-gray-500 text-[13px]">Product :</span>Red Heart Shape Pinata Cake
                                 </p>
                                 <p>
                                     <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday
@@ -3492,25 +3494,28 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- review cell 2 -->
                     <div class="border-2 rounded-xl h-fit">
                         <div class="px-3 py-3 leading-6">
                             <div class="pb-3">
                                 <p class="font-normal text-sm">
-                                    The cake and all the items sent were absolutely amazing. Thankyou Bakingo
+                                    The cake and all the items sent were absolutely
+                                    amazing. Thank you Bakingo
                                 </p>
-                                <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
+                                <p class="font-normal text-[13px] text-gray-500">
+                                    Rating and Review
+                                </p>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
                                     </div>
-                                    <div class="text-green-500 text-sm font-normal">
-                                    <p>Recommended</p>
+                                    <div class="text-green-500 text-xs font-normal">
+                                        <p>Recommended</p>
                                     </div>
                                 </div>
                             </div>
@@ -3534,24 +3539,23 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- review cell 3 -->
                     <div class="border-2 rounded-xl h-fit">
                         <div class="px-3 py-3 leading-6">
                             <div class="pb-3">
                                 <p class="font-normal text-sm">Very tasty.</p>
-                                <p class="font-normal text-[13px] text-gray-500">Rating and Review
-                                </p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
+                                <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
                                     </div>
-                                    <div class="text-green-500 text-sm font-normal">
-                                    <p>Recommended</p>
+                                    <div class="text-green-500 text-xs font-normal">
+                                        <p>Recommended</p>
                                     </div>
                                 </div>
                             </div>
@@ -3575,39 +3579,41 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- review cell 4 -->
                     <div class="border-2 rounded-xl h-fit">
                         <div class="px-3 py-3 leading-6">
                             <div class="pb-3">
                                 <p class="font-normal text-sm">
-                                    I don't have word to express , it was beyond the expectation .
-                                    Thank you for the service bakingo ❤️❤️??
+                                    I don't have word to express , it was beyond the
+                                    expectation . Thank you for the service bakingo
+                                    ❤️❤️??
                                 </p>
                                 <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
                                     </div>
-                                    <div class="text-green-500 text-sm font-normal">
-                                    <p>Recommended</p>
+                                    <div class="text-green-500 text-xs font-normal">
+                                        <p>Recommended</p>
                                     </div>
                                 </div>
                             </div>
                             <hr />
                             <div class="py-3 font-normal text-sm">
                                 <p>
-                                    <span class="text-gray-500 text-[13px]">Product :</span>Adorable Unicorn Butterscotch Pinata Cake
+                                    <span class="text-gray-500 text-[13px]">Product :</span>
+                                    Adorable Unicorn Butterscotch Pinata Cake
                                 </p>
                                 <p>
                                     <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday
                                 </p>
                                 <p>
-                                    <span class="text-gray-500 text-[13px]"> Date :</span> 6th Sep, 2024
+                                    <span class="text-gray-500 text-[13px]">Date :</span>6th Sep, 2024
                                 </p>
                             </div>
                             <div>
@@ -3618,7 +3624,7 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- review cell 5 -->
                     <div class="border-2 rounded-xl h-fit">
                         <img
@@ -3629,22 +3635,25 @@
                         <div class="px-3 py-3 leading-6">
                             <div class="pb-3">
                                 <p class="font-normal text-sm">
-                                    It was exactly same as mentioned over website, delivered
-                                    safely.Would definately recommend. @bakingo top chocolate
-                                    later was very thick , it was hard to break. If possible ,
-                                    reduce the thickness .Overall it was good
+                                    It was exactly same as mentioned over website,
+                                    delivered safely.Would definately recommend. @bakingo
+                                    top chocolate later was very thick , it was hard to
+                                    break. If possible , reduce the thickness .Overall it
+                                    was good
                                 </p>
-                                <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
+                                <p class="font-normal text-[13px] text-gray-500">
+                                    Rating and Review
+                                </p>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
                                     </div>
-                                    <div class="text-green-500 text-sm font-normal">
-                                    <p>Recommended</p>
+                                    <div class="text-green-500 text-xs font-normal">
+                                        <p>Recommended</p>
                                     </div>
                                 </div>
                             </div>
@@ -3657,7 +3666,7 @@
                                     <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday
                                 </p>
                                 <p>
-                                    <span class="text-gray-500 text-[13px]"> Date :</span> 9th Sep, 2024
+                                    <span class="text-gray-500 text-[13px]">Date :</span>9th Sep, 2024
                                 </p>
                             </div>
                             <div>
@@ -3669,13 +3678,13 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- col3 -->
                 <div class="flex flex-col gap-3">
                     <!-- review cell 1 -->
                     <div class="border-2 rounded-xl h-fit">
                         <img
-                            src="../images/cake3.avif"
+                            src="https://media.bakingo.com/bk/review_image/1724827757.6169.jpeg?tr=w-320"
                             alt=""
                             class="w-[100%] rounded-xl"
                         />
@@ -3683,23 +3692,24 @@
                             <div class="pb-3">
                                 <p class="font-normal text-sm">Good as mentioned as in photo</p>
                                 <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
                                     </div>
-                                    <div class="text-green-500 text-sm font-normal">
-                                    <p>Recommended</p>
+                                    <div class="text-green-500 text-xs font-normal">
+                                        <p>Recommended</p>
                                     </div>
                                 </div>
                             </div>
                             <hr />
                             <div class="py-3 font-normal text-sm">
                                 <p>
-                                    <span class="text-gray-500 text-[13px]">Product :</span> PeppaPig Red Velvet Pinata Cake
+                                    <span class="text-gray-500 text-[13px]">Product :</span>
+                                    Peppa Pig Red Velvet Pinata Cake
                                 </p>
                                 <p>
                                     <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday 21st
@@ -3716,30 +3726,31 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- review cell 2 -->
                     <div class="border-2 rounded-xl w-auto h-fit">
                         <div class="px-3 py-3 leading-6">
                             <div class="pb-3">
                                 <p class="font-normal text-sm">Nice products with delicious quality</p>
                                 <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
                                     </div>
-                                    <div class="text-green-500 text-sm font-normal">
-                                    <p>Recommended</p>
+                                    <div class="text-green-500 text-xs font-normal">
+                                        <p>Recommended</p>
                                     </div>
                                 </div>
                             </div>
                             <hr />
                             <div class="py-3 font-normal text-sm">
                                 <p>
-                                    <span class="text-gray-500 text-[13px]">Product :</span>Happy Birthday Choco Ball Pinata Cake
+                                    <span class="text-gray-500 text-[13px]">Product :</span>
+                                    Happy Birthday Choco Ball Pinata Cake
                                 </p>
                                 <p>
                                     <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday
@@ -3756,26 +3767,26 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- review cell 3 -->
                     <div class="border-2 rounded-xl h-fit">
                         <div class="px-3 py-3 leading-6">
                             <div class="pb-3">
                                 <p class="font-normal text-sm">
-                                    The cake and all the items sent were absolutely amazing. Thank you Bakingo
+                                    The cake and all the items sent were absolutely
+                                    amazing. Thank you Bakingo
                                 </p>
-                                    <p class="font-normal text-[13px] text-gray-500">Rating and Review
-                                </p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
+                                <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
                                     </div>
-                                    <div class="text-green-500 text-sm font-normal">
-                                    <p>Recommended</p>
+                                    <div class="text-green-500 text-xs font-normal">
+                                        <p>Recommended</p>
                                     </div>
                                 </div>
                             </div>
@@ -3788,7 +3799,7 @@
                                     <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday
                                 </p>
                                 <p>
-                                    <span class="text-gray-500 text-[13px]"> Date :</span> 28th Aug, 2024
+                                    <span class="text-gray-500 text-[13px]">Date :</span>28th Aug, 2024
                                 </p>
                             </div>
                             <div>
@@ -3799,30 +3810,30 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- review cell 4 -->
                     <div class="border-2 rounded-xl h-fit">
                         <div class="px-3 py-3 leading-6">
                             <div class="pb-3">
                                 <p class="font-normal text-sm">Superb experience.... Thank you!</p>
                                 <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
                                     </div>
-                                    <div class="text-green-500 text-sm font-normal">
-                                    <p>Recommended</p>
+                                    <div class="text-green-500 text-xs font-normal">
+                                        <p>Recommended</p>
                                     </div>
                                 </div>
                             </div>
                             <hr />
                             <div class="py-3 font-normal text-sm">
                                 <p>
-                                    <span class="text-gray-500 text-[13px]">Product :</span> Happy Birthday Choco Ball Pinata Cake
+                                    <span class="text-gray-500 text-[13px]">Product :</span>Happy Birthday Choco Ball Pinata Cake
                                 </p>
                                 <p>
                                     <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday
@@ -3839,25 +3850,25 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- review cell 5 -->
                     <div class="border-2 rounded-xl h-fit">
                         <div class="px-3 py-3 leading-6">
                             <div class="pb-3">
-                            <p class="font-normal text-sm">Delicious cake</p>
-                            <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                            <div class="flex justify-between">
-                                <div class="text-yellow-400">
-                                    <span class="material-symbols-outlined text-[16px]">star</span>
-                                    <span class="material-symbols-outlined text-[16px]">star</span>
-                                    <span class="material-symbols-outlined text-[16px]">star</span>
-                                    <span class="material-symbols-outlined text-[16px]">star</span>
-                                    <span class="material-symbols-outlined text-[16px]">star</span>
+                                <p class="font-normal text-sm">Delicious cake</p>
+                                <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                    </div>
+                                    <div class="text-green-500 text-xs font-normal">
+                                        <p>Recommended</p>
+                                    </div>
                                 </div>
-                                <div class="text-green-500 text-sm font-normal">
-                                    <p>Recommended</p>
-                                </div>
-                            </div>
                             </div>
                             <hr />
                             <div class="py-3 font-normal text-sm">
@@ -3868,7 +3879,7 @@
                                     <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday
                                 </p>
                                 <p>
-                                    <span class="text-gray-500 text-[13px]"> Date :</span> 18th Aug, 2024
+                                    <span class="text-gray-500 text-[13px]">Date :</span>18th Aug, 2024
                                 </p>
                             </div>
                             <div>
@@ -3880,7 +3891,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- col4 -->
                 <div class="flex flex-col gap-3">
                     <!-- review cell 1 -->
@@ -3888,19 +3899,20 @@
                         <div class="px-3 py-3 leading-6">
                             <div class="pb-3">
                                 <p class="font-normal text-sm">
-                                    The cake was very fantastic inside out And delicious Thankyou
-                                    for making it so tasty and it’s very neat and perfect
+                                    The cake was very fantastic inside out And delicious
+                                    Thankyou for making it so tasty and it’s very neat
+                                    and perfect
                                 </p>
                                 <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
                                     </div>
-                                    <div class="text-green-500 text-sm font-normal">
+                                    <div class="text-green-500 text-xs font-normal">
                                         <p>Recommended</p>
                                     </div>
                                 </div>
@@ -3914,7 +3926,7 @@
                                     <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday
                                 </p>
                                 <p>
-                                    <span class="text-gray-500 text-[13px]"> Date :</span>17thSep, 2024
+                                    <span class="text-gray-500 text-[13px]"> Date :</span>17th Sep, 2024
                                 </p>
                             </div>
                             <div>
@@ -3925,27 +3937,29 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- review cell 2 -->
                     <div class="border-2 rounded-xl h-fit">
                         <img
-                            src="../images/cake5.avif"
+                            src="https://media.bakingo.com/bk/review_image/1724160370.2057.jpeg?tr=w-320"
                             alt=""
                             class="w-[100%] rounded-xl"
                         />
                         <div class="px-3 py-3 leading-6">
                             <div class="pb-3">
-                                <p class="font-normal text-sm">On time delivery Good taste So many options to choose</p>
+                                <p class="font-normal text-sm">
+                                    On time delivery Good taste So many options to choose
+                                </p>
                                 <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
                                     </div>
-                                    <div class="text-green-500 text-sm font-normal">
+                                    <div class="text-green-500 text-xs font-normal">
                                         <p>Recommended</p>
                                     </div>
                                 </div>
@@ -3959,81 +3973,33 @@
                                     <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday
                                 </p>
                                 <p>
-                                    <span class="text-gray-500 text-[13px]"> Date :</span> 24th Aug, 2024
+                                    <span class="text-gray-500 text-[13px]">Date :</span>24th Aug, 2024
                                 </p>
                             </div>
                             <div>
-                                <p class="font-semibold text-[15px]">anand.sharma7799</p>
+                                <p class="font-semibold flex text-[15px]">anand.sharma7799</p>
                                 <p>
                                     <span class="text-gray-500 text-sm font-normal">FARIDABAD (Faridabad Sector-7)</span>
                                 </p>
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- review cell 3 -->
                     <div class="border-2 rounded-xl h-fit">
                         <div class="px-3 py-3 leading-6">
                             <div class="pb-3">
                                 <p class="font-normal text-sm">It's yummy</p>
                                 <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
                                     </div>
-                                    <div class="text-green-500 text-sm font-normal">
-                                        <p>Recommended</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr />
-                            <div class="py-3 font-normal text-sm">
-                                <p>
-                                    <span class="text-gray-500 text-[13px]">Product :</span> Happy Birthday Choco Ball Pinata Cake
-                                </p>
-                                <p>
-                                    <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday
-                                </p>
-                                <p>
-                                <span class="text-gray-500 text-[13px]"> Date :</span> 5th Aug, 2024
-                                </p>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-[15px]">Vikram</p>
-                                <p>
-                                    <span class="text-gray-500 text-sm font-normal">JALANDHAR (Sadar Bazar Jalandhar Cantt)</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- review cell 4 -->
-                    <div class="border-2 rounded-xl h-fit">
-                        <img
-                            src="https://media.bakingo.com/bk/review_image/1723272165.7661.jpeg?tr=w-320"
-                            alt=""
-                            class="w-[100%] rounded-xl"
-                        />
-                        <div class="px-3 py-3 leading-6">
-                            <div class="pb-3">
-                                <p class="font-normal text-sm">
-                                    The cake was amazing and perfect for kids birthdays as it’s
-                                    filled with lots of gems and chocolates
-                                </p>
-                                <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                        <span class="material-symbols-outlined text-[16px]">star</span>
-                                    </div>
-                                    <div class="text-green-500 text-sm font-normal">
+                                    <div class="text-green-500 text-xs font-normal">
                                         <p>Recommended</p>
                                     </div>
                                 </div>
@@ -4047,7 +4013,55 @@
                                     <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday
                                 </p>
                                 <p>
-                                    <span class="text-gray-500 text-[13px]"> Date :</span> 10th Aug, 2024
+                                    <span class="text-gray-500 text-[13px]">Date :</span>5th Aug, 2024
+                                </p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-[15px]">Vikram</p>
+                                <p>
+                                    <span class="text-gray-500 text-sm font-normal">JALANDHAR (Sadar Bazar Jalandhar Cantt)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- review cell 4 -->
+                    <div class="border-2 rounded-xl h-fit">
+                        <img
+                            src="https://media.bakingo.com/bk/review_image/1723029141.7298.jpeg?tr=w-320"
+                            alt=""
+                            class="w-[100%] rounded-xl"
+                        />
+                        <div class="px-3 py-3 leading-6">
+                            <div class="pb-3">
+                                <p class="font-normal text-sm">
+                                    The cake was amazing and perfect for kids birthdays
+                                    as it’s filled with lots of gems and chocolates
+                                </p>
+                                <p class="font-normal text-[13px] text-gray-500">Rating and Review</p>
+                                <div class="flex flex-wrap items-center justify-between">
+                                    <div class="text-yellow-400 text-[14px] flex items-center">
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                        <span> ★ </span>
+                                    </div>
+                                    <div class="text-green-500 text-xs font-normal">
+                                        <p>Recommended</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="py-3 font-normal text-sm">
+                                <p>
+                                    <span class="text-gray-500 text-[13px]">Product :</span>Happy Birthday Choco Ball Pinata Cake
+                                </p>
+                                <p>
+                                    <span class="text-gray-500 text-[13px]">Occassion :</span>Birthday
+                                </p>
+                                <p>
+                                    <span class="text-gray-500 text-[13px]">Date :</span>10th Aug, 2024
                                 </p>
                             </div>
                             <div>
@@ -4063,7 +4077,11 @@
 
             <!-- load more review -->
             <div class="m-10 flex justify-center items-center">
-            <a href="" class=" border border-red-400 px-6 py-4 text-red-400 rounded font-semibold text-sm">Load More Review</a>
+            <a
+                href=""
+                class="border border-red-400 px-6 py-4 text-red-400 rounded font-semibold text-sm"
+                >Load More Review</a
+            >
             </div>
         </div>
 
@@ -4430,7 +4448,7 @@
     </div>
 
     <!-- footer section -->
-    <footer>
+    <footer class="w-full">
         <!-- On Time Delivery section -->
         <div class="cursor-default max-w-full h-fit font-poppins flex flex-col gap-6 p-8 justify-between items-center lg:flex-row lg:px-16 bg-[rgb(255,248,239)] border-b-2 border-t-2 border-red-100">
             <div class="flex justify items-center gap-6">
@@ -4481,7 +4499,7 @@
                 </div>
             </div>
 
-            <div id="lists" class="w-fit flex justify-between gap-8 items-start sm:flex-row sm:gap-32">
+            <div id="lists" class="w-fit flex flex-wrap justify-between gap-8 items-start sm:flex-row">
                 <ul class="flex flex-col gap-y-1.5">
                     <h2 class="font-semibold text-[18px] pb-2 ">Know Us</h2>
                     <a href="" class="text-gray-500 text-sm font-normal">Our Story</a>
@@ -4528,9 +4546,9 @@
             </div>
         </div>
         <hr>
-        <div class="flex flex-col items-center justify-center py-3 sm:flex-row sm:gap-8" >
+        <div class="w-full flex flex-col items-center justify-center py-3 sm:flex-row sm:gap-8" >
             <span class="text-gray-500 text-sm font-normal">We Accepted:</span>
-            <img class="w-[600px]" src="../images/payment.e08b4d57.png" alt="Payments">
+            <img src="../images/payment.e08b4d57.png" alt="Payments">
         </div>
     </footer>
 
