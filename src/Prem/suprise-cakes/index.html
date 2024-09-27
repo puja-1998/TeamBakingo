@@ -109,6 +109,119 @@
                               </li>
                            </ul>
                         </li>
+                        <!-- ~ birthday -->
+                        <li>
+                           <button
+                              class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                              onclick="toggleAccordion('birthday', this)"
+                           >
+                              Birthday
+                              <span class="icon-plus">+</span>
+                              <span class="icon-minus hidden">−</span>
+                           </button>
+                           <ul id="birthday" class="w-full hidden">
+                              <li>
+                                 <ul>
+                                    <li class="border-b">
+                                       <a
+                                          href="/src/Rana/allBirthdayCakes.html"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                          >All Birthday Cakes</a
+                                       >
+                                    </li>
+                                    <li class="border-b">
+                                       <a
+                                          href="/src/Rana/1stBirthdayCakes.html"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >
+                                          1st Birthday Cakes</a
+                                       >
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <!-- ~ anniversary -->
+                        <li>
+                           <button
+                              class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                              onclick="toggleAccordion('anniversary', this)"
+                           >
+                              Anniversary
+                              <span class="icon-plus">+</span>
+                              <span class="icon-minus hidden">−</span>
+                           </button>
+                           <ul id="anniversary" class="w-full hidden">
+                              <li>
+                                 <ul>
+                                    <li class="border-b">
+                                       <a
+                                          href="/src/Anniverasary/AnniversaryCakes.html"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                          >All Anniversary Cakes</a
+                                       >
+                                    </li>
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >
+                                          1st Anniversary Cakes</a
+                                       >
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <!-- ~ by relationship -->
+                        <li>
+                           <button
+                              class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                              onclick="toggleAccordion('by-relationship', this)"
+                           >
+                              By Relationship
+                              <span class="icon-plus">+</span>
+                              <span class="icon-minus hidden">−</span>
+                           </button>
+                           <ul id="by-relationship" class="w-full hidden">
+                              <li>
+                                 <button
+                                    class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
+                                    onclick="toggleSubmenu(this)"
+                                 >
+                                    <span
+                                       class="text-[16px] text-slate-900 font-medium"
+                                       >For Him</span
+                                    >
+                                    <span class="icon-down"
+                                       ><img
+                                          alt="arrow"
+                                          src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
+                                          width="16"
+                                          height="16"
+                                    /></span>
+                                 </button>
+                                 <ul class="hidden">
+                                    <li class="border-b">
+                                       <a
+                                          href="#"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >
+                                          Cakes for Father</a
+                                       >
+                                    </li>
+                                    <li class="border-b">
+                                       <a
+                                          href="/src/Prem/for-brother/"
+                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >
+                                          Cakes for Brother</a
+                                       >
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
                         <!-- ~ by flavours -->
                         <li>
                            <button
@@ -188,55 +301,6 @@
                               </li>
                            </ul>
                         </li>
-                        <!-- ~ by relationship -->
-                        <li>
-                           <button
-                              class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
-                              onclick="toggleAccordion('by-relationship', this)"
-                           >
-                              By Relationship
-                              <span class="icon-plus">+</span>
-                              <span class="icon-minus hidden">−</span>
-                           </button>
-                           <ul id="by-relationship" class="w-full hidden">
-                              <li>
-                                 <button
-                                    class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
-                                    onclick="toggleSubmenu(this)"
-                                 >
-                                    <span
-                                       class="text-[16px] text-slate-900 font-medium"
-                                       >For Him</span
-                                    >
-                                    <span class="icon-down"
-                                       ><img
-                                          alt="arrow"
-                                          src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
-                                          width="16"
-                                          height="16"
-                                    /></span>
-                                 </button>
-                                 <ul class="hidden">
-                                    <li class="border-b">
-                                       <a
-                                          href="#"
-                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                       >
-                                          Cakes for Father</a
-                                       >
-                                    </li>
-                                    <li class="border-b">
-                                       <a
-                                          href="#"
-                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                       >
-                                          Cakes for Husband</a
-                                       >
-                                    </li>
-                                 </ul>
-                              </li>
-                           </ul>
-                        </li>
                         <!-- ~ desserts -->
                         <li>
                            <button
@@ -269,78 +333,7 @@
                               </li>
                            </ul>
                         </li>
-                        <!-- ~ birthday -->
-                        <li>
-                           <button
-                              class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
-                              onclick="toggleAccordion('birthday', this)"
-                           >
-                              Birthday
-                              <span class="icon-plus">+</span>
-                              <span class="icon-minus hidden">−</span>
-                           </button>
-                           <ul id="birthday" class="w-full hidden">
-                              <li>
-                                 <ul>
-                                    <li class="border-b">
-                                       <a
-                                          href="#"
-                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                          >All Birthday Cakes</a
-                                       >
-                                    </li>
-                                    <li class="border-b">
-                                       <a
-                                          href="#"
-                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                       >
-                                          1st Birthday Cakes</a
-                                       >
-                                    </li>
-                                    <li class="border-b">
-                                       <a
-                                          href="#"
-                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                       >
-                                          Birthday Photo Cakes</a
-                                       >
-                                    </li>
-                                 </ul>
-                              </li>
-                           </ul>
-                        </li>
-                        <!-- ~ anniversary -->
-                        <li>
-                           <button
-                              class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
-                              onclick="toggleAccordion('anniversary', this)"
-                           >
-                              Anniversary
-                              <span class="icon-plus">+</span>
-                              <span class="icon-minus hidden">−</span>
-                           </button>
-                           <ul id="anniversary" class="w-full hidden">
-                              <li>
-                                 <ul>
-                                    <li class="border-b">
-                                       <a
-                                          href="#"
-                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                          >All Anniversary Cakes</a
-                                       >
-                                    </li>
-                                    <li class="border-b">
-                                       <a
-                                          href="#"
-                                          class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                       >
-                                          1st Anniversary Cakes</a
-                                       >
-                                    </li>
-                                 </ul>
-                              </li>
-                           </ul>
-                        </li>
+
                         <!-- ~ occasion -->
                         <li>
                            <button
@@ -448,7 +441,7 @@
                   </button>
                </div>
 
-               <a href="#" class="w-[7rem] object-cover"
+               <a href="/" class="w-[7rem] object-cover"
                   ><img src="../../images/bakingo.svg" alt="logo"
                /></a>
                <div
@@ -620,13 +613,75 @@
                            <a href="/src/Prem/pinata-cakes"> Pinata Cakes </a>
                         </li>
                         <li class="hover:font-bold">
-                           <a href="/src/Prem/suprise-cakes"> Suprice Cakes </a>
+                           <a href="/src/Prem/suprise-cakes/">
+                              Suprice Cakes
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               Birthday
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <ul class="flex gap-3 flex-col">
+                        <li class="hover:font-bold">
+                           <a href="/src/Rana/allBirthdayCakes.html">
+                              All Birthday Cakes
+                           </a>
                         </li>
                         <li class="hover:font-bold">
-                           <a href="#block"> </a>
+                           <a href="/src/Rana/1stBirthdayCakes.html">
+                              1st Birthday Cakes
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               Anniversary
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <ul class="flex gap-2 flex-col">
+                        <li class="hover:font-bold">
+                           <a href="/src/Anniverasary/AnniversaryCakes.html">
+                              All Anniversary Cakes
+                           </a>
                         </li>
                         <li class="hover:font-bold">
-                           <a href="#block"> </a>
+                           <a href="#block"> 1st Anniversary Cakes </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="cakes-tab relative py-3 group cursor-pointer">
+               By Relationship
+               <div
+                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+               >
+                  <div
+                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+                  >
+                     <h1 class="text-sm font-semibold">For Him</h1>
+                     <ul class="flex gap-3 flex-col">
+                        <li class="hover:font-bold">
+                           <a href="#block"> Cakes for Father </a>
+                        </li>
+                        <li class="hover:font-bold">
+                           <a href="/src/Prem/for-brother/">
+                              Cakes for Brother
+                           </a>
                         </li>
                      </ul>
                   </div>
@@ -671,26 +726,7 @@
                   </div>
                </div>
             </div>
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               By Relationship
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <h1 class="text-sm font-semibold">For Him</h1>
-                     <ul class="flex gap-3 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="#block"> Cakes for Father </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> Cakes for Husband </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
+
             <div class="cakes-tab relative py-3 group cursor-pointer">
                Desserts
                <div
@@ -710,47 +746,7 @@
                   </div>
                </div>
             </div>
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               Birthday
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <ul class="flex gap-3 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="#block"> All Birthday Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> 1st Birthday Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> Birthday Photo Cakes</a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               Anniversary
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <ul class="flex gap-2 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="#block"> All Anniversary Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> 1st Anniversary Cakes </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
+
             <div class="cakes-tab relative py-3 group cursor-pointer">
                Occasion
                <div
