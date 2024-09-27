@@ -5,6 +5,7 @@ module.exports = {
       extend: {
          fontFamily: {
             poppins: "Poppins", // Poppins font - to implement - font-poppins
+            lato: "Lato",
          },
       },
    },
