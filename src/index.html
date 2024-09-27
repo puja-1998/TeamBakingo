@@ -75,220 +75,751 @@
     <!-- Header -->
 
     <header class="fixed top-0 left-0 right-0 z-40">
-        <nav  class="font-poppins flex justify-between items-center px-12 py-5 cursor-pointer bg-white h-auto w-screen border-b-2"
-        >
-            <div id="logo" class="flex gap-8">
-             <a href="#"><img src="./images/bakingo.svg" alt="" id="logo"></a>
-             <div id="Location" class="flex items-center gap-1">
-                <span class="material-symbols-outlined text-[16px]">near_me</span>
-                <button class="font-medium text-sm ">Select City</button>
-                <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
-            </div>
-            </div>
-            
-            <div id="search" class="flex items-center gap-4 rounded-lg border pr-3 pl-6  py-3.5 bg-gray-100">
-                <img src="./images/search.svg" alt="">
-                <input class="font-medium text-[13px] outline-none bg-gray-100 w-72" type="text" placeholder="Search for Cakes, occasion, flavor and more">
+      <nav
+         class="font-poppins flex justify-between items-center px-2 sm:px-12 py-5 cursor-pointer bg-white h-auto w-screen border-b-2"
+      >
+         <div id="logo" class="flex gap-8">
+            <div class="relative sm:hidden p-2 w-[2rem] mr-2">
+               <!-- Sidebar -->
+               <div
+                  id="sidebar"
+                  class="fixed left-0 top-0 w-80 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50"
+               >
+                  <div
+                     class="flex justify-between items-center bg-[#f6f6f6] p-5 rounded-b-lg mr-3"
+                  >
+                     <h2 class="text-lg font-bold text-slate-900">
+                        All Category
+                     </h2>
+                     <button
+                        id="closeBtn"
+                        class="text-2xl focus:outline-none"
+                     >
+                        &times;
+                     </button>
+                  </div>
+                  <ul class="mr-3">
+                     <!-- ~ cakes -->
+                     <li>
+                        <button
+                           class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                           onclick="toggleAccordion('cakes', this)"
+                        >
+                           Cakes
+                           <span class="icon-plus">+</span>
+                           <span class="icon-minus hidden">−</span>
+                        </button>
+                        <ul id="cakes" class="w-full hidden">
+                           <li>
+                              <button
+                                 class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
+                                 onclick="toggleSubmenu(this)"
+                              >
+                                 <span
+                                    class="text-[16px] text-slate-900 font-medium"
+                                    >Trending Cakes</span
+                                 >
+                                 <span class="icon-down"
+                                    ><img
+                                       alt="arrow"
+                                       src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
+                                       width="16"
+                                       height="16"
+                                 /></span>
+                              </button>
+                              <ul class="hidden">
+                                 <li class="border-b">
+                                    <a
+                                       href="#"
+                                       class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >Pinata Cakes</a
+                                    >
+                                 </li>
+                                 <li class="border-b">
+                                    <a
+                                       href="#"
+                                       class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >Suprice Cakes</a
+                                    >
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <!-- ~ by flavours -->
+                     <li>
+                        <button
+                           class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                           onclick="toggleAccordion('by-flavours', this)"
+                        >
+                           By Flavours
+                           <span class="icon-plus">+</span>
+                           <span class="icon-minus hidden">−</span>
+                        </button>
+                        <ul id="by-flavours" class="w-full hidden">
+                           <li>
+                              <ul>
+                                 <li class="border-b">
+                                    <a
+                                       href="#"
+                                       class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >Chocolate Cakes</a
+                                    >
+                                 </li>
+                                 <li class="border-b">
+                                    <a
+                                       href="#"
+                                       class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >Butterscotch Cakes</a
+                                    >
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <!-- ~ theme cakes -->
+                     <li>
+                        <button
+                           class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                           onclick="toggleAccordion('theme-cakes', this)"
+                        >
+                           Theme Cakes
+                           <span class="icon-plus">+</span>
+                           <span class="icon-minus hidden">−</span>
+                        </button>
+                        <ul id="theme-cakes" class="w-full hidden">
+                           <li>
+                              <button
+                                 class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
+                                 onclick="toggleSubmenu(this)"
+                              >
+                                 <span
+                                    class="text-[16px] text-slate-900 font-medium"
+                                    >Kids Cakes</span
+                                 >
+                                 <span class="icon-down"
+                                    ><img
+                                       alt="arrow"
+                                       src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
+                                       width="16"
+                                       height="16"
+                                 /></span>
+                              </button>
+                              <ul class="hidden">
+                                 <li class="border-b">
+                                    <a
+                                       href="#"
+                                       class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >1st Birthday Cakes</a
+                                    >
+                                 </li>
+                                 <li class="border-b">
+                                    <a
+                                       href="#"
+                                       class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                    >
+                                       Princess Cakes</a
+                                    >
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <!-- ~ by relationship -->
+                     <li>
+                        <button
+                           class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                           onclick="toggleAccordion('by-relationship', this)"
+                        >
+                           By Relationship
+                           <span class="icon-plus">+</span>
+                           <span class="icon-minus hidden">−</span>
+                        </button>
+                        <ul id="by-relationship" class="w-full hidden">
+                           <li>
+                              <button
+                                 class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
+                                 onclick="toggleSubmenu(this)"
+                              >
+                                 <span
+                                    class="text-[16px] text-slate-900 font-medium"
+                                    >For Him</span
+                                 >
+                                 <span class="icon-down"
+                                    ><img
+                                       alt="arrow"
+                                       src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
+                                       width="16"
+                                       height="16"
+                                 /></span>
+                              </button>
+                              <ul class="hidden">
+                                 <li class="border-b">
+                                    <a
+                                       href="#"
+                                       class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                    >
+                                       Cakes for Father</a
+                                    >
+                                 </li>
+                                 <li class="border-b">
+                                    <a
+                                       href="#"
+                                       class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                    >
+                                       Cakes for Husband</a
+                                    >
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <!-- ~ desserts -->
+                     <li>
+                        <button
+                           class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                           onclick="toggleAccordion('desserts', this)"
+                        >
+                           Desserts
+                           <span class="icon-plus">+</span>
+                           <span class="icon-minus hidden">−</span>
+                        </button>
+                        <ul id="desserts" class="w-full hidden">
+                           <li>
+                              <ul>
+                                 <li class="border-b">
+                                    <a
+                                       href="#"
+                                       class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >All Desserts</a
+                                    >
+                                 </li>
+                                 <li class="border-b">
+                                    <a
+                                       href="#"
+                                       class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                    >
+                                       Jar Cakes</a
+                                    >
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <!-- ~ birthday -->
+                     <li>
+                        <button
+                           class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                           onclick="toggleAccordion('birthday', this)"
+                        >
+                           Birthday
+                           <span class="icon-plus">+</span>
+                           <span class="icon-minus hidden">−</span>
+                        </button>
+                        <ul id="birthday" class="w-full hidden">
+                           <li>
+                              <ul>
+                                 <li class="border-b">
+                                    <a
+                                       href="#"
+                                       class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >All Birthday Cakes</a
+                                    >
+                                 </li>
+                                 <li class="border-b">
+                                    <a
+                                       href="#"
+                                       class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                    >
+                                       1st Birthday Cakes</a
+                                    >
+                                 </li>
+                                 <li class="border-b">
+                                    <a
+                                       href="#"
+                                       class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                    >
+                                       Birthday Photo Cakes</a
+                                    >
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <!-- ~ anniversary -->
+                     <li>
+                        <button
+                           class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                           onclick="toggleAccordion('anniversary', this)"
+                        >
+                           Anniversary
+                           <span class="icon-plus">+</span>
+                           <span class="icon-minus hidden">−</span>
+                        </button>
+                        <ul id="anniversary" class="w-full hidden">
+                           <li>
+                              <ul>
+                                 <li class="border-b">
+                                    <a
+                                       href="./Anniverasary/AnniversaryCakes.html"
+                                       class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                       >All Anniversary Cakes</a
+                                    >
+                                 </li>
+                                 <li class="border-b">
+                                    <a
+                                       href="#"
+                                       class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                    >
+                                       1st Anniversary Cakes</a
+                                    >
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <!-- ~ occasion -->
+                     <li>
+                        <button
+                           class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                           onclick="toggleAccordion('occasion', this)"
+                        >
+                           Occasion
+                           <span class="icon-plus">+</span>
+                           <span class="icon-minus hidden">−</span>
+                        </button>
+                        <ul id="occasion" class="w-full hidden">
+                           <li>
+                              <button
+                                 class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
+                                 onclick="toggleSubmenu(this)"
+                              >
+                                 <span
+                                    class="text-[16px] text-slate-900 font-medium"
+                                    >Festive Celebrations</span
+                                 >
+                                 <span class="icon-down"
+                                    ><img
+                                       alt="arrow"
+                                       src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
+                                       width="16"
+                                       height="16"
+                                 /></span>
+                              </button>
+                              <ul class="hidden">
+                                 <li class="border-b">
+                                    <a
+                                       href="#"
+                                       class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                    >
+                                       Boss Day Cakes</a
+                                    >
+                                 </li>
+                                 <li class="border-b">
+                                    <a
+                                       href="#"
+                                       class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                    >
+                                       Karwa Chauth Cakes</a
+                                    >
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <!-- ~ customized cakes -->
+                     <li>
+                        <a
+                           href="#"
+                           class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                        >
+                           Customized Cakes
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+
+               <!-- Overlay -->
+               <div
+                  id="overlay"
+                  class="fixed inset-0 bg-black opacity-50 hidden z-40"
+               ></div>
+
+               <!-- Button to Open Sidebar -->
+               <button id="openSidebarBtn">
+                  <!-- class="bg-red-500 text-white px-4 py-2 m-4" -->
+                  <svg
+                     width="30px"
+                     height="30px"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                  >
+                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                     <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                     ></g>
+                     <g id="SVGRepo_iconCarrier">
+                        <path
+                           d="M4 18H10"
+                           stroke="#000000"
+                           stroke-width="2"
+                           stroke-linecap="round"
+                        ></path>
+                        <path
+                           d="M4 12L16 12"
+                           stroke="#000000"
+                           stroke-width="2"
+                           stroke-linecap="round"
+                        ></path>
+                        <path
+                           d="M4 6L20 6"
+                           stroke="#000000"
+                           stroke-width="2"
+                           stroke-linecap="round"
+                        ></path>
+                     </g>
+                  </svg>
+               </button>
             </div>
 
-            <div id="right_head" class="flex gap-8 font-medium text-[13px] ">
-                <div class="flex flex-col items-center gap-1.5">
-                    <img src="./images/trackData.svg" alt="" class="size-6">
-                    <p class="tracking-wider">Track Order</p>
-                </div>
-                <div class="flex flex-col items-center gap-1.5">
-                    <img src="./images/cart3.svg" alt="">
-                    <p class="tracking-wider">Cart</p>
-                </div>
-                <div class="flex flex-col items-center gap-1.5">
-                    <img src="./images/Account.svg" alt="">
-                    <p class="text-[rgb(232,25,81)]">Login/Signup</p>
-                </div>
+            <a href="./index.html" class="w-[7rem] object-cover"
+               ><img src="./images/bakingo.svg" alt="logo"
+            /></a>
+            <div
+               id="Location"
+               class="invisible sm:visible flex items-center gap-2"
+            >
+               <img
+                  width="12"
+                  src="https://bkmedia.bakingo.com/ssr-static/selectCity.svg"
+                  alt="select-city"
+               />
+               <button class="font-medium text-[.78rem]">Select City</button>
+               <img
+                  width="10"
+                  src="https://bkmedia.bakingo.com/ssr-static/cityDD.svg"
+                  alt="dropdown"
+               />
             </div>
-        </nav>
-
-        
-         <!-- ~ dropdown navbar -->
-         <div
-            class="w-full bg-white px-36 flex items-center justify-between text-xs border text-slate-800 font-medium shadow-md"
-         >
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               Cakes
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <h1 class="text-sm font-semibold">Trending Cakes</h1>
-                     <ul class="flex gap-3 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="/src/Prem/pinata-cakes"> Pinata Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> Suprice Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               By Flavours
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <ul class="flex gap-3 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="#block"> Chocolate Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> Butterscotch Cakes </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               Theme Cakes
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <h1 class="text-sm font-semibold">Kids Cakes</h1>
-                     <ul class="flex gap-3 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="#block"> 1st Birthday Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> Princess Cakes </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               By Relationship
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <h1 class="text-sm font-semibold">For Him</h1>
-                     <ul class="flex gap-3 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="#block"> Cakes for Father </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> Cakes for Husband </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               Desserts
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <ul class="flex gap-3 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="#block"> All Desserts </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> Jar Cakes </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               Birthday
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <ul class="flex gap-3 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="#block"> All Birthday Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> 1st Birthday Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> Birthday Photo Cakes</a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               Anniversary
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <ul class="flex gap-2 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="./Anniverasary/AnniversaryCakes.html"> All Anniversary Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> 1st Anniversary Cakes </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="cakes-tab relative py-3 group cursor-pointer">
-               Occasion
-               <div
-                  class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-               >
-                  <div
-                     class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                  >
-                     <h1 class="text-sm font-semibold">Festive Celebrations</h1>
-                     <ul class="flex gap-2 flex-col">
-                        <li class="hover:font-bold">
-                           <a href="#block"> Boss Day Cakes </a>
-                        </li>
-                        <li class="hover:font-bold">
-                           <a href="#block"> Karwa Chauth Cakes </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <a href="#" class="relative cakes-tab py-3 group cursor-pointer">
-               Customized Cakes
-            </a>
          </div>
-    </header>
+
+         <div
+            class="sm:hidden p-2 w-[6rem] flex gap-1 items-center justify-between"
+         >
+            <svg
+               fill="#000000"
+               height="24px"
+               width="24px"
+               version="1.1"
+               id="Capa_1"
+               xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink"
+               viewBox="0 0 488.4 488.4"
+               xml:space="preserve"
+            >
+               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+               <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+               ></g>
+               <g id="SVGRepo_iconCarrier">
+                  <g>
+                     <g>
+                        <path
+                           d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6 s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2 S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7 S381.9,104.65,381.9,203.25z"
+                        ></path>
+                     </g>
+                  </g>
+               </g>
+            </svg>
+            <svg
+               width="30px"
+               height="30px"
+               viewBox="0 0 24 24"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+            >
+               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+               <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+               ></g>
+               <g id="SVGRepo_iconCarrier">
+                  <path
+                     fill-rule="evenodd"
+                     clip-rule="evenodd"
+                     d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                     stroke="#000000"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                  ></path>
+               </g>
+            </svg>
+            <svg
+               width="36px"
+               height="36px"
+               viewBox="0 -0.5 25 25"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+            >
+               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+               <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+               ></g>
+               <g id="SVGRepo_iconCarrier">
+                  <path
+                     fill-rule="evenodd"
+                     clip-rule="evenodd"
+                     d="M5.51132 9.177L6.27532 18.177C6.34062 19.1879 7.16948 19.9803 8.18232 20H16.8253C17.8378 19.9798 18.6661 19.1875 18.7313 18.177L19.4953 9.177C19.5542 8.63047 19.3817 8.08424 19.0196 7.67066C18.6575 7.25708 18.1388 7.01389 17.5893 7H7.41732C6.8678 7.01389 6.34917 7.25708 5.98707 7.67066C5.62497 8.08424 5.45246 8.63047 5.51132 9.177Z"
+                     stroke="#000000"
+                     stroke-width="1.5"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                  ></path>
+                  <path
+                     d="M16.703 6.66154C16.5161 7.03118 16.6642 7.48236 17.0338 7.66929C17.4035 7.85621 17.8547 7.7081 18.0416 7.33846L16.703 6.66154ZM17.3515 5.71218L18.0095 5.35226V5.35226L17.3515 5.71218ZM16.2783 5L16.3543 4.25386C16.3291 4.25129 16.3037 4.25 16.2783 4.25V5ZM8.72831 5V4.25C8.70292 4.25 8.67755 4.25129 8.6523 4.25386L8.72831 5ZM7.65513 5.71218L6.99714 5.35226L6.99714 5.35226L7.65513 5.71218ZM6.96502 7.33846C7.15195 7.7081 7.60313 7.85621 7.97277 7.66929C8.34241 7.48236 8.49052 7.03118 8.3036 6.66154L6.96502 7.33846ZM10.7533 11C10.7533 10.5858 10.4175 10.25 10.0033 10.25C9.5891 10.25 9.25331 10.5858 9.25331 11H10.7533ZM10.0033 11.5H9.25331H10.0033ZM15.7533 11C15.7533 10.5858 15.4175 10.25 15.0033 10.25C14.5891 10.25 14.2533 10.5858 14.2533 11H15.7533ZM18.0416 7.33846C18.3586 6.71151 18.3466 5.96863 18.0095 5.35226L16.6935 6.0721C16.7935 6.25502 16.7971 6.47548 16.703 6.66154L18.0416 7.33846ZM18.0095 5.35226C17.6723 4.73588 17.0533 4.32507 16.3543 4.25386L16.2023 5.74614C16.4097 5.76727 16.5934 5.88919 16.6935 6.0721L18.0095 5.35226ZM16.2783 4.25H8.72831V5.75H16.2783V4.25ZM8.6523 4.25386C7.95335 4.32507 7.3343 4.73588 6.99714 5.35226L8.31313 6.0721C8.41318 5.88919 8.5969 5.76727 8.80432 5.74614L8.6523 4.25386ZM6.99714 5.35226C6.65998 5.96863 6.64797 6.71151 6.96502 7.33846L8.3036 6.66154C8.20951 6.47548 8.21307 6.25502 8.31313 6.0721L6.99714 5.35226ZM9.25331 11V11.5H10.7533V11H9.25331ZM9.25331 11.5C9.25331 13.2949 10.7084 14.75 12.5033 14.75V13.25C11.5368 13.25 10.7533 12.4665 10.7533 11.5H9.25331ZM12.5033 14.75C14.2982 14.75 15.7533 13.2949 15.7533 11.5H14.2533C14.2533 12.4665 13.4698 13.25 12.5033 13.25V14.75ZM15.7533 11.5V11H14.2533V11.5H15.7533Z"
+                     fill="#000000"
+                  ></path>
+               </g>
+            </svg>
+         </div>
+
+         <div class="hidden sm:flex w-[30rem] mr-4 items-center justify-end">
+            <div
+               id="search"
+               class="w-[80%] flex items-center gap-4 rounded-lg border pr-3 pl-6 py-3 bg-[#f4f4f4]"
+            >
+               <img src="./images/search.svg" alt="" />
+               <input
+                  class="font-medium placeholder:text-[#898989] text-[11.6px] outline-none bg-[#f4f4f4] w-full"
+                  type="text"
+                  placeholder="Search for Cakes, occasion, flavor and more"
+               />
+            </div>
+         </div>
+
+         <div
+            id="right_head"
+            class="hidden sm:flex gap-8 font-medium text-[13px]"
+         >
+            <div class="flex flex-col items-center gap-1.5">
+               <img
+                  src="./images/trackData.svg"
+                  alt=""
+                  class="w-[1.4rem] h-[1.4rem]"
+               />
+               <p class="tracking-wider">Track Order</p>
+            </div>
+            <div class="flex flex-col items-center gap-1.5">
+               <img
+                  width="22"
+                  src="./images/cart3.svg"
+                  alt=""
+                  class="w-[1.4rem] h-[1.4rem]"
+               />
+               <p class="tracking-wider">Cart</p>
+            </div>
+            <div class="flex flex-col items-center gap-1.5">
+               <img
+                  width="22"
+                  src="./images/Account.svg"
+                  alt=""
+                  class="w-[1.4rem] h-[1.4rem]"
+               />
+               <p class="text-[rgb(232,25,81)]">Login/Signup</p>
+            </div>
+         </div>
+      </nav>
+
+      <!-- ~ dropdown navbar -->
+      <div
+         class="invisible sm:visible w-full bg-white px-4 md:px-12 lg:px-36 flex gap-2 items-center justify-between text-xs text-nowrap border text-slate-800 font-medium shadow-md"
+      >
+         <div class="cakes-tab relative py-3 group cursor-pointer">
+            Cakes
+            <div
+               class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+            >
+               <div
+                  class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+               >
+                  <h1 class="text-sm font-semibold">Trending Cakes</h1>
+                  <ul class="flex gap-3 flex-col">
+                     <li class="hover:font-bold">
+                        <a href="/src/Prem/pinata-cakes"> Pinata Cakes </a>
+                     </li>
+                     <li class="hover:font-bold">
+                        <a href="#block"> Suprice Cakes </a>
+                     </li>
+                     <li class="hover:font-bold">
+                        <a href="#block"> </a>
+                     </li>
+                     <li class="hover:font-bold">
+                        <a href="#block"> </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="cakes-tab relative py-3 group cursor-pointer">
+            By Flavours
+            <div
+               class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+            >
+               <div
+                  class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+               >
+                  <ul class="flex gap-3 flex-col">
+                     <li class="hover:font-bold">
+                        <a href="#block"> Chocolate Cakes </a>
+                     </li>
+                     <li class="hover:font-bold">
+                        <a href="#block"> Butterscotch Cakes </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="cakes-tab relative py-3 group cursor-pointer">
+            Theme Cakes
+            <div
+               class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+            >
+               <div
+                  class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+               >
+                  <h1 class="text-sm font-semibold">Kids Cakes</h1>
+                  <ul class="flex gap-3 flex-col">
+                     <li class="hover:font-bold">
+                        <a href="#block"> 1st Birthday Cakes </a>
+                     </li>
+                     <li class="hover:font-bold">
+                        <a href="#block"> Princess Cakes </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="cakes-tab relative py-3 group cursor-pointer">
+            By Relationship
+            <div
+               class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+            >
+               <div
+                  class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+               >
+                  <h1 class="text-sm font-semibold">For Him</h1>
+                  <ul class="flex gap-3 flex-col">
+                     <li class="hover:font-bold">
+                        <a href="#block"> Cakes for Father </a>
+                     </li>
+                     <li class="hover:font-bold">
+                        <a href="#block"> Cakes for Husband </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="cakes-tab relative py-3 group cursor-pointer">
+            Desserts
+            <div
+               class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+            >
+               <div
+                  class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+               >
+                  <ul class="flex gap-3 flex-col">
+                     <li class="hover:font-bold">
+                        <a href="#block"> All Desserts </a>
+                     </li>
+                     <li class="hover:font-bold">
+                        <a href="#block"> Jar Cakes </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="cakes-tab relative py-3 group cursor-pointer">
+            Birthday
+            <div
+               class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+            >
+               <div
+                  class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+               >
+                  <ul class="flex gap-3 flex-col">
+                     <li class="hover:font-bold">
+                        <a href="#block"> All Birthday Cakes </a>
+                     </li>
+                     <li class="hover:font-bold">
+                        <a href="#block"> 1st Birthday Cakes </a>
+                     </li>
+                     <li class="hover:font-bold">
+                        <a href="#block"> Birthday Photo Cakes</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="cakes-tab relative py-3 group cursor-pointer">
+            Anniversary
+            <div
+               class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+            >
+               <div
+                  class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+               >
+                  <ul class="flex gap-2 flex-col">
+                     <li class="hover:font-bold">
+                        <a href="./Anniverasary/AnniversaryCakes.html"> All Anniversary Cakes </a>
+                     </li>
+                     <li class="hover:font-bold">
+                        <a href="#block"> 1st Anniversary Cakes </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="cakes-tab relative py-3 group cursor-pointer">
+            Occasion
+            <div
+               class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+            >
+               <div
+                  class="text-xs flex gap-4 flex-col items-start w-[10rem]"
+               >
+                  <h1 class="text-sm font-semibold">Festive Celebrations</h1>
+                  <ul class="flex gap-2 flex-col">
+                     <li class="hover:font-bold">
+                        <a href="#block"> Boss Day Cakes </a>
+                     </li>
+                     <li class="hover:font-bold">
+                        <a href="#block"> Karwa Chauth Cakes </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <a href="#" class="relative cakes-tab py-3 group cursor-pointer">
+            Customized Cakes
+         </a>
+      </div>
+   </header>
 
     <!-- Main Container -->
     <main>
-      <div class="px-14 mt-44">
+      <div class="px-14 mt-44 sm:w-36 md:w-44 lg:w-full">
          <!-- ~ flickity crousal -->
         <div
-        class="cursor-pointer"
+        class="cursor-pointer  "
         data-flickity='{ "wrapAround": true, "cellAlign":"center"}'
      >
         <img
@@ -322,13 +853,13 @@
       <!-- Surprise Your Loved One -->
 
       <div class=" px-20 mt-10">
-         <h1 class=" text-[34px] font-semibold">Surprise Your Loved One</h1>
-         <div class="mt-4">
-            <div class="flex gap-6 ">
+         <h1 class=" text-34px sm:text-lg md:text-3xl font-semibold ">Surprise Your Loved One</h1>
+         <div class="mt-4  ">
+            <div class="  grid grid-cols-1 gap-4 md:grid-cols-4">
                
-               <div class="border pb-3 rounded-lg">
+               <div class="border pb-3 rounded-lg ">
                   <div class="overflow-hidden">
-                     <a href=""><img src="https://bkmedia.bakingo.com/regular_cake_1.jpg?tr=w-484,q-70" alt="Regular Cake " class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out"></a>
+                     <a href=""><img src="https://bkmedia.bakingo.com/regular_cake_1.jpg?tr=w-484,q-70" alt="Regular Cake " class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out w-full h-auto"></a>
                   </div>
                    <div>
                      <a href=""><span class=" pt-3 flex  items-center justify-center font-semibold text-[17px]">Regular Cakes</span></a>
@@ -336,23 +867,23 @@
                </div>
                <div class="border pb-3 rounded-lg">
                <div class="overflow-hidden">
-               <a href=""><img src="https://bkmedia.bakingo.com/gourmet_cake_0.jpg?tr=w-484,q-70" alt="Gourmet Cake" class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out"></a>
+               <a href=""><img src="https://bkmedia.bakingo.com/gourmet_cake_0.jpg?tr=w-484,q-70" alt="Gourmet Cake" class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out w-full h-auto"></a>
                </div>
                <div>
                   <a href=""><span class=" pt-3 flex  items-center justify-center font-semibold text-[17px]">Gourmet Cakes</span></a>
                </div>
                </div>
-               <div class="border pb-3 rounded-lg">
+               <div class="border pb-3 rounded-lg ">
                <div class="overflow-hidden">
-               <a href=""><img src="https://bkmedia.bakingo.com/photo_cake_desktop.jpg?tr=w-484,q-70" alt="Photo Cakes" class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out"></a>
+               <a href=""><img src="https://bkmedia.bakingo.com/photo_cake_desktop.jpg?tr=w-484,q-70" alt="Photo Cakes" class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out w-full h-auto"></a>
                </div>
                <div>
                   <a href=""><span class=" pt-3 flex  items-center justify-center font-semibold text-[17px]">Photo Cakes</span></a>
                </div>
                </div>
-               <div class="border pb-3 rounded-lg">
+               <div class="border pb-3 rounded-lg w-">
                <div class="overflow-hidden">
-               <a href=""><img src="https://bkmedia.bakingo.com/theme_cake_9.jpg?tr=w-484,q-70" alt="Theme Cakes" class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out"></a>
+               <a href=""><img src="https://bkmedia.bakingo.com/theme_cake_9.jpg?tr=w-484,q-70" alt="Theme Cakes" class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out w-full h-auto"></a>
                </div>
                <div>
                   <a href=""><span class=" pt-3 flex  items-center justify-center font-semibold text-[17px]">Theme Cakes</span></a>
@@ -365,16 +896,25 @@
       <!-- Our Best Sellers -->
        <div class="  mt-14 pb-14 h-auto" style="background-image: url('https://media.bakingo.com/bakingo-ssr/static/media/bestSellerDesk.ce04c4ff.svg');">
          
-         <div class="px-20 pt-14 flex justify-between">
-            <h2 class="text-[34px] font-semibold font-lato">Our Best Sellers</h2>
-            <p class="text-[14px] font-semibold border text-red-400 border-red-400 hover:bg-red-400 hover:text-white rounded-full w-32 h-10 bg-white flex items-center justify-center">View All</p>
+         <div class="px-20 pt-14 flex flex-wrap justify-between">
+            <h2 class="text-34px sm:text-lg md:text-3xl font-lato   font-semibold">Our Best Sellers</h2>
+            <p class="text-[14px] sm:justify-center sm:w-32 sm:h-10 font-semibold border text-red-400 border-red-400 hover:bg-red-400 hover:text-white rounded-full w-32 h-10 bg-white flex items-center justify-center">View All</p>
          </div>
       
          <!-- card container section -->
-         <div class="max-w-full grid grid-cols-4 justify-start items-center px-[4.6rem] mt-4 gap-y-6 ">
+         <div class=" relative max-w-full grid grid-cols-1 justify-start items-center px-[4.6rem] mt-4 gap-y-6 sm:grid-cols-2 md:grid-cols-4">
+           
             <!-- single card 1 -->
-            <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden bg-white">
-            <div class="p-2">
+            <div class="relative max-w-[17.7rem] h-fit border rounded-md overflow-hidden bg-white">
+            <!-- ~ veg symbol button -->
+           <img
+           width="10"
+           height="10"
+           src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
+           alt="vegetarian-food-symbol"
+           class="absolute z-20 top-6 right-6 cursor-pointer bg-white"
+           />
+               <div class="p-2">
                <div class="overflow-hidden  border rounded-md border-none">
                   <img
                         src="https://bkmedia.bakingo.com/choco-truffle-cake0005choc-a.jpg?tr=h-265,w-265?tr=w-266,q-70"
@@ -385,15 +925,6 @@
                </div>
             </div>
             <div>
-               <!-- ~ veg symbol button -->
-               <!-- <div class="absolute border rounded-[20px] border-green-400 h-[8px] top-[3px] right-[3px] w-[8px] bg-[#1c8b6a]"></div> -->
-               <img
-               width="10"
-               height="10"
-               src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
-               alt="vegetarian-food-symbol"
-               class="absolute  top-2 right-6 cursor-pointer bg-white"
-               />
                <div class="w-full p-2 pb-3 flex flex-col gap-1">
                   <p class="text-[15px] font-normal">
                      Our Classic Chocolate Truffle Cake
@@ -420,8 +951,17 @@
             </div>
             </div>
 
+
              <!-- single card 2 -->
-             <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden bg-white">
+             <div class="relative max-w-[17.7rem] h-fit border rounded-md overflow-hidden bg-white">
+               <!-- ~ veg symbol button -->
+               <img
+               width="10"
+               height="10"
+               src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
+               alt="vegetarian-food-symbol"
+               class="absolute z-20 top-6 right-6 cursor-pointer bg-white"
+               />
                <div class="p-2">
                   <div class="overflow-hidden  border rounded-md border-none">
                <img
@@ -433,14 +973,7 @@
                   </div>
                </div>
                <div>
-                  <!-- ~ veg symbol button -->
-                  <img
-                  width="10"
-                  height="10"
-                  src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
-                  alt="vegetarian-food-symbol"
-                  class="absolute top-2 right-6 cursor-pointer bg-white"
-                  />
+                  
                   <div class="w-full p-2 pb-3 flex flex-col gap-1">
                      <p class="text-[15px] font-normal">
                         Chocolate Vanilla Half & Half Cake
@@ -467,7 +1000,15 @@
              </div>
    
                 <!-- single card 3 -->
-            <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden bg-white">
+            <div class="relative max-w-[17.7rem] h-fit border rounded-md overflow-hidden bg-white">
+               <!-- ~ veg symbol button -->
+           <img
+           width="10"
+           height="10"
+           src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
+           alt="vegetarian-food-symbol"
+           class="absolute z-20 top-6 right-6 cursor-pointer bg-white"
+           />
                <div class="p-2">
                   <div class="overflow-hidden  border rounded-md border-none">
                <img
@@ -479,17 +1020,9 @@
                   </div>
                </div>
                <div>
-                  <!-- ~ veg symbol button -->
-                  <img
-                  width="10"
-                  height="10"
-                  src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
-                  alt="vegetarian-food-symbol"
-                  class="absolute top-2 right-6 cursor-pointer bg-white"
-                  />
                   <div class="w-full p-2 pb-3 flex flex-col gap-1">
                      <p class="text-[15px] font-normal">
-                        Fresh Fruits & Roasted Almonds Cake
+                        Fresh Fruits & Roasted Almonds...
                      </p>
                      <div
                         class="flex items-center gap-1 text-base text-slate-900 font-semibold scale-105 px-2"
@@ -513,7 +1046,15 @@
             </div>
 
                 <!-- single card 4 -->
-            <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden bg-white">
+            <div class="relative max-w-[17.7rem] h-fit border rounded-md overflow-hidden bg-white">
+               <!-- ~ veg symbol button -->
+           <img
+           width="10"
+           height="10"
+           src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
+           alt="vegetarian-food-symbol"
+           class="absolute z-20 top-6 right-6 cursor-pointer bg-white"
+           />
                <div class="p-2">
                   <div class="overflow-hidden  border rounded-md border-none">
                <img
@@ -525,17 +1066,9 @@
                   </div>
                </div>
                <div>
-                  <!-- ~ veg symbol button -->
-                  <img
-                  width="10"
-                  height="10"
-                  src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
-                  alt="vegetarian-food-symbol"
-                  class="absolute top-2 right-6 cursor-pointer bg-white"
-                  />
                   <div class="w-full p-2 pb-3 flex flex-col gap-1">
                      <p class="text-[15px] font-normal">
-                        Rose Petals N Pistachio Rasmalai Cake
+                        Rose Petals N Pistachio Rasmalai.. 
                      </p>
                      <div
                         class="flex items-center gap-1 text-base text-slate-900 font-semibold scale-105 px-2"
@@ -559,7 +1092,15 @@
                </div>
 
                 <!-- single card 5 -->
-            <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden bg-white">
+            <div class="relative max-w-[17.7rem] h-fit border rounded-md overflow-hidden bg-white">
+                  <!-- ~ veg symbol button -->
+           <img
+           width="10"
+           height="10"
+           src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
+           alt="vegetarian-food-symbol"
+           class="absolute z-20 top-6 right-6 cursor-pointer bg-white"
+           />
                <div class="p-2">
                   <div class="overflow-hidden  border rounded-md border-none">
                <img
@@ -571,14 +1112,6 @@
                   </div>
                </div>
                <div>
-                  <!-- ~ veg symbol button -->
-                  <img
-                  width="10"
-                  height="10"
-                  src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
-                  alt="vegetarian-food-symbol"
-                  class="absolute top-2 right-6 cursor-pointer bg-white"
-                  />
                   <div class="w-full p-2 pb-3 flex flex-col gap-1">
                      <p class="text-[15px] font-normal">
                         Whipped Cream Pineapple Cake
@@ -606,7 +1139,15 @@
             </div>
 
                 <!-- single card 6 -->
-            <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden bg-white">
+            <div class="relative max-w-[17.7rem] h-fit border rounded-md overflow-hidden bg-white">
+               <!-- ~ veg symbol button -->
+           <img
+           width="10"
+           height="10"
+           src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
+           alt="vegetarian-food-symbol"
+           class="absolute z-20 top-6 right-6 cursor-pointer bg-white"
+           />
                <div class="p-2">
                   <div class="overflow-hidden  border rounded-md border-none">
                <img
@@ -618,14 +1159,6 @@
                   </div>
                </div>
                <div>
-                  <!-- ~ veg symbol button -->
-                  <img
-                  width="10"
-                  height="10"
-                  src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
-                  alt="vegetarian-food-symbol"
-                  class="absolute top-2 right-6 cursor-pointer bg-white"
-                  />
                   <div class="w-full p-2 pb-3 flex flex-col gap-1">
                      <p class="text-[15px] font-normal">
                         Original Black Forest Cake
@@ -653,7 +1186,15 @@
             </div>
 
                 <!-- single card 7 -->
-            <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden bg-white">
+            <div class="relative max-w-[17.7rem] h-fit border rounded-md overflow-hidden bg-white">
+               <!-- ~ veg symbol button -->
+           <img
+           width="10"
+           height="10"
+           src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
+           alt="vegetarian-food-symbol"
+           class="absolute z-20 top-6 right-6 cursor-pointer bg-white"
+           />
                <div class="p-2">
                   <div class="overflow-hidden  border rounded-md border-none">
                <img
@@ -665,14 +1206,7 @@
                   </div>
                </div>
                <div>
-                  <!-- ~ veg symbol button -->
-                  <img
-                  width="10"
-                  height="10"
-                  src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
-                  alt="vegetarian-food-symbol"
-                  class="absolute top-2 right-6 cursor-pointer bg-white"
-                  />
+                  
                   <div class="w-full p-2 pb-3 flex flex-col gap-1">
                      <p class="text-[15px] font-normal">
                         KitKat Chocolate Truffle Cake
@@ -698,7 +1232,15 @@
                </div>
             </div>
                 <!-- single card 8 -->
-            <div class="relative max-w-[17.7rem] min-h-[403px] border rounded-md overflow-hidden bg-white">
+            <div class="relative max-w-[17.7rem] h-fit border rounded-md overflow-hidden bg-white">
+               <!-- ~ veg symbol button -->
+           <img
+           width="10"
+           height="10"
+           src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
+           alt="vegetarian-food-symbol"
+           class="absolute z-20 top-6 right-6 cursor-pointer bg-white"
+           />
                <div class="p-2">
                   <div class="overflow-hidden  border rounded-md border-none">
                <img
@@ -710,14 +1252,6 @@
                   </div>
                </div>
             <div>
-                  <!-- ~ veg symbol button -->
-                  <img
-                  width="10"
-                  height="10"
-                  src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
-                  alt="vegetarian-food-symbol"
-                  class="absolute top-2 right-6 cursor-pointer bg-white"
-                  />
                   <div class="w-full p-2 pb-3 flex flex-col gap-1">
                      <p class="text-[15px] font-normal">
                         Choco Chip Truffle Cake
@@ -748,8 +1282,8 @@
 
       <!-- Experience Flavours -->
        <div class=" cursor-pointer mt-14 mx-20">
-            <h2 class="font-lato font-semibold text-[34px]">Experience Flavours</h2>
-         <div class=" mt-10 flex gap-3  font-semibold text-base">
+            <h2 class="font-lato font-semibold text-34px sm:text-lg md:text-3xl">Experience Flavours</h2>
+         <div class=" mt-10 flex flex-col sm:flex-row md:flex-wrap  justify-between   font-semibold text-base">
             <a href="" class=" flex justify-center w-[140px] border border-gray-400 rounded-lg hover:border-red-400 hover:text-red-400 px-6 py-3">Chocolate</a>
             <a href="" class=" flex justify-center w-[140px] border border-gray-400 rounded-lg hover:border-red-400 hover:text-red-400 px-6 py-3">Fruits</a>
             <a href="" class=" flex justify-center w-[140px] border border-gray-400 rounded-lg hover:border-red-400 hover:text-red-400 px-6 py-3">Red Velvet</a>
@@ -764,26 +1298,26 @@
        <!-- Trending Cakes -->
        <div class="  mt-14 pb-14 h-auto bg-[rgb(255,247,238)] cursor-pointer">
          
-         <div class="px-20 pt-12 flex justify-between">
-            <h2 class="text-[34px] font-semibold font-lato">Trending Cakes</h2>
-            <p class="text-[14px] font-semibold border text-red-400 border-red-400 hover:bg-red-400 hover:text-white rounded-full w-32 h-10 bg-white flex items-center justify-center">View All</p>
+         <div class="px-20 pt-12 flex flex-wrap justify-between">
+            <h2 class="text-34px sm:text-lg md:text-3xl font-semibold font-lato">Trending Cakes</h2>
+            <p class="text-[14px] font-semibold border text-red-400 border-red-400 hover:bg-red-400 hover:text-white rounded-full w-32 h-10 bg-white flex items-center justify-center  sm:justify-center">View All</p>
          </div>
          <!-- trending cake images -->
            <!-- First Row - 3 Columns -->
          <div class=" grid grid-cols-3  px-[4.6rem] mt-4 gap-6 ">
-            <div class="flex flex-col justify-center items-center">
+            <div class="flex flex-col flex-wrap justify-center items-center">
                <div class="rounded-md overflow-hidden">
                   <img src="https://bkmedia.bakingo.com/photo_pulling_cake_desktop.jpg?tr=w-484,q-70" alt="pulling_cake" class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out">
                </div>
                <a href="" class=" font-lato font-semibold text-[17px] pt-4">Photo Pulling Cakes</a>
             </div>
-            <div class="flex flex-col justify-center items-center">
+            <div class="flex flex-col flex-wrap justify-center items-center">
                <div class="rounded-md overflow-hidden">
                   <img src="https://bkmedia.bakingo.com/pinata_cake_desktop.jpg?tr=w-484,q-70" alt="/pinata_cake" class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out">
                </div>
                <a href="" class=" font-lato font-semibold text-[17px] pt-4">Pinata Cake</a>
             </div>
-            <div class="max-w-full flex flex-col justify-center items-center">
+            <div class="max-w-full flex flex-col flex-wrap justify-center items-center">
               <div class="rounded-md overflow-hidden">
                <img src="https://bkmedia.bakingo.com/pull_me_up_cake_desktop.jpg?tr=w-484,q-70" alt="pull_me_up_cake" class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out">
               </div>
@@ -791,14 +1325,14 @@
             </div >
 
              <!-- Second Row - 2 Equal Columns -->
-            <div class="col-span-3 grid grid-cols-2 justify-between items-center">
-            <div class="flex flex-col justify-center items-center">
+            <div class="col-span-3 grid grid-cols-2  justify-between items-center">
+            <div class="flex flex-col flex-wrap  justify-center items-center">
                <div class="rounded-md overflow-hidden ">
                   <img src="https://bkmedia.bakingo.com/bomb_cake_desktop.jpg?tr=w-484,q-70" alt="bomb_cake" class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out">
                </div>
                <a href="" class=" font-lato font-semibold text-[17px] pt-4">Bomb Cake</a>
             </div>
-            <div class="flex flex-col justify-center items-center">
+            <div class="flex flex-col flex-wrap justify-center items-center">
                <div class="rounded-md overflow-hidden">
                   <img src="https://bkmedia.bakingo.com/surprise_cake_box_desktop.jpg?tr=w-484,q-70" alt="surprise_cake_box" class="w-full rounded-md hover:scale-110 transition duration-500 delay-75 ease-in-out">
                </div>
@@ -811,13 +1345,13 @@
         <!-- Designer Cakes -->
         <div class="  mt-8 pb-14 h-auto bg-white cursor-pointer">
          
-         <div class="px-20 pt-12 flex justify-between">
-            <h2 class="text-[34px] font-semibold font-lato"> Designer Cakes</h2>
+         <div class="px-20 pt-12 flex flex-wrap justify-between">
+            <h2 class="text-34px sm:text-lg md:text-3xl font-semibold font-lato"> Designer Cakes</h2>
             <p class="text-[14px] font-semibold border text-red-400 border-red-400 hover:bg-red-400 hover:text-white rounded-full w-32 h-10 bg-white flex items-center justify-center">View All</p>
          </div>
 
          <div class="mt-4 px-20">
-            <div class="grid grid-cols-3 gap-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
                <div class="border pb-3 rounded-lg">
                   <div class="overflow-hidden rounded-t-lg">
                      <a href=""><img src="https://bkmedia.bakingo.com/barbie_1.jpg?tr=w-484,q-70" alt="barbie_1" class="rounded-t-lg hover:scale-110 transition duration-500 delay-75 ease-in-out"></a>
@@ -862,12 +1396,12 @@
         
         <!-- Looking for something else -->
        <div class=" px-20">
-         <div class=" px-14 pr-2    mt-4 pb-10 h-auto" style="background-image: url('https://media.bakingo.com/bakingo-ssr/static/media/youMay.afb47926.jpg');">
+         <div class=" px-14 pr-2  mt-4 pb-10 sm:h-auto" style="background-image: url('https://media.bakingo.com/bakingo-ssr/static/media/youMay.afb47926.jpg');">
          
-            <div class=" pt-8  h-auto flex justify-between">
-               <h2 class="text-[34px] font-semibold font-lato">Looking For Something Else</h2>
+            <div class=" pt-8  h-auto flex flex-wrap justify-between">
+               <h2 class="text-34px sm:text-lg md:text-3xl font-semibold font-lato">Looking For Something Else</h2>
             </div>
-            <div class="pt-4 grid grid-cols-3 gap-6">
+            <div class="pt-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
                <div>
                   <img src="https://bkmedia.bakingo.com/pastries_3.png?tr=w-350,q-70" alt="pastries">
                </div>
@@ -893,14 +1427,14 @@
          <!-- Recently Viewed Products -->
          <div class="  mt-14 pb-14 h-auto bg-white cursor-pointer">
          
-            <div class="px-20 pt-12 flex justify-between">
-               <h2 class="text-[36px] font-semibold ">Recently Viewed Products</h2>
+            <div class="px-20 pt-12 flex flex-wrap justify-between">
+               <h2 class="text-34px sm:text-lg md:text-3xl font-semibold ">Recently Viewed Products</h2>
                <p class="text-[14px] font-semibold border text-red-400 border-red-400 hover:bg-red-400 hover:text-white rounded-full w-32 h-10 bg-white flex items-center justify-center">View All</p>
             </div>
 
             
             <!-- card cake section -->
-         <div class="px-20 mt-8 max-w-full grid grid-cols-4 gap-4 pb-7">
+         <div class="px-20 mt-8 max-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 pb-7">
             <!-- single card -->
             <div class="border rounded-lg cursor-pointer hover:shadow-md">
                 <div class=" relative max-w-80">
@@ -987,10 +1521,10 @@
 
            
     <!-- Read Some section -->
-    <div class="  mt-3 pb-12 h-auto bg-[rgb(255,239,239)] cursor-pointer">
+    <div class="  mt-3 pb-12 h-auto bg-[rgb(255,239,239)] cursor-pointer ">
          
-      <div class="px-20 pb-8 pt-10 flex justify-between">
-         <h2 class="text-[34px] font-semibold font-lato">Read Some Of Our Recent Blog Posts</h2>
+      <div class="px-20 pb-8 pt-10 flex flex-wrap justify-between">
+         <h2 class="text-34px sm:text-lg md:text-3xl font-semibold font-lato">Read Some Of Our Recent Blog Posts</h2>
          <p class="text-[14px] font-semibold border text-red-400 border-red-400 hover:bg-red-400 hover:text-white rounded-full w-32 h-10 bg-white flex items-center justify-center">View All</p>
       </div>
 
@@ -1040,8 +1574,8 @@
 
      <!-- What our customer says -->
       <div class="mt-20 pb-2 px-20 h-auto cursor-pointer">
-         <div class="flex  items-center justify-between">
-            <div class="mt-5  h-[590px] w-[506px] bg-cover"  style="background-image: url('https://bkmedia.bakingo.com/ssr-static/blobs.png');">
+         <div class="flex  flex-wrap items-center justify-between  ">
+            <div class="mt-5  h-[590px] w-[506px] bg-cover hidden md:block"  style="background-image: url('https://bkmedia.bakingo.com/ssr-static/blobs.png');">
                <div class="px-14 ">
                  <div class=" pt-52">
                    <!-- ~ flickity crousal -->
@@ -1082,11 +1616,11 @@
                  </div>
                </div>
             </div>
-            <div class=" flex flex-col flex-wrap gap-6 items-start w-[50vw] pl-52 pr-16 ">
+            <div class=" flex flex-col gap-6 items-start w-[50vw] pl-52 pr-16 ">
                <div>
-                  <h1 class="font-normal text-[35px]">What our customers say about us!</h1>
+                  <h1 class="font-normal text-35px sm:text-lg md:text-3xl">What our customers say about us!</h1>
                </div>
-               <div class="flex  gap-2  items-center">
+               <div class="flex gap-2  items-center">
                   <div class="text-green-700 border rounded bg-[rgb(232,244,237)] h-7 w-16 font-normal flex items-center justify-center gap-1 ">
                      <i class="fa-solid fa-star text-base"></i>
                      <span class=" text-[15px]">4.9</span>
@@ -1120,25 +1654,25 @@
       </div>
 
       <!-- Seeking for Something -->
-       <div class=" mt-2 flex gap-20">
-         <div class="h-full w-full">
+       <div class=" mt-2 flex gap-20 ">
+         <div class="h-full w-full hidden md:block">
             <img src="https://bkmedia.bakingo.com/ssr-static/contact_form.png" alt="Cake Image">
          </div>
          <div class="pr-16 h-full w-full">
-            <div class="font-normal text-[33px]">
+            <div class="font-normal text-34px sm:text-lg md:text-3xl max-w-md mx-auto ">
                ..Seeking for something special and customized ?
             </div>
             <div class="pt-4">
-               <form>
+               <form class="max-w-md mx-auto">
                   <div class="flex gap-3">
                      <div class="mb-7">
                         <label for="name" class="block text-sm font-medium text-gray-400">Your Name <span class="text-red-400">*</span></label>
-                        <input type="text" id="name" name="name" required class="mt-3  w-[290px] h-[36px] border-black border focus:outline-none  p-2" >
+                        <input type="text" id="name" name="name" required class="mt-3  block w-full h-[36px] border-black border focus:outline-none  p-2" >
                       </div>
                       
                       <div class="mb-7">
                          <label for="name" class="block text-sm font-medium text-gray-400">Phone Number <span class="text-red-400">*</span></label>
-                        <input type="text" id="name" name="name" required class="mt-3  w-[290px] h-[36px]  border-black border focus:outline-none  p-2" >
+                        <input type="text" id="name" name="name" required class="mt-3  block w-full h-[36px]  border-black border focus:outline-none  p-2" >
                       </div>
                   </div>
                   
@@ -1161,14 +1695,14 @@
        </div>
 
        <!-- About Us -->
-       <div class="px-28 mt-14 pb-14 h-auto bg-cover bg-center" style="background-image: url('https://bkmedia.bakingo.com/ssr-static/aboutus_bg.png');">
-         <div class="w-2/4">
-            <h1 class="font-normal text-[38px]">About us</h1>
-            <p class="font-normal text-base text-gray-400 pt-6 mb-6">Bakingo is an FSSAI-certified bakery where every dessert tells a story! Our bakery came to light intending to make your remarkable occasions even sweeter and more memorable. We bake perfection with quality ingredients into impeccable cakes, pastries, brownies, cupcakes, and much more. We specialise in delivering exuberant smiles to our customers in around 30 cities across India, including Delhi, Mumbai, Bengaluru, Hyderabad, Ahmedabad, Chennai, Kolkata, Pune, and so forth. Bakingo is a haven for dessert lovers who want to indulge in scrumptious treats and fill their celebrations with cherished memories.</p>
+       <div class="px-28 mt-14 pb-14 h-auto bg-cover bg-center hidden md:block" style="background-image: url('https://bkmedia.bakingo.com/ssr-static/aboutus_bg.png');">
+         <div class="w-2/4 ">
+            <h1 class="font-normal text-38px sm:text-lg md:text-3xl">About us</h1>
+            <p class=" font-normal text-base text-gray-400 pt-6 mb-6">Bakingo is an FSSAI-certified bakery where every dessert tells a story! Our bakery came to light intending to make your remarkable occasions even sweeter and more memorable. We bake perfection with quality ingredients into impeccable cakes, pastries, brownies, cupcakes, and much more. We specialise in delivering exuberant smiles to our customers in around 30 cities across India, including Delhi, Mumbai, Bengaluru, Hyderabad, Ahmedabad, Chennai, Kolkata, Pune, and so forth. Bakingo is a haven for dessert lovers who want to indulge in scrumptious treats and fill their celebrations with cherished memories.</p>
             <span class="px-6 py-2 border-2 text-[15px] font-semibold hover:cursor-pointer bg-red-50 text-red-400 rounded-md border-red-300">View All</span>
          </div>
         </div>
-        <div class="mt-4 px-28">
+        <div class="mt-4  px-4 sm:px-32 max-w-full">
          <h1 class="font-semibold text-[20px] text-gray-600 py-3">Bakingo - Your Trusted FSSAI Certified Online Bakery For Every Celebration</h1>
          <p class="font-normal text-sm text-gray-400">We are exactly what you are looking for. Yes, we are an FSSAI certified online cake and Bakery Company that specializes in delivering absolutely lip-smacking delicacies. Currently, we are delivering cakes in Gurgaon, Delhi, Noida,Ghaziabad, Bangalore, Hyderabad, Mumbai, Kolkata, Chennai, and many other cities. We are here to create some unforgettable memories and some undying emotions by helping you to send cake online to your beloved ones.</p>
          <p class="font-normal text-sm text-gray-400 py-3">Our mission is to “deliver these heavenly cakes at your doorstep on time to make your celebrations even grander”. Because for us, it is not just a Cake but more and so we craft it with a blend of inspiration, passion, and love. We guarantee an extraordinary taste in your choicest flavors with ravishing designs. Sounds perfect, isn’t it?</p>
@@ -1219,104 +1753,202 @@
 
 
     <!-- Footer -->
-     <footer>
-        <div class=" mt-4 cursor-default font-poppins flex h-32 px-20 items-center justify-between bg-[rgb(255,248,239)] border-b-2 border-t-2 border-red-100">
-            <div class="flex justify-between items-center gap-6">
-                <div class="flex items-center font-semibold text-[13px]">
-                    <img src="./images/truckIcon.822f5067.svg" alt="" class="pr-3">
-                    <span>On Time Delivery</span>
-                </div>
-                <div><img src="./images/sideLine.474eaa2c.svg" alt=""></div>
-                <div class="flex items-center font-semibold text-[13px]">
-                    <img src="./images/cakeIcon.f5517658.svg" alt="" class="pr-3">
-                    <p>100% Fresh & Hygienic</p>
-                </div>
-                <div><img src="./images/sideLine.474eaa2c.svg" alt=""></div>
-                <div class="flex items-center font-semibold text-[13px]">
-                    <img src="./images/fssaiIcon.27904f51.svg" alt="" class="pr-3">
-                    <p>FSSAI Certified</p>
-                </div>
+    <footer>
+      <div
+         class="mt-12 cursor-default font-poppins flex gap-10 h-32 px-4 sm:px-20 items-center justify-center lg:justify-between bg-[rgb(255,248,239)] border-b-2 border-t-2 border-red-100 no-scrollbar"
+      >
+         <div class="flex justify-between items-center gap-2 sm:gap-6">
+            <div
+               class="flex items-center font-semibold text-[11px] sm:text-[13px]"
+            >
+               <img
+                  src="./images/truckIcon.822f5067.svg"
+                  alt=""
+                  class="pr-3"
+               />
+               <span>On Time Delivery</span>
             </div>
-            <div class="flex flex-col font-semibold text-sm">
-                <p>Subscribes To Newsletter</p>
-               <div class=" flex justify-between border w-96 h-12 bg-white items-center rounded-xl pl-2 pr-1">
-                <input type="email" placeholder="Enter email address" class=" outline-none font-medium ">
-                <span class="border px-4 py-2 rounded-xl  bg-red-400 text-white cursor-pointer">Subscribe</span>
-               </div>
+            <div>
+               <img src="./images/sideLine.474eaa2c.svg" alt="" />
             </div>
-        </div>
-     <div class=" flex px-20 py-8 justify-between font-poppins">
-        <div class="w-40">
-            <img src="./images/bakingo.svg" alt="">
+            <div
+               class="flex items-center font-semibold text-[11px] sm:text-[13px]"
+            >
+               <img
+                  src="./images/cakeIcon.f5517658.svg"
+                  alt=""
+                  class="pr-3"
+               />
+               <p>100% Fresh & Hygienic</p>
+            </div>
+            <div>
+               <img src="./images/sideLine.474eaa2c.svg" alt="" />
+            </div>
+            <div
+               class="flex items-center font-semibold text-[11px] sm:text-[13px]"
+            >
+               <img
+                  src="./images/fssaiIcon.27904f51.svg"
+                  alt=""
+                  class="pr-3"
+               />
+               <p>FSSAI Certified</p>
+            </div>
+         </div>
+         <div class="hidden lg:flex flex-col font-semibold text-sm">
+            <p>Subscribes To Newsletter</p>
+            <div
+               class="flex justify-between border w-96 h-12 bg-white items-center rounded-xl pl-2 pr-1"
+            >
+               <input
+                  type="email"
+                  placeholder="Enter email address"
+                  class="outline-none font-medium"
+               />
+               <span
+                  class="border px-4 py-2 rounded-xl bg-red-400 text-white cursor-pointer"
+                  >Subscribe</span
+               >
+            </div>
+         </div>
+      </div>
+      <div
+         class="flex flex-col md:flex-row px-6 sm:px-20 py-8 gap-10 justify-between font-poppins"
+      >
+         <div class="w-40">
+            <img src="./images/bakingo.svg" alt="" />
             <div class="flex pt-4 gap-2">
-                <img src="./images/copyright.a7ac9fa8.svg" alt="">
-                <p class="text-gray-500">2024</p>
-            </div><hr>
+               <img src="./images/copyright.a7ac9fa8.svg" alt="" />
+               <p class="text-gray-500">2024</p>
+            </div>
+            <hr />
 
             <div class="pt-6 text-wrap">
-                <p class="text-sm font-medium">Show us some love <span class="text-red-500">❤</span> & connect with us!</p>
+               <p class="text-sm font-medium">
+                  Show us some love <span class="text-red-500">❤</span> &
+                  connect with us!
+               </p>
             </div>
-            <div id="icons" class="flex pt-5">
-                <img src="./images/insta.d65eb680.svg" alt="Instagram">  
-                <img src="./images/fb.36648f6e.svg" alt="Facebook"> 
-                <img src="./images/yt.9fce5bbb.svg" alt="Youtube">
-                <img src="./images/linked.43e16b45.svg" alt="Linkedin">
-                <img src="./images/twitter.4d80ab9f.svg" alt="twitter">
-                <img src="./images/pinterestLogo.c2e0166f.svg" alt="pinterestLogo" class="size-5">
+            <div id="icons" class="flex gap-1 pt-5">
+               <img src="./images/insta.d65eb680.svg" alt="Instagram" />
+               <img src="./images/fb.36648f6e.svg" alt="Facebook" />
+               <img src="./images/yt.9fce5bbb.svg" alt="Youtube" />
+               <img src="./images/linked.43e16b45.svg" alt="Linkedin" />
+               <img src="./images/twitter.4d80ab9f.svg" alt="twitter" />
+               <img
+                  src="./images/pinterestLogo.c2e0166f.svg"
+                  alt="pinterestLogo"
+                  class="size-5"
+               />
             </div>
-        </div>
+         </div>
 
-        <div id="lists" class="flex justify-between gap-20">
-                    <ul class="flex flex-col gap-y-1.5">
-                        <h2 class="font-semibold text-[18px] pb-2 ">Know Us</h2>
-                        <a href="" class="text-gray-500 text-sm font-normal">Our Story</a>
-                        <a href="" class="text-gray-500 text-sm font-normal">Contact Us</a>
-                        <a href="" class="text-gray-500 text-sm font-normal">Locate Us</a>
-                        <a href="" class="text-gray-500 text-sm font-normal">Blog</a>
-                        <a href="" class="text-gray-500 text-sm font-normal">Media</a>
-                        <a href="" class="text-gray-500 text-sm font-normal">Careers</a>
-                    </ul>
-                
-                <ul class="flex flex-col leading-loose gap-y-1.5">
-                    <h2 class="font-semibold text-[18px] pb-2 ">Need Help</h2>
-                    <a href="" class="text-gray-500 text-sm font-normal">FAQ</a>
-                    <a href="" class="text-gray-500 text-sm font-normal">Cancellation and Refund</a>
-                    <a href="" class="text-gray-500 text-sm font-normal">Privacy Policy</a>
-                    <a href="" class="text-gray-500 text-sm font-normal">Terms and Conditions</a>
-                    <a href="" class="text-gray-500 text-sm font-normal">Customer Grievance</a>
-                    <a href="" class="text-gray-500 text-sm font-normal">Sitemap</a>
-                </ul>
-                <ul class="flex flex-col leading-loose gap-y-1.5">
-                    <h2 class="font-semibold text-[18px] pb-2 ">More Info</h2>
-                    <a href="" class="text-gray-500 text-sm font-normal">Corporate Cakes</a>
-                    <a href="" class="text-gray-500 text-sm font-normal">Coupons & Offers</a>
-                    <a href="" class="text-gray-500 text-sm font-normal">Franchise</a>
-                    <a href="" class="text-gray-500 text-sm font-normal">Investor Relations</a>
-                    <a href="" class="text-gray-500 text-sm font-normal">Stamps</a>
-                    <a href="" class="text-gray-500 text-sm font-normal">Download App</a>
-                </ul>
-        </div>
+         <div
+            id="lists"
+            class="flex flex-wrap sm:flex-nowrap justify-between gap-4 sm:gap-20"
+         >
+            <ul class="flex flex-col gap-y-1.5">
+               <h2 class="font-semibold text-[18px] pb-2">Know Us</h2>
+               <a href="" class="text-gray-500 text-sm font-normal"
+                  >Our Story</a
+               >
+               <a href="" class="text-gray-500 text-sm font-normal"
+                  >Contact Us</a
+               >
+               <a href="" class="text-gray-500 text-sm font-normal"
+                  >Locate Us</a
+               >
+               <a href="" class="text-gray-500 text-sm font-normal">Blog</a>
+               <a href="" class="text-gray-500 text-sm font-normal">Media</a>
+               <a href="" class="text-gray-500 text-sm font-normal"
+                  >Careers</a
+               >
+            </ul>
 
-        <div>
-            <div class="font-semibold text-sm pb-4 ">
-                <p>Experience Bakingo App On Mobile</p>
+            <ul class="flex flex-col leading-loose gap-y-1.5">
+               <h2 class="font-semibold text-[18px] pb-2">Need Help</h2>
+               <a href="" class="text-gray-500 text-sm font-normal">FAQ</a>
+               <a href="" class="text-gray-500 text-sm font-normal"
+                  >Cancellation and Refund</a
+               >
+               <a href="" class="text-gray-500 text-sm font-normal"
+                  >Privacy Policy</a
+               >
+               <a href="" class="text-gray-500 text-sm font-normal"
+                  >Terms and Conditions</a
+               >
+               <a href="" class="text-gray-500 text-sm font-normal"
+                  >Customer Grievance</a
+               >
+               <a href="" class="text-gray-500 text-sm font-normal"
+                  >Sitemap</a
+               >
+            </ul>
+            <ul class="flex flex-col leading-loose gap-y-1.5">
+               <h2 class="font-semibold text-[18px] pb-2">More Info</h2>
+               <a href="" class="text-gray-500 text-sm font-normal"
+                  >Corporate Cakes</a
+               >
+               <a href="" class="text-gray-500 text-sm font-normal"
+                  >Coupons & Offers</a
+               >
+               <a href="" class="text-gray-500 text-sm font-normal"
+                  >Franchise</a
+               >
+               <a href="" class="text-gray-500 text-sm font-normal"
+                  >Investor Relations</a
+               >
+               <a href="" class="text-gray-500 text-sm font-normal"
+                  >Stamps</a
+               >
+               <a href="" class="text-gray-500 text-sm font-normal"
+                  >Download App</a
+               >
+            </ul>
+         </div>
+
+         <div>
+            <div class="font-semibold text-sm pb-4">
+               <p>Experience Bakingo App On Mobile</p>
             </div>
             <div class="flex gap-2">
-                <div id="scan">
-                    <img src="https://media.bakingo.com/bakingo-ssr/static/media/Scanner.9bb37a0c.svg" alt="Scanner">
-                </div>
-                <div >
-                    <img class="pb-1" src="https://media.bakingo.com/bakingo-ssr/static/media/Play_Store.51d90250.svg" alt="Play Store">
-                    <img src="https://media.bakingo.com/bakingo-ssr/static/media/App_Store.df740ce5.svg" alt="App Store">
-                </div>
+               <div id="scan">
+                  <img
+                     src="https://media.bakingo.com/bakingo-ssr/static/media/Scanner.9bb37a0c.svg"
+                     alt="Scanner"
+                  />
+               </div>
+               <div>
+                  <img
+                     class="pb-1"
+                     src="https://media.bakingo.com/bakingo-ssr/static/media/Play_Store.51d90250.svg"
+                     alt="Play Store"
+                  />
+                  <img
+                     src="https://media.bakingo.com/bakingo-ssr/static/media/App_Store.df740ce5.svg"
+                     alt="App Store"
+                  />
+               </div>
             </div>
-        </div>
-     </div>
-     <hr>
-     <div class="flex items-center justify-center py-3" >
-        <span class="text-gray-500 text-sm font-normal">We Accepted:</span>
-        <img class="w-[600px]" src="./images/payment.e08b4d57.png" alt="Payments">
-    </div>
-    </footer>
+         </div>
+      </div>
+      <hr />
+      <div class="flex items-center justify-center py-3">
+         <span class="hidden sm:block text-gray-500 text-sm font-normal"
+            >We Accepted:</span
+         >
+         <img
+            class="hidden sm:block object-cover w-[50%]"
+            src="./images/payment.e08b4d57.png"
+            alt="Payments"
+         /><img
+            class="h-[6rem] sm:hidden object-cover"
+            src="https://media.bakingo.com/bakingo-ssr/static/media/mobilepayment.4cb75e0e.png"
+            alt="Payments"
+         />
+      </div>
+   </footer>
+
+   <script src="./Prem/dropdown.script.js"></script>
 </body>
 </html>
