@@ -151,10 +151,12 @@ For inquiries, feedback, or support, please reach out:
 1. **Header Section**: The header contains the logo, search bar, and navigation links.
    ![Header Section](/src/images/header.jpeg)
 
-2. **Home Page**: The footer section contains quick links and contact information.
-   ![Footer Section](/src/images/homepage.png)
+2. **Home Page**:
+   ![Mainpage](/src/images/homepage.png)
 
 3. **Footer Section**: The footer section contains quick links and contact information.
    ![Footer Section](/src/images/footer.jpeg)
 
 4. **Some More Screenshots**
+   ![Pinata Cakes](/src/images/pinata-cakes.png)
+   ![For Brother Cakes](/src/images/for-brother.png)
