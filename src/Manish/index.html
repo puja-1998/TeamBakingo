@@ -20,746 +20,751 @@
 </head>
 <body class="font-poppins w-screen overflow-x-hidden">
 
-    <!-- ~ header -->
-    <header class="w-screen fixed top-0 left-0 right-0 z-40">
+<!-- ~ header -->
+<header class="fixed top-0 left-0 right-0 z-40">
     <nav
-        class="font-poppins flex justify-between items-center px-2 sm:px-12 py-5 cursor-pointer bg-white h-auto w-screen border-b-2"
+       class="font-poppins flex justify-between items-center px-2 sm:px-12 py-5 cursor-pointer bg-white h-auto w-screen border-b-2"
     >
-        <div id="logo" class="flex gap-8">
-            <div class="relative sm:hidden p-2 w-[2rem] mr-2">
-                <!-- Sidebar -->
-                <div
+       <div id="logo" class="flex gap-8">
+          <div class="relative sm:hidden p-2 w-[2rem] mr-2">
+             <!-- Sidebar -->
+             <div
                 id="sidebar"
                 class="fixed left-0 top-0 w-80 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50"
-                >
+             >
                 <div
-                    class="flex justify-between items-center bg-[#f6f6f6] p-5 rounded-b-lg mr-3"
+                   class="flex justify-between items-center bg-[#f6f6f6] p-5 rounded-b-lg mr-3"
                 >
-                    <h2 class="text-lg font-bold text-slate-900">
-                        All Category
-                    </h2>
-                    <button
-                        id="closeBtn"
-                        class="text-2xl focus:outline-none"
-                    >
-                        &times;
-                    </button>
+                   <h2 class="text-lg font-bold text-slate-900">
+                      All Category
+                   </h2>
+                   <button
+                      id="closeBtn"
+                      class="text-2xl focus:outline-none"
+                   >
+                      &times;
+                   </button>
                 </div>
                 <ul class="mr-3">
-                    <!-- ~ cakes -->
-                    <li>
-                        <button
-                            class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
-                            onclick="toggleAccordion('cakes', this)"
-                        >
-                            Cakes
-                            <span class="icon-plus">+</span>
-                            <span class="icon-minus hidden">−</span>
-                        </button>
-                        <ul id="cakes" class="w-full hidden">
-                            <li>
+                   <!-- ~ cakes -->
+                   <li>
+                      <button
+                         class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                         onclick="toggleAccordion('cakes', this)"
+                      >
+                         Cakes
+                         <span class="icon-plus">+</span>
+                         <span class="icon-minus hidden">−</span>
+                      </button>
+                      <ul id="cakes" class="w-full hidden">
+                         <li>
                             <button
-                                class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
-                                onclick="toggleSubmenu(this)"
+                               class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
+                               onclick="toggleSubmenu(this)"
                             >
-                                <span
-                                    class="text-[16px] text-slate-900 font-medium"
-                                    >Trending Cakes</span
-                                >
-                                <span class="icon-down"
-                                    ><img
-                                        alt="arrow"
-                                        src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
-                                        width="16"
-                                        height="16"
-                                /></span>
+                               <span
+                                  class="text-[16px] text-slate-900 font-medium"
+                                  >Trending Cakes</span
+                               >
+                               <span class="icon-down"
+                                  ><img
+                                     alt="arrow"
+                                     src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
+                                     width="16"
+                                     height="16"
+                               /></span>
                             </button>
                             <ul class="hidden">
-                                <li class="border-b">
-                                    <a
-                                        href="#"
-                                        class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                        >Pinata Cakes</a
-                                    >
-                                </li>
-                                <li class="border-b">
-                                    <a
-                                        href="#"
-                                        class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                        >Suprice Cakes</a
-                                    >
-                                </li>
+                               <li class="border-b">
+                                  <a
+                                     href="/TeamBakingo/src/Prem/pinata-cakes/"
+                                     class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                     >Pinata Cakes</a
+                                  >
+                               </li>
+                               <li class="border-b">
+                                  <a
+                                     href="/TeamBakingo/src/Prem/suprise-cakes/"
+                                     class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                     >Suprice Cakes</a
+                                  >
+                               </li>
                             </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- ~ by flavours -->
-                    <li>
-                        <button
-                            class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
-                            onclick="toggleAccordion('by-flavours', this)"
-                        >
-                            By Flavours
-                            <span class="icon-plus">+</span>
-                            <span class="icon-minus hidden">−</span>
-                        </button>
-                        <ul id="by-flavours" class="w-full hidden">
-                            <li>
+                         </li>
+                      </ul>
+                   </li>
+                   <!-- ~ birthday -->
+                   <li>
+                      <button
+                         class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                         onclick="toggleAccordion('birthday', this)"
+                      >
+                         Birthday
+                         <span class="icon-plus">+</span>
+                         <span class="icon-minus hidden">−</span>
+                      </button>
+                      <ul id="birthday" class="w-full hidden">
+                         <li>
                             <ul>
-                                <li class="border-b">
-                                    <a
-                                        href="#"
-                                        class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                        >Chocolate Cakes</a
-                                    >
-                                </li>
-                                <li class="border-b">
-                                    <a
-                                        href="#"
-                                        class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                        >Butterscotch Cakes</a
-                                    >
-                                </li>
+                               <li class="border-b">
+                                  <a
+                                     href="/TeamBakingo/src/Rana/all-birthday/"
+                                     class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                     >All Birthday Cakes</a
+                                  >
+                               </li>
+                               <li class="border-b">
+                                  <a
+                                     href="/TeamBakingo/src/Rana/1st-birthday/"
+                                     class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                  >
+                                     1st Birthday Cakes</a
+                                  >
+                               </li>
                             </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- ~ theme cakes -->
-                    <li>
-                        <button
-                            class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
-                            onclick="toggleAccordion('theme-cakes', this)"
-                        >
-                            Theme Cakes
-                            <span class="icon-plus">+</span>
-                            <span class="icon-minus hidden">−</span>
-                        </button>
-                        <ul id="theme-cakes" class="w-full hidden">
-                            <li>
+                         </li>
+                      </ul>
+                   </li>
+                   <!-- ~ anniversary -->
+                   <li>
+                      <button
+                         class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                         onclick="toggleAccordion('anniversary', this)"
+                      >
+                         Anniversary
+                         <span class="icon-plus">+</span>
+                         <span class="icon-minus hidden">−</span>
+                      </button>
+                      <ul id="anniversary" class="w-full hidden">
+                         <li>
+                            <ul>
+                               <li class="border-b">
+                                  <a
+                                     href="/TeamBakingo/src/Puja/AnniversaryCakes.html"
+                                     class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                     >All Anniversary Cakes</a
+                                  >
+                               </li>
+                            </ul>
+                         </li>
+                      </ul>
+                   </li>
+                   <!-- ~ by relationship -->
+                   <li>
+                      <button
+                         class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                         onclick="toggleAccordion('by-relationship', this)"
+                      >
+                         By Relationship
+                         <span class="icon-plus">+</span>
+                         <span class="icon-minus hidden">−</span>
+                      </button>
+                      <ul id="by-relationship" class="w-full hidden">
+                         <li>
                             <button
-                                class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
-                                onclick="toggleSubmenu(this)"
+                               class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
+                               onclick="toggleSubmenu(this)"
                             >
-                                <span
-                                    class="text-[16px] text-slate-900 font-medium"
-                                    >Kids Cakes</span
-                                >
-                                <span class="icon-down"
-                                    ><img
-                                        alt="arrow"
-                                        src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
-                                        width="16"
-                                        height="16"
-                                /></span>
+                               <span
+                                  class="text-[16px] text-slate-900 font-medium"
+                                  >For Him</span
+                               >
+                               <span class="icon-down"
+                                  ><img
+                                     alt="arrow"
+                                     src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
+                                     width="16"
+                                     height="16"
+                               /></span>
                             </button>
                             <ul class="hidden">
-                                <li class="border-b">
-                                    <a
-                                        href="#"
-                                        class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                        >Animal Cakes</a
-                                    >
-                                </li>
-                                <li class="border-b">
-                                    <a
-                                        href="#"
-                                        class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                    >
-                                        Princess Cakes</a
-                                    >
-                                </li>
+                               <li class="border-b">
+                                  <a
+                                     href="/TeamBakingo/src/Rana/for-father/"
+                                     class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                  >
+                                     Cakes for Father</a
+                                  >
+                               </li>
+                               <li class="border-b">
+                                  <a
+                                     href="/TeamBakingo/src/Prem/for-brother/"
+                                     class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                  >
+                                     Cakes for Brother</a
+                                  >
+                               </li>
                             </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- ~ by relationship -->
-                    <li>
-                        <button
-                            class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
-                            onclick="toggleAccordion('by-relationship', this)"
-                        >
-                            By Relationship
-                            <span class="icon-plus">+</span>
-                            <span class="icon-minus hidden">−</span>
-                        </button>
-                        <ul id="by-relationship" class="w-full hidden">
-                            <li>
+                         </li>
+                      </ul>
+                   </li>
+                   <!-- ~ by flavours -->
+                   <li>
+                      <button
+                         class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                         onclick="toggleAccordion('by-flavours', this)"
+                      >
+                         By Flavours
+                         <span class="icon-plus">+</span>
+                         <span class="icon-minus hidden">−</span>
+                      </button>
+                      <ul id="by-flavours" class="w-full hidden">
+                         <li>
+                            <ul>
+                               <li class="border-b">
+                                  <a
+                                     href="/TeamBakingo/src/anubhav/chocolate-cake/"
+                                     class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                     >Chocolate Cakes</a
+                                  >
+                               </li>
+                               <li class="border-b">
+                                  <a
+                                     href="/TeamBakingo/src/anubhav/butterscotch-cake/"
+                                     class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                     >Butterscotch Cakes</a
+                                  >
+                               </li>
+                            </ul>
+                         </li>
+                      </ul>
+                   </li>
+                   <!-- ~ theme cakes -->
+                   <li>
+                      <button
+                         class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                         onclick="toggleAccordion('theme-cakes', this)"
+                      >
+                         Theme Cakes
+                         <span class="icon-plus">+</span>
+                         <span class="icon-minus hidden">−</span>
+                      </button>
+                      <ul id="theme-cakes" class="w-full hidden">
+                         <li>
                             <button
-                                class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
-                                onclick="toggleSubmenu(this)"
+                               class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
+                               onclick="toggleSubmenu(this)"
                             >
-                                <span
-                                    class="text-[16px] text-slate-900 font-medium"
-                                    >For Him</span
-                                >
-                                <span class="icon-down"
-                                    ><img
-                                        alt="arrow"
-                                        src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
-                                        width="16"
-                                        height="16"
-                                /></span>
+                               <span
+                                  class="text-[16px] text-slate-900 font-medium"
+                                  >Kids Cakes</span
+                               >
+                               <span class="icon-down"
+                                  ><img
+                                     alt="arrow"
+                                     src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
+                                     width="16"
+                                     height="16"
+                               /></span>
                             </button>
                             <ul class="hidden">
-                                <li class="border-b">
-                                    <a
-                                        href="#"
-                                        class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                    >
-                                        Cakes for Father</a
-                                    >
-                                </li>
-                                <li class="border-b">
-                                    <a
-                                        href="#"
-                                        class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                    >
-                                        Cakes for Husband</a
-                                    >
-                                </li>
+                               <li class="border-b">
+                                  <a
+                                     href="/TeamBakingo/src/Manish/animal/index.html"
+                                     class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                     >Animal Cakes</a
+                                  >
+                               </li>
+                               <li class="border-b">
+                                  <a
+                                     href="/TeamBakingo/src/Manish/index.html"
+                                     class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                  >
+                                     Princess Cakes</a
+                                  >
+                               </li>
                             </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- ~ desserts -->
-                    <li>
-                        <button
-                            class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
-                            onclick="toggleAccordion('desserts', this)"
-                        >
-                            Desserts
-                            <span class="icon-plus">+</span>
-                            <span class="icon-minus hidden">−</span>
-                        </button>
-                        <ul id="desserts" class="w-full hidden">
-                            <li>
+                         </li>
+                      </ul>
+                   </li>
+                   <!-- ~ desserts -->
+                   <li>
+                      <button
+                         class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                         onclick="toggleAccordion('desserts', this)"
+                      >
+                         Desserts
+                         <span class="icon-plus">+</span>
+                         <span class="icon-minus hidden">−</span>
+                      </button>
+                      <ul id="desserts" class="w-full hidden">
+                         <li>
                             <ul>
-                                <li class="border-b">
-                                    <a
-                                        href="#"
-                                        class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                        >All Desserts</a
-                                    >
-                                </li>
-                                <li class="border-b">
-                                    <a
-                                        href="#"
-                                        class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                    >
-                                        Jar Cakes</a
-                                    >
-                                </li>
+                               <li class="border-b">
+                                  <a
+                                     href="/TeamBakingo/src/rajshree-jha/alldesserts.html"
+                                     class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                     >All Desserts</a
+                                  >
+                               </li>
+                               <li class="border-b">
+                                  <a
+                                     href="#"
+                                     class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                  >
+                                     Jar Cakes</a
+                                  >
+                               </li>
                             </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- ~ birthday -->
-                    <li>
-                        <button
-                            class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
-                            onclick="toggleAccordion('birthday', this)"
-                        >
-                            Birthday
-                            <span class="icon-plus">+</span>
-                            <span class="icon-minus hidden">−</span>
-                        </button>
-                        <ul id="birthday" class="w-full hidden">
-                            <li>
-                            <ul>
-                                <li class="border-b">
-                                    <a
-                                        href="#"
-                                        class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                        >All Birthday Cakes</a
-                                    >
-                                </li>
-                                <li class="border-b">
-                                    <a
-                                        href="#"
-                                        class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                    >
-                                        1st Birthday Cakes</a
-                                    >
-                                </li>
-                                <li class="border-b">
-                                    <a
-                                        href="#"
-                                        class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                    >
-                                        Birthday Photo Cakes</a
-                                    >
-                                </li>
-                            </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- ~ anniversary -->
-                    <li>
-                        <button
-                            class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
-                            onclick="toggleAccordion('anniversary', this)"
-                        >
-                            Anniversary
-                            <span class="icon-plus">+</span>
-                            <span class="icon-minus hidden">−</span>
-                        </button>
-                        <ul id="anniversary" class="w-full hidden">
-                            <li>
-                            <ul>
-                                <li class="border-b">
-                                    <a
-                                        href="#"
-                                        class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                        >All Anniversary Cakes</a
-                                    >
-                                </li>
-                                <li class="border-b">
-                                    <a
-                                        href="#"
-                                        class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                    >
-                                        1st Anniversary Cakes</a
-                                    >
-                                </li>
-                            </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- ~ occasion -->
-                    <li>
-                        <button
-                            class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
-                            onclick="toggleAccordion('occasion', this)"
-                        >
-                            Occasion
-                            <span class="icon-plus">+</span>
-                            <span class="icon-minus hidden">−</span>
-                        </button>
-                        <ul id="occasion" class="w-full hidden">
-                            <li>
-                            <button
-                                class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
-                                onclick="toggleSubmenu(this)"
-                            >
-                                <span
-                                    class="text-[16px] text-slate-900 font-medium"
-                                    >Festive Celebrations</span
-                                >
-                                <span class="icon-down"
-                                    ><img
-                                        alt="arrow"
-                                        src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
-                                        width="16"
-                                        height="16"
-                                /></span>
-                            </button>
-                            <ul class="hidden">
-                                <li class="border-b">
-                                    <a
-                                        href="#"
-                                        class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                    >
-                                        Boss Day Cakes</a
-                                    >
-                                </li>
-                                <li class="border-b">
-                                    <a
-                                        href="#"
-                                        class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
-                                    >
-                                        Karwa Chauth Cakes</a
-                                    >
-                                </li>
-                            </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- ~ customized cakes -->
-                    <li>
-                        <a
-                            href="#"
-                            class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
-                        >
-                            Customized Cakes
-                        </a>
-                    </li>
-                </ul>
-                </div>
+                         </li>
+                      </ul>
+                   </li>
 
-                <!-- Overlay -->
-                <div
+                   <!-- ~ occasion -->
+                   <li>
+                      <button
+                         class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                         onclick="toggleAccordion('occasion', this)"
+                      >
+                         Occasion
+                         <span class="icon-plus">+</span>
+                         <span class="icon-minus hidden">−</span>
+                      </button>
+                      <ul id="occasion" class="w-full hidden">
+                         <li>
+                            <button
+                               class="w-full text-left flex justify-between items-center px-4 py-2 border-b"
+                               onclick="toggleSubmenu(this)"
+                            >
+                               <span
+                                  class="text-[16px] text-slate-900 font-medium"
+                                  >Festive Celebrations</span
+                               >
+                               <span class="icon-down"
+                                  ><img
+                                     alt="arrow"
+                                     src="https://media.bakingo.com/bakingo-ssr/static/media/open_dropdown.d9ed8a89.svg"
+                                     width="16"
+                                     height="16"
+                               /></span>
+                            </button>
+                            <ul class="hidden">
+                               <li class="border-b">
+                                  <a
+                                     href="#"
+                                     class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                  >
+                                     Boss Day Cakes</a
+                                  >
+                               </li>
+                               <li class="border-b">
+                                  <a
+                                     href="#"
+                                     class="px-4 py-2 block text-sm text-slate-900 bg-[#f6f6f6]"
+                                  >
+                                     Karwa Chauth Cakes</a
+                                  >
+                               </li>
+                            </ul>
+                         </li>
+                      </ul>
+                   </li>
+                   <!-- ~ customized cakes -->
+                   <li>
+                      <a
+                         href="#"
+                         class="w-full text-left font-semibold flex justify-between items-center text-sm border-b px-4 py-3"
+                      >
+                         Customized Cakes
+                      </a>
+                   </li>
+                </ul>
+             </div>
+
+             <!-- Overlay -->
+             <div
                 id="overlay"
                 class="fixed inset-0 bg-black opacity-50 hidden z-40"
-                ></div>
+             ></div>
 
-                <!-- Button to Open Sidebar -->
-                <button id="openSidebarBtn">
+             <!-- Button to Open Sidebar -->
+             <button id="openSidebarBtn">
                 <!-- class="bg-red-500 text-white px-4 py-2 m-4" -->
                 <svg
-                    width="30px"
-                    height="30px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                   width="30px"
+                   height="30px"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   xmlns="http://www.w3.org/2000/svg"
                 >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                        id="SVGRepo_tracerCarrier"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                        <path
-                            d="M4 18H10"
-                            stroke="#000000"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                        ></path>
-                        <path
-                            d="M4 12L16 12"
-                            stroke="#000000"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                        ></path>
-                        <path
-                            d="M4 6L20 6"
-                            stroke="#000000"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                        ></path>
-                    </g>
+                   <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                   <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                   ></g>
+                   <g id="SVGRepo_iconCarrier">
+                      <path
+                         d="M4 18H10"
+                         stroke="#000000"
+                         stroke-width="2"
+                         stroke-linecap="round"
+                      ></path>
+                      <path
+                         d="M4 12L16 12"
+                         stroke="#000000"
+                         stroke-width="2"
+                         stroke-linecap="round"
+                      ></path>
+                      <path
+                         d="M4 6L20 6"
+                         stroke="#000000"
+                         stroke-width="2"
+                         stroke-linecap="round"
+                      ></path>
+                   </g>
                 </svg>
-                </button>
-            </div>
+             </button>
+          </div>
 
-            <a href="#" class="w-[7rem] object-cover"
-                ><img src="https://bkmedia.bakingo.com/ssr-static/bakingo.svg" alt="logo"
-            /></a>
-            <div
-                id="Location"
-                class="invisible sm:visible flex items-center gap-2"
-            >
-                <img
+          <a href="/TeamBakingo" class="w-[7rem] object-cover"
+             ><img src="../../images/bakingo.svg" alt="logo"
+          /></a>
+          <div
+             id="Location"
+             class="invisible sm:visible flex items-center gap-2"
+          >
+             <img
                 width="12"
                 src="https://bkmedia.bakingo.com/ssr-static/selectCity.svg"
                 alt="select-city"
-                />
-                <button class="font-medium text-[.78rem]">Select City</button>
-                <img
+             />
+             <button class="font-medium text-[.78rem]">Select City</button>
+             <img
                 width="10"
                 src="https://bkmedia.bakingo.com/ssr-static/cityDD.svg"
                 alt="dropdown"
-                />
-            </div>
-        </div>
+             />
+          </div>
+       </div>
 
-        <div
-            class="sm:hidden p-2 w-[6rem] flex gap-1 items-center justify-between"
-        >
-            <svg
-                fill="#000000"
-                height="24px"
-                width="24px"
-                version="1.1"
-                id="Capa_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 488.4 488.4"
-                xml:space="preserve"
-            >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
+       <div
+          class="sm:hidden p-2 w-[6rem] flex gap-1 items-center justify-between"
+       >
+          <svg
+             fill="#000000"
+             height="24px"
+             width="24px"
+             version="1.1"
+             id="Capa_1"
+             xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             viewBox="0 0 488.4 488.4"
+             xml:space="preserve"
+          >
+             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+             <g
                 id="SVGRepo_tracerCarrier"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
+             ></g>
+             <g id="SVGRepo_iconCarrier">
                 <g>
-                    <g>
-                        <path
-                            d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6 s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2 S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7 S381.9,104.65,381.9,203.25z"
-                        ></path>
-                    </g>
+                   <g>
+                      <path
+                         d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6 s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2 S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7 S381.9,104.65,381.9,203.25z"
+                      ></path>
+                   </g>
                 </g>
-                </g>
-            </svg>
-            <svg
-                width="30px"
-                height="30px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
+             </g>
+          </svg>
+          <svg
+             width="30px"
+             height="30px"
+             viewBox="0 0 24 24"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg"
+          >
+             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+             <g
                 id="SVGRepo_tracerCarrier"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
+             ></g>
+             <g id="SVGRepo_iconCarrier">
                 <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                   fill-rule="evenodd"
+                   clip-rule="evenodd"
+                   d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                   stroke="#000000"
+                   stroke-width="2"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
                 ></path>
-                </g>
-            </svg>
-            <svg
-                width="36px"
-                height="36px"
-                viewBox="0 -0.5 25 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
+             </g>
+          </svg>
+          <svg
+             width="36px"
+             height="36px"
+             viewBox="0 -0.5 25 25"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg"
+          >
+             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+             <g
                 id="SVGRepo_tracerCarrier"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
+             ></g>
+             <g id="SVGRepo_iconCarrier">
                 <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M5.51132 9.177L6.27532 18.177C6.34062 19.1879 7.16948 19.9803 8.18232 20H16.8253C17.8378 19.9798 18.6661 19.1875 18.7313 18.177L19.4953 9.177C19.5542 8.63047 19.3817 8.08424 19.0196 7.67066C18.6575 7.25708 18.1388 7.01389 17.5893 7H7.41732C6.8678 7.01389 6.34917 7.25708 5.98707 7.67066C5.62497 8.08424 5.45246 8.63047 5.51132 9.177Z"
-                    stroke="#000000"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                   fill-rule="evenodd"
+                   clip-rule="evenodd"
+                   d="M5.51132 9.177L6.27532 18.177C6.34062 19.1879 7.16948 19.9803 8.18232 20H16.8253C17.8378 19.9798 18.6661 19.1875 18.7313 18.177L19.4953 9.177C19.5542 8.63047 19.3817 8.08424 19.0196 7.67066C18.6575 7.25708 18.1388 7.01389 17.5893 7H7.41732C6.8678 7.01389 6.34917 7.25708 5.98707 7.67066C5.62497 8.08424 5.45246 8.63047 5.51132 9.177Z"
+                   stroke="#000000"
+                   stroke-width="1.5"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
                 ></path>
                 <path
-                    d="M16.703 6.66154C16.5161 7.03118 16.6642 7.48236 17.0338 7.66929C17.4035 7.85621 17.8547 7.7081 18.0416 7.33846L16.703 6.66154ZM17.3515 5.71218L18.0095 5.35226V5.35226L17.3515 5.71218ZM16.2783 5L16.3543 4.25386C16.3291 4.25129 16.3037 4.25 16.2783 4.25V5ZM8.72831 5V4.25C8.70292 4.25 8.67755 4.25129 8.6523 4.25386L8.72831 5ZM7.65513 5.71218L6.99714 5.35226L6.99714 5.35226L7.65513 5.71218ZM6.96502 7.33846C7.15195 7.7081 7.60313 7.85621 7.97277 7.66929C8.34241 7.48236 8.49052 7.03118 8.3036 6.66154L6.96502 7.33846ZM10.7533 11C10.7533 10.5858 10.4175 10.25 10.0033 10.25C9.5891 10.25 9.25331 10.5858 9.25331 11H10.7533ZM10.0033 11.5H9.25331H10.0033ZM15.7533 11C15.7533 10.5858 15.4175 10.25 15.0033 10.25C14.5891 10.25 14.2533 10.5858 14.2533 11H15.7533ZM18.0416 7.33846C18.3586 6.71151 18.3466 5.96863 18.0095 5.35226L16.6935 6.0721C16.7935 6.25502 16.7971 6.47548 16.703 6.66154L18.0416 7.33846ZM18.0095 5.35226C17.6723 4.73588 17.0533 4.32507 16.3543 4.25386L16.2023 5.74614C16.4097 5.76727 16.5934 5.88919 16.6935 6.0721L18.0095 5.35226ZM16.2783 4.25H8.72831V5.75H16.2783V4.25ZM8.6523 4.25386C7.95335 4.32507 7.3343 4.73588 6.99714 5.35226L8.31313 6.0721C8.41318 5.88919 8.5969 5.76727 8.80432 5.74614L8.6523 4.25386ZM6.99714 5.35226C6.65998 5.96863 6.64797 6.71151 6.96502 7.33846L8.3036 6.66154C8.20951 6.47548 8.21307 6.25502 8.31313 6.0721L6.99714 5.35226ZM9.25331 11V11.5H10.7533V11H9.25331ZM9.25331 11.5C9.25331 13.2949 10.7084 14.75 12.5033 14.75V13.25C11.5368 13.25 10.7533 12.4665 10.7533 11.5H9.25331ZM12.5033 14.75C14.2982 14.75 15.7533 13.2949 15.7533 11.5H14.2533C14.2533 12.4665 13.4698 13.25 12.5033 13.25V14.75ZM15.7533 11.5V11H14.2533V11.5H15.7533Z"
-                    fill="#000000"
+                   d="M16.703 6.66154C16.5161 7.03118 16.6642 7.48236 17.0338 7.66929C17.4035 7.85621 17.8547 7.7081 18.0416 7.33846L16.703 6.66154ZM17.3515 5.71218L18.0095 5.35226V5.35226L17.3515 5.71218ZM16.2783 5L16.3543 4.25386C16.3291 4.25129 16.3037 4.25 16.2783 4.25V5ZM8.72831 5V4.25C8.70292 4.25 8.67755 4.25129 8.6523 4.25386L8.72831 5ZM7.65513 5.71218L6.99714 5.35226L6.99714 5.35226L7.65513 5.71218ZM6.96502 7.33846C7.15195 7.7081 7.60313 7.85621 7.97277 7.66929C8.34241 7.48236 8.49052 7.03118 8.3036 6.66154L6.96502 7.33846ZM10.7533 11C10.7533 10.5858 10.4175 10.25 10.0033 10.25C9.5891 10.25 9.25331 10.5858 9.25331 11H10.7533ZM10.0033 11.5H9.25331H10.0033ZM15.7533 11C15.7533 10.5858 15.4175 10.25 15.0033 10.25C14.5891 10.25 14.2533 10.5858 14.2533 11H15.7533ZM18.0416 7.33846C18.3586 6.71151 18.3466 5.96863 18.0095 5.35226L16.6935 6.0721C16.7935 6.25502 16.7971 6.47548 16.703 6.66154L18.0416 7.33846ZM18.0095 5.35226C17.6723 4.73588 17.0533 4.32507 16.3543 4.25386L16.2023 5.74614C16.4097 5.76727 16.5934 5.88919 16.6935 6.0721L18.0095 5.35226ZM16.2783 4.25H8.72831V5.75H16.2783V4.25ZM8.6523 4.25386C7.95335 4.32507 7.3343 4.73588 6.99714 5.35226L8.31313 6.0721C8.41318 5.88919 8.5969 5.76727 8.80432 5.74614L8.6523 4.25386ZM6.99714 5.35226C6.65998 5.96863 6.64797 6.71151 6.96502 7.33846L8.3036 6.66154C8.20951 6.47548 8.21307 6.25502 8.31313 6.0721L6.99714 5.35226ZM9.25331 11V11.5H10.7533V11H9.25331ZM9.25331 11.5C9.25331 13.2949 10.7084 14.75 12.5033 14.75V13.25C11.5368 13.25 10.7533 12.4665 10.7533 11.5H9.25331ZM12.5033 14.75C14.2982 14.75 15.7533 13.2949 15.7533 11.5H14.2533C14.2533 12.4665 13.4698 13.25 12.5033 13.25V14.75ZM15.7533 11.5V11H14.2533V11.5H15.7533Z"
+                   fill="#000000"
                 ></path>
-                </g>
-            </svg>
-        </div>
+             </g>
+          </svg>
+       </div>
 
-        <div class="hidden sm:flex w-[30rem] mr-4 items-center justify-end">
-            <div
-                id="search"
-                class="w-[80%] flex items-center gap-4 rounded-lg border pr-3 pl-6 py-3 bg-[#f4f4f4]"
-            >
-                <img src="../images/search.svg" alt="" />
-                <input
+       <div class="hidden sm:flex w-[30rem] mr-4 items-center justify-end">
+          <div
+             id="search"
+             class="w-[80%] flex items-center gap-4 rounded-lg border pr-3 pl-6 py-3 bg-[#f4f4f4]"
+          >
+             <img src="../../images/search.svg" alt="" />
+             <input
                 class="font-medium placeholder:text-[#898989] text-[11.6px] outline-none bg-[#f4f4f4] w-full"
                 type="text"
                 placeholder="Search for Cakes, occasion, flavor and more"
-                />
-            </div>
-        </div>
+             />
+          </div>
+       </div>
 
-        <div
-            id="right_head"
-            class="hidden sm:flex gap-8 font-medium text-[13px]"
-        >
-            <div class="flex flex-col items-center gap-1.5">
-                <img
-                src="https://bkmedia.bakingo.com/ssr-static/trackData.svg"
+       <div
+          id="right_head"
+          class="hidden sm:flex gap-8 font-medium text-[13px]"
+       >
+          <div class="flex flex-col items-center gap-1.5">
+             <img
+                src="../../images/trackData.svg"
                 alt=""
                 class="w-[1.4rem] h-[1.4rem]"
-                />
-                <p class="tracking-wider">Track Order</p>
-            </div>
-            <div class="flex flex-col items-center gap-1.5">
-                <img
+             />
+             <p class="tracking-wider">Track Order</p>
+          </div>
+          <div class="flex flex-col items-center gap-1.5">
+             <img
                 width="22"
-                src="https://bkmedia.bakingo.com/ssr-static/cart3.svg"
+                src="../../images/cart3.svg"
                 alt=""
                 class="w-[1.4rem] h-[1.4rem]"
-                />
-                <p class="tracking-wider">Cart</p>
-            </div>
-            <div class="flex flex-col items-center gap-1.5">
-                <img
+             />
+             <p class="tracking-wider">Cart</p>
+          </div>
+          <div class="flex flex-col items-center gap-1.5">
+             <img
                 width="22"
-                src="https://bkmedia.bakingo.com/ssr-static/Account.svg"
+                src="../../images/Account.svg"
                 alt=""
                 class="w-[1.4rem] h-[1.4rem]"
-                />
-                <p class="text-[rgb(232,25,81)]">Login/Signup</p>
-            </div>
-        </div>
+             />
+             <p class="text-[rgb(232,25,81)]">Login/Signup</p>
+          </div>
+       </div>
     </nav>
 
     <!-- ~ dropdown navbar -->
     <div
-        class="invisible sm:visible w-full bg-white px-4 md:px-12 lg:px-36 flex gap-2 items-center justify-between text-xs text-nowrap border text-slate-800 font-medium shadow-md"
+       class="invisible sm:visible w-full bg-white px-4 md:px-12 lg:px-36 flex gap-2 items-center justify-between text-xs text-nowrap border text-slate-800 font-medium shadow-md"
     >
-        <div class="cakes-tab relative py-3 group cursor-pointer">
-            Cakes
-            <div
-                class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-            >
-                <div
+       <div class="cakes-tab relative py-3 group cursor-pointer">
+          Cakes
+          <div
+             class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+          >
+             <div
                 class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                >
+             >
                 <h1 class="text-sm font-semibold">Trending Cakes</h1>
                 <ul class="flex gap-3 flex-col">
-                    <li class="hover:font-bold">
-                        <a href="/src/Prem/pinata-cakes"> Pinata Cakes </a>
-                    </li>
-                    <li class="hover:font-bold">
-                        <a href="#block"> Suprice Cakes </a>
-                    </li>
-                    <li class="hover:font-bold">
-                        <a href="#block"> </a>
-                    </li>
-                    <li class="hover:font-bold">
-                        <a href="#block"> </a>
-                    </li>
+                   <li class="hover:font-bold">
+                      <a href="/TeamBakingo/src/Prem/pinata-cakes">
+                         Pinata Cakes
+                      </a>
+                   </li>
+                   <li class="hover:font-bold">
+                      <a href="/TeamBakingo/src/Prem/suprise-cakes/">
+                         Suprice Cakes
+                      </a>
+                   </li>
                 </ul>
-                </div>
-            </div>
-        </div>
-        <div class="cakes-tab relative py-3 group cursor-pointer">
-            By Flavours
-            <div
-                class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-            >
-                <div
+             </div>
+          </div>
+       </div>
+       <div class="cakes-tab relative py-3 group cursor-pointer">
+          Birthday
+          <div
+             class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+          >
+             <div
                 class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                >
+             >
                 <ul class="flex gap-3 flex-col">
-                    <li class="hover:font-bold">
-                        <a href="#block"> Chocolate Cakes </a>
-                    </li>
-                    <li class="hover:font-bold">
-                        <a href="#block"> Butterscotch Cakes </a>
-                    </li>
+                   <li class="hover:font-bold">
+                      <a href="/TeamBakingo/src/Rana/all-birthday/">
+                         All Birthday Cakes
+                      </a>
+                   </li>
+                   <li class="hover:font-bold">
+                      <a href="/TeamBakingo/src/Rana/1st-birthday/">
+                         1st Birthday Cakes
+                      </a>
+                   </li>
                 </ul>
-                </div>
-            </div>
-        </div>
-        <div class="cakes-tab relative py-3 group cursor-pointer">
-            Theme Cakes
-            <div
-                class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-            >
-                <div
+             </div>
+          </div>
+       </div>
+       <div class="cakes-tab relative py-3 group cursor-pointer">
+          Anniversary
+          <div
+             class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+          >
+             <div
                 class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                >
-                <h1 class="text-sm font-semibold">Kids Cakes</h1>
-                <ul class="flex gap-3 flex-col">
-                    <li class="hover:font-bold">
-                        <a href="#block"> 1st Birthday Cakes </a>
-                    </li>
-                    <li class="hover:font-bold">
-                        <a href="#block"> Princess Cakes </a>
-                    </li>
+             >
+                <ul class="flex gap-2 flex-col">
+                   <li class="hover:font-bold">
+                      <a
+                         href="/TeamBakingo/src/Puja/AnniversaryCakes.html"
+                      >
+                         All Anniversary Cakes
+                      </a>
+                   </li>
                 </ul>
-                </div>
-            </div>
-        </div>
-        <div class="cakes-tab relative py-3 group cursor-pointer">
-            By Relationship
-            <div
-                class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-            >
-                <div
+             </div>
+          </div>
+       </div>
+       <div class="cakes-tab relative py-3 group cursor-pointer">
+          By Relationship
+          <div
+             class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+          >
+             <div
                 class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                >
+             >
                 <h1 class="text-sm font-semibold">For Him</h1>
                 <ul class="flex gap-3 flex-col">
-                    <li class="hover:font-bold">
-                        <a href="#block"> Cakes for Father </a>
-                    </li>
-                    <li class="hover:font-bold">
-                        <a href="#block"> Cakes for Husband </a>
-                    </li>
+                   <li class="hover:font-bold">
+                      <a href="/TeamBakingo/src/Rana/for-father/">
+                         Cakes for Father
+                      </a>
+                   </li>
+                   <li class="hover:font-bold">
+                      <a href="/TeamBakingo/src/Prem/for-brother/">
+                         Cakes for Brother
+                      </a>
+                   </li>
                 </ul>
-                </div>
-            </div>
-        </div>
-        <div class="cakes-tab relative py-3 group cursor-pointer">
-            Desserts
-            <div
-                class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-            >
-                <div
+             </div>
+          </div>
+       </div>
+       <div class="cakes-tab relative py-3 group cursor-pointer">
+          By Flavours
+          <div
+             class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+          >
+             <div
                 class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                >
+             >
                 <ul class="flex gap-3 flex-col">
-                    <li class="hover:font-bold">
-                        <a href="#block"> All Desserts </a>
-                    </li>
-                    <li class="hover:font-bold">
-                        <a href="#block"> Jar Cakes </a>
-                    </li>
+                   <li class="hover:font-bold">
+                      <a href="/TeamBakingo/src/anubhav/chocolate-cake/">
+                         Chocolate Cakes
+                      </a>
+                   </li>
+                   <li class="hover:font-bold">
+                      <a
+                         href="/TeamBakingo/src/anubhav/butterscotch-cake/"
+                      >
+                         Butterscotch Cakes
+                      </a>
+                   </li>
                 </ul>
-                </div>
-            </div>
-        </div>
-        <div class="cakes-tab relative py-3 group cursor-pointer">
-            Birthday
-            <div
-                class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-            >
-                <div
+             </div>
+          </div>
+       </div>
+       <div class="cakes-tab relative py-3 group cursor-pointer">
+          Theme Cakes
+          <div
+             class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+          >
+             <div
                 class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                >
+             >
+                <h1 class="text-sm font-semibold">Kids Cakes</h1>
                 <ul class="flex gap-3 flex-col">
-                    <li class="hover:font-bold">
-                        <a href="#block"> All Birthday Cakes </a>
-                    </li>
-                    <li class="hover:font-bold">
-                        <a href="#block"> 1st Birthday Cakes </a>
-                    </li>
-                    <li class="hover:font-bold">
-                        <a href="#block"> Birthday Photo Cakes</a>
-                    </li>
+                   <li class="hover:font-bold">
+                      <a href="/TeamBakingo/src/Manish/animal/index.html">
+                         1st Birthday Cakes
+                      </a>
+                   </li>
+                   <li class="hover:font-bold">
+                      <a href="/TeamBakingo/src/Manish/index.html">
+                         Princess Cakes
+                      </a>
+                   </li>
                 </ul>
-                </div>
-            </div>
-        </div>
-        <div class="cakes-tab relative py-3 group cursor-pointer">
-            Anniversary
-            <div
-                class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-            >
-                <div
+             </div>
+          </div>
+       </div>
+
+       <div class="cakes-tab relative py-3 group cursor-pointer">
+          Desserts
+          <div
+             class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+          >
+             <div
                 class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                >
-                <ul class="flex gap-2 flex-col">
-                    <li class="hover:font-bold">
-                        <a href="#block"> All Anniversary Cakes </a>
-                    </li>
-                    <li class="hover:font-bold">
-                        <a href="#block"> 1st Anniversary Cakes </a>
-                    </li>
+             >
+                <ul class="flex gap-3 flex-col">
+                   <li class="hover:font-bold">
+                      <a
+                         href="/TeamBakingo/src/rajshree-jha/alldesserts.html"
+                      >
+                         All Desserts
+                      </a>
+                   </li>
+                   <li class="hover:font-bold">
+                      <a href="#"> Jar Cakes </a>
+                   </li>
                 </ul>
-                </div>
-            </div>
-        </div>
-        <div class="cakes-tab relative py-3 group cursor-pointer">
-            Occasion
-            <div
-                class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
-            >
-                <div
+             </div>
+          </div>
+       </div>
+
+       <div class="cakes-tab relative py-3 group cursor-pointer">
+          Occasion
+          <div
+             class="absolute top-full left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible flex gap-4 py-4 px-6 rounded-bl-2xl rounded-br-2xl"
+          >
+             <div
                 class="text-xs flex gap-4 flex-col items-start w-[10rem]"
-                >
+             >
                 <h1 class="text-sm font-semibold">Festive Celebrations</h1>
                 <ul class="flex gap-2 flex-col">
-                    <li class="hover:font-bold">
-                        <a href="#block"> Boss Day Cakes </a>
-                    </li>
-                    <li class="hover:font-bold">
-                        <a href="#block"> Karwa Chauth Cakes </a>
-                    </li>
+                   <li class="hover:font-bold">
+                      <a href="#"> Boss Day Cakes </a>
+                   </li>
+                   <li class="hover:font-bold">
+                      <a href="#"> Karwa Chauth Cakes </a>
+                   </li>
                 </ul>
-                </div>
-            </div>
-        </div>
-        <a href="#" class="relative cakes-tab py-3 group cursor-pointer">
-            Customized Cakes
-        </a>
+             </div>
+          </div>
+       </div>
+       <a href="#" class="relative cakes-tab py-3 group cursor-pointer">
+          Customized Cakes
+       </a>
     </div>
-    </header>
+ </header>
 
     <!-- Title of 1st Birthday Cakes section -->
     <div class="mt-24 sm:mt-32 px-3 sm:px-[4rem] sm:bg-gray-100 border flex justify-between items-center w-full h-24 overflow-x-hidden">
